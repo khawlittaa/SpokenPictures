@@ -9,5 +9,7 @@ target 'SpokenPicture_iOS' do
 
   pod 'IQKeyboardManager'
   pod 'iOSDropDown'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
 end

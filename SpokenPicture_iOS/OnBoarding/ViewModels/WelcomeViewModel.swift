@@ -7,16 +7,23 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class WelcomeViewModel {
     
     let languages = ["English", "Arabic", "French"]
+    let disposeBag = DisposeBag()
     
-    // mail and name to biend to VC 
-    var nameText: String = "test"
-    var emailText: String = "mail@test.com"
+    // mail and name to biend to VC
+    var userName = PublishSubject<String>()
+    var emailAddress = PublishSubject<String>()
     
-    func ValidateCredentials() -> Bool{
-        return isValidEmail(emailText) && isValidUserName(nameText)
+    func  isValid() -> Observable<Bool> {
+        return Observable.combineLatest(self.userName.asObservable().startWith(""), self.emailAddress.asObservable().startWith(""))
+            .map{userName, email in
+                isValidUserName(userName) && isValidEmail(email)
+        }.startWith(false)
     }
+    
 }
