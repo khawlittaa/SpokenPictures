@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class WelcomeViewModel {
+    
+    let languages = ["", "English", "Arabic", "French"]
+}
