@@ -65,8 +65,10 @@ extension WelcomeViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     }
     // When user selects an option, this function will set the text of the text field to reflect the selected option.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        languageTextField.text = welcomeVM.languages[row]
-        getStartedButton.isValid = true
+        if row != 0 && welcomeVM.ValidateCredentials(email: emailTextField.text ?? "", name: nameTextField.text ?? ""){
+            languageTextField.text = welcomeVM.languages[row]
+            getStartedButton.isValid = true
+        }
     }
     
 }

@@ -11,4 +11,10 @@ import Foundation
 class WelcomeViewModel {
     
     let languages = ["", "English", "Arabic", "French"]
+    
+    func ValidateCredentials(email: String, name: String) -> Bool{
+        
+        return isValidEmail(email) && isValidUserName(name)
+        
+    }
 }
