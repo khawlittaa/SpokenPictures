@@ -8,5 +8,6 @@ target 'SpokenPicture_iOS' do
   # Pods for SpokenPicture_iOS
 
   pod 'IQKeyboardManager'
+  pod 'iOSDropDown'
 
 end

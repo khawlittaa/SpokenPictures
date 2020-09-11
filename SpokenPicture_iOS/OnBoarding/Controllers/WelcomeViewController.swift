@@ -1,4 +1,4 @@
-//
+////
 //  WelcomeViewController.swift
 //  SpokenPicture_iOS
 //
@@ -7,68 +7,55 @@
 //
 
 import UIKit
+import iOSDropDown
 
 class WelcomeViewController: UIViewController {
     @IBOutlet weak var getStartedButton: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var languageTextField: UITextField!
+    
+    @IBOutlet weak var subtitleDropDown: DropDown!
     
     let welcomeVM = WelcomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLanguagePicker()
+        setsubtitleList()
         setButtonAppearance()
     }
+     override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
+     
+     override func viewWillDisappear(_ animated: Bool) {
+         super.viewWillDisappear(animated)
+         navigationController?.setNavigationBarHidden(false, animated: animated)
+     }
     
     func setButtonAppearance(){
         getStartedButton.isValid = false
         getStartedButton.roundEdges()
     }
     
-    func setLanguagePicker(){
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        
-        languageTextField.inputView = pickerView
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-}
-
-extension WelcomeViewController: UIPickerViewDataSource, UIPickerViewDelegate{
-    
-    // Sets number of columns in picker view
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    // Sets the number of rows in the picker view
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return welcomeVM.languages.count
-    }
-    
-    // This function sets the text of the picker view to the content of the "languages" array
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return welcomeVM.languages[row]
-    }
-    // When user selects an option, this function will set the text of the text field to reflect the selected option.
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if row != 0 && welcomeVM.ValidateCredentials(email: emailTextField.text ?? "", name: nameTextField.text ?? ""){
-            languageTextField.text = welcomeVM.languages[row]
-            getStartedButton.isValid = true
+    func setsubtitleList(){
+        subtitleDropDown.optionArray = welcomeVM.languages
+         // The the Closure returns Selected Index and String
+        subtitleDropDown.listWillAppear {
+            self.subtitleDropDown.textInputView.resignFirstResponder()
+            self.subtitleDropDown.endEditing(true)
         }
+        
+         subtitleDropDown.didSelect{(selectedText , index ,id) in
+         print ("Selected String: \(selectedText) \n index: \(index)")
+
+            if  self.welcomeVM.ValidateCredentials(){
+                self.getStartedButton.isValid = true
+               }
+         }
+       
     }
-    
+ 
+  
 }

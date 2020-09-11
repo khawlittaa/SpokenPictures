@@ -10,11 +10,13 @@ import Foundation
 
 class WelcomeViewModel {
     
-    let languages = ["", "English", "Arabic", "French"]
+    let languages = ["English", "Arabic", "French"]
     
-    func ValidateCredentials(email: String, name: String) -> Bool{
-        
-        return isValidEmail(email) && isValidUserName(name)
-        
+    // mail and name to biend to VC 
+    var nameText: String = "test"
+    var emailText: String = "mail@test.com"
+    
+    func ValidateCredentials() -> Bool{
+        return isValidEmail(emailText) && isValidUserName(nameText)
     }
 }
