@@ -55,6 +55,11 @@ class WelcomeViewController: UIViewController {
         self.welcomeVM.isValid()
             .bind(to: getStartedButton.rx.isEnabled)
             .disposed(by: self.disposeBag)
+        
+        self.welcomeVM.isValid()
+            .map{$0 ? UIColor.accentAccent31Main : UIColor.grey3Disabled}
+            .bind(to: getStartedButton.rx.backgroundColor)
+            .disposed(by: self.disposeBag)
     }
     
     func setsubtitleList(){

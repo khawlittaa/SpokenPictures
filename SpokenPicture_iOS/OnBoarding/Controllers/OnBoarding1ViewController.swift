@@ -16,7 +16,7 @@ class OnBoarding1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setBackgrouudImage(imageName: "onBoarding_Background1")
         addSwipeGesture()
         skipButton.setSkipButtonAppearance()
         
@@ -33,7 +33,6 @@ class OnBoarding1ViewController: UIViewController {
     }
     
     func addSwipeGesture(){
-        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
         swipeRight.direction = .left
         self.view.addGestureRecognizer(swipeRight)

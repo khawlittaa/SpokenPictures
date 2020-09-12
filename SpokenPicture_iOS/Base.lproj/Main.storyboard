@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ezI-D1-NRz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ezI-D1-NRz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -37,8 +37,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onBoarding_Background1" translatesAutoresizingMaskIntoConstraints="NO" id="965-h3-jWJ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="423.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="965-h3-jWJ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="0.0"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpY-iy-jGw">
                                 <rect key="frame" x="24" y="490.5" width="200" height="38.5"/>
@@ -134,7 +134,7 @@
                             <constraint firstItem="JpY-iy-jGw" firstAttribute="leading" secondItem="7Ia-b1-1dU" secondAttribute="leading" id="ohs-wq-VuR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="965-h3-jWJ" secondAttribute="trailing" id="qsS-41-QmH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAk-Gl-u1Z" secondAttribute="bottom" constant="10" id="trj-EW-8ZM"/>
-                            <constraint firstItem="7Ia-b1-1dU" firstAttribute="top" secondItem="965-h3-jWJ" secondAttribute="bottom" id="uDX-V9-aby"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="965-h3-jWJ" secondAttribute="bottom" id="uDX-V9-aby"/>
                             <constraint firstItem="dAk-Gl-u1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="uk5-er-8fn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zQJ-fv-ATC" secondAttribute="trailing" constant="30" id="wcp-WA-3nn"/>
                         </constraints>
@@ -343,7 +343,7 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a Language" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAa-Qk-zp7" customClass="DropDown" customModule="iOSDropDown">
                                                 <rect key="frame" x="0.0" y="52.5" width="311" height="34"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
@@ -682,7 +682,6 @@
         <image name="Onboarding_welcome" width="360" height="827"/>
         <image name="empty_rogress_Indicator" width="12" height="12"/>
         <image name="full_Progress_Indicator" width="12" height="12"/>
-        <image name="onBoarding_Background1" width="760" height="761"/>
         <image name="onBoarding_Background2" width="360" height="761"/>
         <image name="onBoarding_Background3" width="360" height="761"/>
         <image name="onBoarding_Background4" width="360" height="761"/>
