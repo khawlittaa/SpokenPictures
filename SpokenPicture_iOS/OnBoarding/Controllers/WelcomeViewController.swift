@@ -76,5 +76,12 @@ class WelcomeViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func getStartedbuttonClicked(_ sender: Any) {
+
+        let home = UIStoryboard(name: "Home", bundle: nil)
+        let popUp = home.instantiateViewController(withIdentifier: "CreatePopUpViewController")
+        navigationController?.pushViewController(popUp, animated: true)
+    }
 }
 

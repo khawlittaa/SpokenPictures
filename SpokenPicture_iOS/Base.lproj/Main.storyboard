@@ -369,6 +369,9 @@
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="getStartedbuttonClicked:" destination="a6P-9D-1u6" eventType="touchUpInside" id="G6s-x7-XLz"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jM1-oH-Lvx">
                                 <rect key="frame" x="32" y="175" width="311" height="98.5"/>
