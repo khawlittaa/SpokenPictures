@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXD-MZ-9En">
                         <rect key="frame" x="0.0" y="0.0" width="136" height="190"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IXc-b4-5vu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ckturistando3XxocVqC2AiUnsplash" translatesAutoresizingMaskIntoConstraints="NO" id="IXc-b4-5vu">
                                 <rect key="frame" x="0.0" y="0.0" width="136" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="vdS-29-Ffl"/>
@@ -83,6 +83,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="ckturistando3XxocVqC2AiUnsplash" width="176" height="174"/>
         <image name="group_Album" width="61" height="61"/>
         <image name="notification_Bell_Album" width="32" height="32"/>
     </resources>

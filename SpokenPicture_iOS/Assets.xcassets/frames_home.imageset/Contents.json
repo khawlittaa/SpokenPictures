@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "ovalCopy2FramesCopyCopy2RectangleMask.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ovalCopy2FramesCopyCopy2RectangleMask@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "ovalCopy2FramesCopyCopy2RectangleMask@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
