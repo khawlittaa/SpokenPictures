@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GG-zM-rd4">
-                                <rect key="frame" x="58" y="100" width="298" height="191"/>
+                                <rect key="frame" x="58" y="140" width="298" height="191"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsb-cL-ehq">
                                         <rect key="frame" x="13" y="14" width="73" height="47"/>
@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoG-Oy-1tQ">
-                                        <rect key="frame" x="261" y="26.666666666666671" width="18" height="22"/>
+                                        <rect key="frame" x="261" y="26.666666666666657" width="18" height="22"/>
                                         <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="xmark" catalog="system"/>
                                         <connections>
@@ -66,7 +66,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9GG-zM-rd4" firstAttribute="centerX" secondItem="CtP-fY-cha" secondAttribute="centerX" id="u32-wv-tvz"/>
-                            <constraint firstItem="9GG-zM-rd4" firstAttribute="top" secondItem="iAu-7E-4eU" secondAttribute="top" constant="100" id="wIG-qv-h1d"/>
+                            <constraint firstItem="9GG-zM-rd4" firstAttribute="top" secondItem="iAu-7E-4eU" secondAttribute="top" constant="140" id="wIG-qv-h1d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iAu-7E-4eU"/>
                     </view>

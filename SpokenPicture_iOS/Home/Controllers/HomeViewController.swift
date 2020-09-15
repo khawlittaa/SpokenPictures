@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var albumsView: UIView!
     @IBOutlet weak var framesView: UIView!
     @IBOutlet weak var postCardView: UIView!
@@ -24,14 +24,14 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-         navigationController?.setNavigationBarHidden(true, animated: animated)
-     }
-     
-     override func viewWillDisappear(_ animated: Bool) {
-         super.viewWillDisappear(animated)
-         navigationController?.setNavigationBarHidden(false, animated: animated)
-     }
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     func SetUpBAckgoudsforViews(){
         self.setBackgrouudImage(imageName: "background")
@@ -49,11 +49,15 @@ class HomeViewController: UIViewController {
         albums.viewTitle = title
         navigationController?.pushViewController(albums, animated: true)
     }
-
+    
     @IBAction func createButtonClicked(_ sender: Any) {
         
-        let popUp = home.instantiateViewController(withIdentifier: "CreatePopUpViewController")
-        self.navigationController?.pushViewController(popUp, animated: true)
+        let popUp = home.instantiateViewController(withIdentifier: "CreatePopUpViewController") as! CreatePopUpViewController
+        self.addChild(popUp)
+        popUp.view.frame = self.view.frame
+        self.view.addSubview(popUp.view)
+        popUp.didMove(toParent: self)
+        
     }
     
     @IBAction func albumsButtonClicked(_ sender: Any) {
