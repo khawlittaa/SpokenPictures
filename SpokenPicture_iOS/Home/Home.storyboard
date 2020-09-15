@@ -329,17 +329,30 @@
                                 </constraints>
                                 <state key="normal" image="bars"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig6-9L-MTt">
+                                <rect key="frame" x="30" y="34" width="30" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ZdY-0R-3K1"/>
+                                    <constraint firstAttribute="height" constant="33" id="mnp-Eg-Wgd"/>
+                                </constraints>
+                                <state key="normal" image="whiteBack"/>
+                                <connections>
+                                    <action selector="backbtnPressed:" destination="evH-67-evF" eventType="touchUpInside" id="xvr-Aq-OVW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="z0f-IV-7iX" firstAttribute="centerX" secondItem="Z6c-GD-AgG" secondAttribute="centerX" id="1U1-O4-WQa"/>
-                            <constraint firstItem="uKw-go-Nlo" firstAttribute="top" secondItem="v8L-XU-qHD" secondAttribute="top" constant="30" id="C5x-bQ-auS"/>
+                            <constraint firstItem="uKw-go-Nlo" firstAttribute="top" secondItem="Z6c-GD-AgG" secondAttribute="top" constant="30" id="C5x-bQ-auS"/>
                             <constraint firstItem="7Jg-hQ-mhi" firstAttribute="top" secondItem="cvY-MY-jJK" secondAttribute="bottom" constant="10" id="CfO-Ue-vmU"/>
+                            <constraint firstItem="Ig6-9L-MTt" firstAttribute="leading" secondItem="v8L-XU-qHD" secondAttribute="leading" constant="30" id="Cfs-YW-Rf8"/>
                             <constraint firstItem="z0f-IV-7iX" firstAttribute="top" secondItem="Z6c-GD-AgG" secondAttribute="top" constant="20" id="ISi-0K-nUq"/>
                             <constraint firstItem="cvY-MY-jJK" firstAttribute="leading" secondItem="v8L-XU-qHD" secondAttribute="leading" constant="20" id="MeA-N3-eaI"/>
                             <constraint firstItem="v8L-XU-qHD" firstAttribute="trailing" secondItem="uKw-go-Nlo" secondAttribute="trailing" constant="30" id="MpC-me-sNc"/>
                             <constraint firstItem="v8L-XU-qHD" firstAttribute="bottom" secondItem="7Jg-hQ-mhi" secondAttribute="bottom" id="c2S-Q5-OD8"/>
                             <constraint firstItem="cvY-MY-jJK" firstAttribute="top" secondItem="v8L-XU-qHD" secondAttribute="top" constant="100" id="lWH-wc-HrP"/>
+                            <constraint firstItem="Ig6-9L-MTt" firstAttribute="top" secondItem="Z6c-GD-AgG" secondAttribute="top" constant="34" id="m5b-GM-Vkr"/>
                             <constraint firstItem="7Jg-hQ-mhi" firstAttribute="leading" secondItem="v8L-XU-qHD" secondAttribute="leading" constant="32" id="y1M-my-yIc"/>
                             <constraint firstItem="v8L-XU-qHD" firstAttribute="trailing" secondItem="7Jg-hQ-mhi" secondAttribute="trailing" constant="32" id="yxx-QO-LV4"/>
                         </constraints>
@@ -358,6 +371,7 @@
     <resources>
         <image name="bars" width="42" height="42"/>
         <image name="spLogoCopy" width="265" height="196"/>
+        <image name="whiteBack" width="30" height="33"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

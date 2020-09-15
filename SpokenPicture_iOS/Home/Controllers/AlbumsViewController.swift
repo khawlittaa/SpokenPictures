@@ -43,6 +43,9 @@ class AlbumsViewController: UIViewController {
         myAlbumsCollectionView.registerCell(nib: "CreateAlbumCell", cellreuseIdentifier: "CreateAlbumCell")
         myAlbumsCollectionView.registerCell(nib: "AlbumCoverCollectionViewCell", cellreuseIdentifier: "AlbumCoverCollectionViewCell")
     }
+    @IBAction func backbtnPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }
 
