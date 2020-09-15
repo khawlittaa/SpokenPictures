@@ -13,7 +13,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     
     let menuViewModel = MenuviewModel()
-    
+    let menu = UIStoryboard(name: "Menu", bundle: nil)
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
@@ -35,6 +36,11 @@ class MenuViewController: UIViewController {
         menuTableView.delegate = self
         menuTableView.registerCell(nib: "MenuTableViewCell", cellreuseIdentifier: "MenuTableViewCell")
     }
+    
+    func selectMenuItem(itemTitle: String){
+        let menuItem = menu.instantiateViewController(withIdentifier: itemTitle)
+        self.navigationController?.pushViewController(menuItem, animated: true)
+    }
 
     @IBAction func menuButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -43,6 +49,12 @@ class MenuViewController: UIViewController {
 extension MenuViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if (indexPath.row == 1){
+            selectMenuItem(itemTitle: "MenuProfileViewController")
+        }
     }
 }
 
