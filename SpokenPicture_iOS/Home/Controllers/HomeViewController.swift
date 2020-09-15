@@ -50,6 +50,11 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(albums, animated: true)
     }
     
+    @IBAction func menuButtonClicked(_ sender: Any) {
+        let menu = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        self.navigationController?.pushViewController(menu, animated: true)
+    }
+    
     @IBAction func createButtonClicked(_ sender: Any) {
         
         let popUp = home.instantiateViewController(withIdentifier: "CreatePopUpViewController") as! CreatePopUpViewController

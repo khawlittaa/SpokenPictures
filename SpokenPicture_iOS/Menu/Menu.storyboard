@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bbY-D4-Yjv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="83q-pk-yLN">
+            <objects>
+                <navigationController id="bbY-D4-Yjv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nj1-Qp-736">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TL4-3h-cLj" kind="relationship" relationship="rootViewController" id="3Io-Jw-CCg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sga-Ku-OlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="-342"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="3MS-Ev-oir">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="TL4-3h-cLj" customClass="MenuViewController" customModule="SpokenPicture_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F9H-5b-k18">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-4n-frw">
+                                <rect key="frame" x="346" y="116" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="19Z-A6-GKC"/>
+                                    <constraint firstAttribute="width" constant="42" id="7cq-O6-2OE"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="bars"/>
+                                <connections>
+                                    <action selector="menuButtonClicked:" destination="TL4-3h-cLj" eventType="touchUpInside" id="KF2-L4-cZm"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8l0-gG-FvI">
+                                <rect key="frame" x="0.0" y="198" width="414" height="664"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6YL-HE-KF1" firstAttribute="trailing" secondItem="0LC-4n-frw" secondAttribute="trailing" constant="26" id="1ol-lJ-X6n"/>
+                            <constraint firstItem="0LC-4n-frw" firstAttribute="top" secondItem="6YL-HE-KF1" secondAttribute="top" constant="28" id="3Ft-BB-rCh"/>
+                            <constraint firstItem="6YL-HE-KF1" firstAttribute="trailing" secondItem="8l0-gG-FvI" secondAttribute="trailing" id="JkD-XC-0JR"/>
+                            <constraint firstItem="8l0-gG-FvI" firstAttribute="leading" secondItem="6YL-HE-KF1" secondAttribute="leading" id="MaU-61-eQH"/>
+                            <constraint firstItem="8l0-gG-FvI" firstAttribute="top" secondItem="0LC-4n-frw" secondAttribute="bottom" constant="40" id="Vtk-c8-iF9"/>
+                            <constraint firstItem="6YL-HE-KF1" firstAttribute="bottom" secondItem="8l0-gG-FvI" secondAttribute="bottom" id="YRu-0h-Le2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6YL-HE-KF1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="avQ-4B-uy5"/>
+                    <connections>
+                        <outlet property="menuTableView" destination="8l0-gG-FvI" id="DpA-S1-Lte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUn-aB-fJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="-341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bars" width="42" height="42"/>
+    </resources>
+</document>
