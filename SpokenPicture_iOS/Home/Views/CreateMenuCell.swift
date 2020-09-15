@@ -9,10 +9,17 @@
 import UIKit
 
 class CreateMenuCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var menuImage: UIImageView!
+    @IBOutlet weak var menuOption: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
+    func setUIelements(title: String, imageName: String){
+        menuOption.text = title
+        menuImage.image = UIImage(named: imageName)
+    }
+    
 }

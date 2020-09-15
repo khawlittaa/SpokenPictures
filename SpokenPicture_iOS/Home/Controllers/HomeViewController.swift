@@ -41,12 +41,30 @@ class HomeViewController: UIViewController {
         scanView.setBackgrouudImage(imageName: "scan_home")
         postCardView.setBackgrouudImage(imageName: "postcard_home")
     }
+    
+    func albumsView(bgColor: UIColor, createImage: String, title: String){
+        let albums = home.instantiateViewController(withIdentifier: "AlbumsViewController") as! AlbumsViewController
+        albums.bgColor = bgColor
+        albums.createImgName = createImage
+        albums.viewTitle = title
+        navigationController?.pushViewController(albums, animated: true)
+    }
 
     @IBAction func createButtonClicked(_ sender: Any) {
+        
+        let popUp = home.instantiateViewController(withIdentifier: "CreatePopUpViewController")
+        self.navigationController?.pushViewController(popUp, animated: true)
     }
     
     @IBAction func albumsButtonClicked(_ sender: Any) {
-        let albums = home.instantiateViewController(withIdentifier: "AlbumsViewController")
-        navigationController?.pushViewController(albums, animated: true)
+        albumsView(bgColor: .accentAccent21Main, createImage: "create_Album", title: "My Albums")
+    }
+    
+    @IBAction func postcardsClicked(_ sender: Any) {
+        albumsView(bgColor: .accentAccent11Main, createImage: "create_postCard", title: "My Postcards")
+    }
+    
+    @IBAction func FramesClicked(_ sender: Any) {
+        albumsView(bgColor: .pastelPastel22Vivid, createImage: "create_Frame", title: "My Frames")
     }
 }

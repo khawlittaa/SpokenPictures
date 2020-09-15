@@ -13,7 +13,7 @@ extension UIViewController{
     func setBackgrouudImage(imageName: String){
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: imageName)
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
+        backgroundImage.contentMode =  UIView.ContentMode.scaleToFill
         self.view.insertSubview(backgroundImage, at: 0)
     }
 }
