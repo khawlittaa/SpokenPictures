@@ -70,7 +70,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iAu-7E-4eU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Dv4-eK-IW3"/>
                     <connections>
                         <outlet property="createMenuCollectionView" destination="MfN-aQ-9sB" id="XAm-4d-9hP"/>
                     </connections>
@@ -304,24 +303,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Jg-hQ-mhi">
-                                <rect key="frame" x="32" y="51" width="350" height="685"/>
+                                <rect key="frame" x="32" y="131" width="350" height="605"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewLayout key="collectionViewLayout" id="yxY-oT-lZt" customClass="PinterestLayout" customModule="SpokenPicture_iOS" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvY-MY-jJK">
-                                <rect key="frame" x="20" y="20" width="85.333333333333329" height="21"/>
+                                <rect key="frame" x="20" y="100" width="85.333333333333329" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spLogoCopy" translatesAutoresizingMaskIntoConstraints="NO" id="z0f-IV-7iX">
+                                <rect key="frame" x="165" y="20" width="84" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nqG-au-vEp"/>
+                                    <constraint firstAttribute="width" constant="84" id="qzc-Mr-MBq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKw-go-Nlo">
+                                <rect key="frame" x="342" y="30" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="GEp-hU-r0H"/>
+                                    <constraint firstAttribute="width" constant="42" id="l9h-k2-m6H"/>
+                                </constraints>
+                                <state key="normal" image="bars"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="z0f-IV-7iX" firstAttribute="centerX" secondItem="Z6c-GD-AgG" secondAttribute="centerX" id="1U1-O4-WQa"/>
+                            <constraint firstItem="uKw-go-Nlo" firstAttribute="top" secondItem="v8L-XU-qHD" secondAttribute="top" constant="30" id="C5x-bQ-auS"/>
                             <constraint firstItem="7Jg-hQ-mhi" firstAttribute="top" secondItem="cvY-MY-jJK" secondAttribute="bottom" constant="10" id="CfO-Ue-vmU"/>
+                            <constraint firstItem="z0f-IV-7iX" firstAttribute="top" secondItem="Z6c-GD-AgG" secondAttribute="top" constant="20" id="ISi-0K-nUq"/>
                             <constraint firstItem="cvY-MY-jJK" firstAttribute="leading" secondItem="v8L-XU-qHD" secondAttribute="leading" constant="20" id="MeA-N3-eaI"/>
+                            <constraint firstItem="v8L-XU-qHD" firstAttribute="trailing" secondItem="uKw-go-Nlo" secondAttribute="trailing" constant="30" id="MpC-me-sNc"/>
                             <constraint firstItem="v8L-XU-qHD" firstAttribute="bottom" secondItem="7Jg-hQ-mhi" secondAttribute="bottom" id="c2S-Q5-OD8"/>
-                            <constraint firstItem="cvY-MY-jJK" firstAttribute="top" secondItem="v8L-XU-qHD" secondAttribute="top" constant="20" id="lWH-wc-HrP"/>
+                            <constraint firstItem="cvY-MY-jJK" firstAttribute="top" secondItem="v8L-XU-qHD" secondAttribute="top" constant="100" id="lWH-wc-HrP"/>
                             <constraint firstItem="7Jg-hQ-mhi" firstAttribute="leading" secondItem="v8L-XU-qHD" secondAttribute="leading" constant="32" id="y1M-my-yIc"/>
                             <constraint firstItem="v8L-XU-qHD" firstAttribute="trailing" secondItem="7Jg-hQ-mhi" secondAttribute="trailing" constant="32" id="yxx-QO-LV4"/>
                         </constraints>

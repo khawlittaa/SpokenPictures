@@ -24,6 +24,16 @@ class AlbumsViewController: UIViewController {
         titleLabel.text = viewTitle
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func setUpCollectionView(){
         if let layout = myAlbumsCollectionView?.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
