@@ -18,6 +18,11 @@
 		6E36DB302510FD84005203F3 /* MenuProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB2F2510FD84005203F3 /* MenuProfileViewController.swift */; };
 		6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB3125110499005203F3 /* ProfileViewModel.swift */; };
 		6E36DB3425111475005203F3 /* CreateAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */; };
+		6E3B628525121F9700DB862E /* ChooseLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */; };
+		6E3B6288251220FB00DB862E /* LayoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */; };
+		6E3B6289251220FB00DB862E /* LayoutCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */; };
+		6E3B628B2512368D00DB862E /* ChooseLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */; };
+		6E3B628E251236C900DB862E /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B628D251236C900DB862E /* Layout.swift */; };
 		6E4F8FDA250A41E500A2241B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FD9250A41E500A2241B /* WelcomeViewController.swift */; };
 		6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FDB250A659200A2241B /* OnBoarding1ViewController.swift */; };
 		6E4F8FDE250A65A200A2241B /* OnBoarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FDD250A65A200A2241B /* OnBoarding2ViewController.swift */; };
@@ -64,6 +69,11 @@
 		6E36DB2F2510FD84005203F3 /* MenuProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileViewController.swift; sourceTree = "<group>"; };
 		6E36DB3125110499005203F3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlbumViewController.swift; sourceTree = "<group>"; };
+		6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLayoutViewController.swift; sourceTree = "<group>"; };
+		6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutCollectionViewCell.xib; sourceTree = "<group>"; };
+		6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLayoutViewModel.swift; sourceTree = "<group>"; };
+		6E3B628D251236C900DB862E /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		6E4F8FD9250A41E500A2241B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6E4F8FDB250A659200A2241B /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FDD250A65A200A2241B /* OnBoarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +158,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		6E3B628C251236B900DB862E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E3B628D251236C900DB862E /* Layout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6E4F8FD3250A39D900A2241B /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +227,7 @@
 		6E71AF35250F623E001E8BF8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6E3B628C251236B900DB862E /* Models */,
 				6E71AF3A250F6765001E8BF8 /* ViewModels */,
 				6E71AF39250F675B001E8BF8 /* Controllers */,
 				6E71AF38250F6753001E8BF8 /* Views */,
@@ -226,6 +245,8 @@
 				6E71AF48250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib */,
 				6E71AF53250FB80B001E8BF8 /* CreateAlbumCell.swift */,
 				6E71AF54250FB80B001E8BF8 /* CreateAlbumCell.xib */,
+				6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */,
+				6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +258,7 @@
 				6E71AF4B250F9492001E8BF8 /* AlbumsViewController.swift */,
 				6E71AF4D250F94B7001E8BF8 /* HomeViewController.swift */,
 				6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */,
+				6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */,
+				6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -389,6 +412,7 @@
 				6E71AF37250F6271001E8BF8 /* Home.storyboard in Resources */,
 				6E81026B250A37A700B9BB43 /* Assets.xcassets in Resources */,
 				6E810269250A37A500B9BB43 /* Main.storyboard in Resources */,
+				6E3B6289251220FB00DB862E /* LayoutCollectionViewCell.xib in Resources */,
 				6E36DB2A2510E8B6005203F3 /* MenuTableViewCell.xib in Resources */,
 				6E4F8FE6250A67B900A2241B /* CantataOne-Regular.ttf in Resources */,
 			);
@@ -448,6 +472,7 @@
 				6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */,
 				6E74E870250B67C000B6ABC7 /* Helper.swift in Sources */,
 				6E4F8FE2250A65C000A2241B /* OnBoarding4ViewController.swift in Sources */,
+				6E3B628B2512368D00DB862E /* ChooseLayoutViewModel.swift in Sources */,
 				6E74E874250B780200B6ABC7 /* WelcomeViewModel.swift in Sources */,
 				6E36DB3425111475005203F3 /* CreateAlbumViewController.swift in Sources */,
 				6E4F8FDA250A41E500A2241B /* WelcomeViewController.swift in Sources */,
@@ -468,10 +493,13 @@
 				6E71AF4E250F94B7001E8BF8 /* HomeViewController.swift in Sources */,
 				6E4F8FE0250A65B300A2241B /* OnBoarding3ViewController.swift in Sources */,
 				6E71AF59250FC065001E8BF8 /* PinterestLayout.swift in Sources */,
+				6E3B628E251236C900DB862E /* Layout.swift in Sources */,
 				6E71AF43250F6D03001E8BF8 /* CreateMenuCell.swift in Sources */,
 				6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */,
 				6E36DB2C2510EDD9005203F3 /* UITableView.swift in Sources */,
 				6E71AF46250F7C8B001E8BF8 /* UICollectionView.swift in Sources */,
+				6E3B628525121F9700DB862E /* ChooseLayoutViewController.swift in Sources */,
+				6E3B6288251220FB00DB862E /* LayoutCollectionViewCell.swift in Sources */,
 				6E36DB292510E8B6005203F3 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

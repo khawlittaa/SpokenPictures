@@ -485,7 +485,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccn-qV-fzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="601"/>
+            <point key="canvasLocation" x="-217" y="609"/>
+        </scene>
+        <!--Choose Layout View Controller-->
+        <scene sceneID="VBa-tm-5K5">
+            <objects>
+                <viewController storyboardIdentifier="ChooseLayoutViewController" id="TxD-d6-h7B" customClass="ChooseLayoutViewController" customModule="SpokenPicture_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s7q-PA-OMy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOO-SE-Kxl">
+                                <rect key="frame" x="0.0" y="592" width="414" height="270"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dms-Ya-6ZB">
+                                        <rect key="frame" x="15" y="15" width="123" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-wz-tKD">
+                                        <rect key="frame" x="354" y="15" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="pfm-Tc-2Wm"/>
+                                            <constraint firstAttribute="height" constant="30" id="ss1-Gj-xoI"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="closezButtonClicked:" destination="TxD-d6-h7B" eventType="touchUpInside" id="IQi-JT-9oY"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nza-90-Mzw">
+                                        <rect key="frame" x="0.0" y="46" width="414" height="224"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gH3-JI-YFD">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Nza-90-Mzw" secondAttribute="trailing" id="5cE-L4-04O"/>
+                                    <constraint firstAttribute="height" constant="270" id="8Rt-DG-85l"/>
+                                    <constraint firstItem="Nza-90-Mzw" firstAttribute="leading" secondItem="gOO-SE-Kxl" secondAttribute="leading" id="JY7-zc-0nm"/>
+                                    <constraint firstItem="Nza-90-Mzw" firstAttribute="top" secondItem="dms-Ya-6ZB" secondAttribute="bottom" constant="10" id="KVP-B3-aoM"/>
+                                    <constraint firstItem="kGE-wz-tKD" firstAttribute="top" secondItem="gOO-SE-Kxl" secondAttribute="top" constant="15" id="Mid-Vl-pJB"/>
+                                    <constraint firstItem="dms-Ya-6ZB" firstAttribute="leading" secondItem="gOO-SE-Kxl" secondAttribute="leading" constant="15" id="SxW-oh-lNQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nza-90-Mzw" secondAttribute="bottom" id="XLg-Ow-woe"/>
+                                    <constraint firstAttribute="trailing" secondItem="kGE-wz-tKD" secondAttribute="trailing" constant="30" id="avX-cc-exH"/>
+                                    <constraint firstItem="dms-Ya-6ZB" firstAttribute="top" secondItem="gOO-SE-Kxl" secondAttribute="top" constant="15" id="yf5-U7-ctc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gOO-SE-Kxl" firstAttribute="leading" secondItem="Ea0-us-txc" secondAttribute="leading" id="SGr-Cx-Sbu"/>
+                            <constraint firstItem="Ea0-us-txc" firstAttribute="trailing" secondItem="gOO-SE-Kxl" secondAttribute="trailing" id="cZC-A2-jBN"/>
+                            <constraint firstItem="gOO-SE-Kxl" firstAttribute="bottom" secondItem="Ea0-us-txc" secondAttribute="bottom" id="wBQ-Sn-FLa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ea0-us-txc"/>
+                    </view>
+                    <connections>
+                        <outlet property="layoutsCollectionView" destination="Nza-90-Mzw" id="LLu-R8-bjV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuQ-Ib-3zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492.75362318840581" y="609.375"/>
         </scene>
         <!--Albums View Controller-->
         <scene sceneID="8e4-I9-2dT">
