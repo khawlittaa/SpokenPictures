@@ -375,7 +375,19 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eze-ui-ukV">
                                         <rect key="frame" x="20" y="399" width="374" height="535"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6IH-4w-gXi">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="535"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </tableView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6IH-4w-gXi" secondAttribute="trailing" id="0Ce-Xb-QiH"/>
+                                            <constraint firstAttribute="bottom" secondItem="6IH-4w-gXi" secondAttribute="bottom" id="Z2n-Eg-tG1"/>
+                                            <constraint firstItem="6IH-4w-gXi" firstAttribute="top" secondItem="eze-ui-ukV" secondAttribute="top" id="aYw-Yk-IAX"/>
+                                            <constraint firstItem="6IH-4w-gXi" firstAttribute="leading" secondItem="eze-ui-ukV" secondAttribute="leading" id="rnj-By-ees"/>
+                                        </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sbh-Ho-chN">
                                         <rect key="frame" x="123.5" y="18.5" width="116" height="40"/>
@@ -515,6 +527,7 @@
                     <connections>
                         <outlet property="albumCoverImage" destination="beV-sP-q1B" id="TKy-Fj-Qmi"/>
                         <outlet property="dateTextField" destination="dne-ox-OUf" id="RxL-qb-nkr"/>
+                        <outlet property="pagesTableView" destination="6IH-4w-gXi" id="LhI-Fn-xtg"/>
                         <outlet property="saveButton" destination="xLi-7t-gcQ" id="Eer-sd-22E"/>
                         <outlet property="titleTextField" destination="EtN-6c-HKW" id="xdx-kt-tiX"/>
                     </connections>

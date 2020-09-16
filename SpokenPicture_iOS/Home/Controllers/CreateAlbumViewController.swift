@@ -9,10 +9,12 @@
 import UIKit
 
 class CreateAlbumViewController: UIViewController {
+    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var albumCoverImage: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var pagesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
