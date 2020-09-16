@@ -39,4 +39,9 @@ extension UIButton{
         self.titleLabel?.textColor = .grey1Main
         self.underline()
     }
+    
+    func selectedRadioButton(){
+        let bgImage = UIImage(named: "coverColorSelection")
+        self.setBackgroundImage(bgImage, for: .normal)
+    }
 }
