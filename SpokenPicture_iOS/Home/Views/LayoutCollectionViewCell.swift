@@ -9,13 +9,12 @@
 import UIKit
 
 class LayoutCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var layoutImage: UIImageView!
     @IBOutlet weak var lockedImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setLayoutUI(layout: Layout){
@@ -24,7 +23,13 @@ class LayoutCollectionViewCell: UICollectionViewCell {
             lockedImage.isHidden = false
             layoutImage.alpha = 0.4
         }
-        
     }
-
+    
+    override var isSelected: Bool {
+        didSet {
+            self.isUserInteractionEnabled = self.lockedImage.isHidden
+            print("cell is enabled = \(self.isUserInteractionEnabled)")
+        }
+    }
+    
 }

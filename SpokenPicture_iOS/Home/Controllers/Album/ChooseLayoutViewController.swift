@@ -12,6 +12,7 @@ class ChooseLayoutViewController: UIViewController {
     @IBOutlet weak var layoutsCollectionView: UICollectionView!
     
     let layoutsVM = ChooseLayoutViewModel()
+    var createAlbumVM: CreateAlbumViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,8 @@ class ChooseLayoutViewController: UIViewController {
         layoutsCollectionView.dataSource = self
         layoutsCollectionView.delegate = self
         layoutsCollectionView.registerCell(nib: "LayoutCollectionViewCell", cellreuseIdentifier: "LayoutCollectionViewCell")
-        
     }
+    
     func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -34,7 +35,7 @@ class ChooseLayoutViewController: UIViewController {
             self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     func removeAnimate()
     {
         UIView.animate(withDuration: 0.25, animations: {
@@ -53,11 +54,41 @@ class ChooseLayoutViewController: UIViewController {
         removeAnimate()
     }
     
-
+    
 }
 
 extension ChooseLayoutViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let page = AlbumPageLayout1Item()
+            createAlbumVM?.pages.append(page)
+            removeAnimate()
+        case 1:
+            let page = AlbumPageLayout2Item()
+            createAlbumVM?.pages.append(page)
+            removeAnimate()
+        case 2:
+            let page = AlbumPageLayout3Item()
+            createAlbumVM?.pages.append(page)
+            removeAnimate()
+        case 3:
+            let page = AlbumPageLayout4Item()
+            createAlbumVM?.pages.append(page)
+            removeAnimate()
+        case 4:
+            let page = AlbumPageLayout5Item()
+            createAlbumVM?.pages.append(page)
+            removeAnimate()
+        case 5:
+            let page = AlbumPageLayout6Item()
+            createAlbumVM?.pages.append(page)
+            removeAnimate()
+        default:
+            print("error selcting layout")
+        }
+        print("selected layout \(indexPath.row) ")
+    }
 }
 
 extension ChooseLayoutViewController: UICollectionViewDataSource{
@@ -70,6 +101,4 @@ extension ChooseLayoutViewController: UICollectionViewDataSource{
         cell.setLayoutUI(layout: layoutsVM.layouts[indexPath.row])
         return cell
     }
-    
-    
 }
