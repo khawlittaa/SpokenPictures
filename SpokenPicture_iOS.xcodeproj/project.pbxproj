@@ -49,6 +49,11 @@
 		6E6B3F1A2513454D00862D47 /* AlbumPageLayout5Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */; };
 		6E6B3F1C2513455900862D47 /* AlbumPageLayout6Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */; };
 		6E6B3F1F251369F400862D47 /* CreateAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */; };
+		6E6B3F22251390C900862D47 /* Album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6B3F21251390C900862D47 /* Album.storyboard */; };
+		6E6B3F272513A49200862D47 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F262513A49200862D47 /* UIImageView.swift */; };
+		6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */; };
+		6E6B3F2B2513A53A00862D47 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F2A2513A53A00862D47 /* EditPhotoViewController.swift */; };
+		6E6B3F2D2513B31700862D47 /* RecordAudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F2C2513B31700862D47 /* RecordAudioViewModel.swift */; };
 		6E71AF37250F6271001E8BF8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E71AF36250F6271001E8BF8 /* Home.storyboard */; };
 		6E71AF40250F68D4001E8BF8 /* CreatePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71AF3F250F68D4001E8BF8 /* CreatePopUpViewController.swift */; };
 		6E71AF43250F6D03001E8BF8 /* CreateMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71AF41250F6D03001E8BF8 /* CreateMenuCell.swift */; };
@@ -120,6 +125,11 @@
 		6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout5Item.swift; sourceTree = "<group>"; };
 		6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout6Item.swift; sourceTree = "<group>"; };
 		6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlbumViewModel.swift; sourceTree = "<group>"; };
+		6E6B3F21251390C900862D47 /* Album.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Album.storyboard; sourceTree = "<group>"; };
+		6E6B3F262513A49200862D47 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
+		6E6B3F2A2513A53A00862D47 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		6E6B3F2C2513B31700862D47 /* RecordAudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewModel.swift; sourceTree = "<group>"; };
 		6E71AF36250F6271001E8BF8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6E71AF3F250F68D4001E8BF8 /* CreatePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePopUpViewController.swift; sourceTree = "<group>"; };
 		6E71AF41250F6D03001E8BF8 /* CreateMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMenuCell.swift; sourceTree = "<group>"; };
@@ -279,6 +289,7 @@
 				6E71AF45250F7C8B001E8BF8 /* UICollectionView.swift */,
 				6E71AF4F250FA2C3001E8BF8 /* UIView.swift */,
 				6E36DB2B2510EDD9005203F3 /* UITableView.swift */,
+				6E6B3F262513A49200862D47 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +323,41 @@
 				6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */,
 			);
 			path = Album;
+			sourceTree = "<group>";
+		};
+		6E6B3F20251390AF00862D47 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F25251392CE00862D47 /* ViewModels */,
+				6E6B3F24251392C600862D47 /* Controllers */,
+				6E6B3F23251392BE00862D47 /* Views */,
+				6E6B3F21251390C900862D47 /* Album.storyboard */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		6E6B3F23251392BE00862D47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E6B3F24251392C600862D47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */,
+				6E6B3F2A2513A53A00862D47 /* EditPhotoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6E6B3F25251392CE00862D47 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F2C2513B31700862D47 /* RecordAudioViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		6E71AF35250F623E001E8BF8 /* Home */ = {
@@ -410,6 +456,7 @@
 				6E4F8FE4250A677200A2241B /* Extensions */,
 				6E36DB1F2510E421005203F3 /* Menu */,
 				6E71AF35250F623E001E8BF8 /* Home */,
+				6E6B3F20251390AF00862D47 /* Album */,
 				6E4F8FD3250A39D900A2241B /* OnBoarding */,
 				6E810267250A37A500B9BB43 /* Main.storyboard */,
 				6E81026A250A37A700B9BB43 /* Assets.xcassets */,
@@ -504,6 +551,7 @@
 				6E3B629B2512566800DB862E /* PageLayout3TableViewCell.xib in Resources */,
 				6E71AF44250F6D03001E8BF8 /* CreateMenuCell.xib in Resources */,
 				6E71AF37250F6271001E8BF8 /* Home.storyboard in Resources */,
+				6E6B3F22251390C900862D47 /* Album.storyboard in Resources */,
 				6E81026B250A37A700B9BB43 /* Assets.xcassets in Resources */,
 				6E810269250A37A500B9BB43 /* Main.storyboard in Resources */,
 				6E3B62932512563300DB862E /* PageLayout1TableViewCell.xib in Resources */,
@@ -571,6 +619,7 @@
 				6E6B3F162513452D00862D47 /* AlbumPageLayout3Item.swift in Sources */,
 				6E6B3F182513453F00862D47 /* AlbumPageLayout4Item.swift in Sources */,
 				6E74E870250B67C000B6ABC7 /* Helper.swift in Sources */,
+				6E6B3F2D2513B31700862D47 /* RecordAudioViewModel.swift in Sources */,
 				6E4F8FE2250A65C000A2241B /* OnBoarding4ViewController.swift in Sources */,
 				6E3B62A62512569600DB862E /* PageLayout6TableViewCell.swift in Sources */,
 				6E3B628B2512368D00DB862E /* ChooseLayoutViewModel.swift in Sources */,
@@ -591,10 +640,12 @@
 				6E36DB302510FD84005203F3 /* MenuProfileViewController.swift in Sources */,
 				6E6B3F142513451F00862D47 /* AlbumPageLayout2Item.swift in Sources */,
 				6E74E86D250B5B3700B6ABC7 /* UIButton.swift in Sources */,
+				6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */,
 				6E71AF50250FA2C3001E8BF8 /* UIView.swift in Sources */,
 				6E71AF4C250F9492001E8BF8 /* AlbumsViewController.swift in Sources */,
 				6E810264250A37A500B9BB43 /* SceneDelegate.swift in Sources */,
 				6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */,
+				6E6B3F2B2513A53A00862D47 /* EditPhotoViewController.swift in Sources */,
 				6E3B629A2512566800DB862E /* PageLayout3TableViewCell.swift in Sources */,
 				6E74E872250B776800B6ABC7 /* RegularExpressions.swift in Sources */,
 				6E71AF49250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.swift in Sources */,
@@ -609,6 +660,7 @@
 				6E3B62962512564E00DB862E /* PageLayout2TableViewCell.swift in Sources */,
 				6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */,
 				6E36DB2C2510EDD9005203F3 /* UITableView.swift in Sources */,
+				6E6B3F272513A49200862D47 /* UIImageView.swift in Sources */,
 				6E71AF46250F7C8B001E8BF8 /* UICollectionView.swift in Sources */,
 				6E3B628525121F9700DB862E /* ChooseLayoutViewController.swift in Sources */,
 				6E3B6288251220FB00DB862E /* LayoutCollectionViewCell.swift in Sources */,
