@@ -138,7 +138,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1Y-yP-rW7">
                                 <rect key="frame" x="30" y="703" width="354" height="80"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="6jY-3f-F38">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.59999999999999998" progressImage="progress" translatesAutoresizingMaskIntoConstraints="NO" id="6jY-3f-F38">
                                         <rect key="frame" x="50" y="22.5" width="254" height="6"/>
                                         <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -402,6 +402,7 @@
         <image name="groupCopy" width="312" height="413"/>
         <image name="microphone" width="108" height="108"/>
         <image name="playButtonSmall" width="30" height="30"/>
+        <image name="progress" width="212" height="25"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="undo" width="30" height="30"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

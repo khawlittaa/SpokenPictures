@@ -31,7 +31,13 @@ class EditPhotoViewController: UIViewController {
         super.viewDidLoad()
         addNavigationBarItem()
         BindToViewModel()
+        self.audioProgresssBar.progress = 0.0
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        //        audioPlayer.stop()
     }
     
     func getDocumentsDirectory() -> URL {
@@ -39,10 +45,17 @@ class EditPhotoViewController: UIViewController {
         return paths[0]
     }
     
-      func getFileURL() -> URL {
-          let path = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-          return path as URL
-      }
+    func showAudioDuration(){
+        let duration =  (Int(audioPlayer.duration))
+        
+        let (m, s) = secondsToMinutesSeconds(seconds: duration)
+        audioDurationLabel.text = "\(m) : \(s)"
+    }
+    
+    func getFileURL() -> URL {
+        let path = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        return path as URL
+    }
     
     func preparePlayer() {
         var error: NSError?
@@ -71,6 +84,7 @@ class EditPhotoViewController: UIViewController {
             .map{$0 ? false : true}
             .bind(to: playAudioView.rx.isHidden)
             .disposed(by: self.disposeBag)
+        
     }
     
     func addNavigationBarItem(){
@@ -80,14 +94,28 @@ class EditPhotoViewController: UIViewController {
         
     }
     
+    
     @objc func addTapped()  {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func playButtonPressed(_ sender: Any) {
-               preparePlayer()
-               audioPlayer.play()
+    @objc  func updateAudioProgressView()
+    {
+        if audioPlayer.isPlaying
+        {
+            // Update progress
+            audioProgresssBar.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: true)
+        }
     }
+    @IBAction func playButtonPressed(_ sender: Any) {
+        preparePlayer()
+        audioPlayer.play()
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateAudioProgressView), userInfo: nil, repeats: true)
+        audioProgresssBar.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: false)
+        showAudioDuration()
+        print("duration is \(Int(audioPlayer.duration))")
+    }
+    
     
     @IBAction func deleteAudioPressed(_ sender: Any) {
         deleteAudioView.isHidden = false
