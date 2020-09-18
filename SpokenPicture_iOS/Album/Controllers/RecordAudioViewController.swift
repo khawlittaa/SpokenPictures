@@ -107,17 +107,6 @@ class RecordAudioViewController: UIViewController {
     }
     
     private func resetRecording(){
-        recordAudioVM.timerDuration  = 120
-        displayRemainingTime(seconds: recordAudioVM.timerDuration)
-        
-        view.layer.sublayers = view.layer.sublayers?.filter { layer in
-            !layer.isKind(of: CAShapeLayer.classForCoder())
-        }
-        
-        shapeLayer = CAShapeLayer()
-        trackLayer = CAShapeLayer()
-        
-        updateDesignBasedOnRecordingStatus()
     }
     
     @IBAction func recordButtonPressed(_ sender: Any) {
@@ -146,5 +135,18 @@ class RecordAudioViewController: UIViewController {
     }
     
     @IBAction func redoButtonPressed(_ sender: Any) {
+        
+        recordAudioVM.timerDuration  = 120
+        recordAudioVM.isRecording = false
+        displayRemainingTime(seconds: recordAudioVM.timerDuration)
+        
+        view.layer.sublayers = view.layer.sublayers?.filter { layer in
+            !layer.isKind(of: CAShapeLayer.classForCoder())
+        }
+        
+        shapeLayer = CAShapeLayer()
+        trackLayer = CAShapeLayer()
+        
+        updateDesignBasedOnRecordingStatus()
     }
 }
