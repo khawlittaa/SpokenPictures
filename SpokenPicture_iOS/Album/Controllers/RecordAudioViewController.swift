@@ -18,7 +18,7 @@ class RecordAudioViewController: UIViewController {
     var recordAudioVM = RecordAudioViewModel()
     
     private var timer: Timer?
-//    private var counter : Int = 30
+    //    private var counter : Int = 30
     private var shapeLayer = CAShapeLayer()
     private var trackLayer = CAShapeLayer()
     
@@ -45,10 +45,10 @@ class RecordAudioViewController: UIViewController {
     }
     
     private  func displayRemainingTime(seconds: Int){
-
+        
         let (m, s) = secondsToMinutesSeconds(seconds: seconds)
         timeCounterLabel.text = "\(m) : \(s)"
-      }
+    }
     
     private func stopRecording(){
         recordAudioVM.isRecording = false
@@ -87,7 +87,7 @@ class RecordAudioViewController: UIViewController {
     
     private func addSublayer(color:CGColor){
         let center = loaderView.center
-        let circularPath = UIBezierPath(arcCenter: center, radius: 160, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center, radius: 160, startAngle:(3 * CGFloat.pi) / 2, endAngle:(7 * CGFloat.pi) / 2, clockwise: true)
         
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.white.cgColor
@@ -107,6 +107,19 @@ class RecordAudioViewController: UIViewController {
     }
     
     private func resetRecording(){
+        
+        recordAudioVM.timerDuration  = 120
+        recordAudioVM.isRecording = false
+        displayRemainingTime(seconds: recordAudioVM.timerDuration)
+        
+        view.layer.sublayers = view.layer.sublayers?.filter { layer in
+            !layer.isKind(of: CAShapeLayer.classForCoder())
+        }
+        
+        shapeLayer = CAShapeLayer()
+        trackLayer = CAShapeLayer()
+        
+        updateDesignBasedOnRecordingStatus()
     }
     
     @IBAction func recordButtonPressed(_ sender: Any) {
@@ -127,7 +140,6 @@ class RecordAudioViewController: UIViewController {
         basicAnimation.isRemovedOnCompletion = false
         
         shapeLayer.add(basicAnimation, forKey: "loader")
-        
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
@@ -135,18 +147,10 @@ class RecordAudioViewController: UIViewController {
     }
     
     @IBAction func redoButtonPressed(_ sender: Any) {
-        
-        recordAudioVM.timerDuration  = 120
-        recordAudioVM.isRecording = false
-        displayRemainingTime(seconds: recordAudioVM.timerDuration)
-        
-        view.layer.sublayers = view.layer.sublayers?.filter { layer in
-            !layer.isKind(of: CAShapeLayer.classForCoder())
-        }
-        
-        shapeLayer = CAShapeLayer()
-        trackLayer = CAShapeLayer()
-        
-        updateDesignBasedOnRecordingStatus()
+        resetRecording()
     }
 }
+
+//extension RecordAudioViewController: AVAudioRecorderDelegate{
+//
+//}
