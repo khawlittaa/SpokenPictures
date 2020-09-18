@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RecordAudioViewController: UIViewController {
     
@@ -16,9 +17,10 @@ class RecordAudioViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     
     var recordAudioVM = RecordAudioViewModel()
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
     
     private var timer: Timer?
-    //    private var counter : Int = 30
     private var shapeLayer = CAShapeLayer()
     private var trackLayer = CAShapeLayer()
     
@@ -27,6 +29,24 @@ class RecordAudioViewController: UIViewController {
         
         BindToViewModel()
         selectedimage.roundImage()
+        
+        recordingSession = AVAudioSession.sharedInstance()
+
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+//                        self.loadRecordingUI()
+                    } else {
+                        // failed to record!
+                    }
+                }
+            }
+        } catch {
+            // failed to record!
+        }
     }
     
     func BindToViewModel(){
@@ -122,28 +142,71 @@ class RecordAudioViewController: UIViewController {
         updateDesignBasedOnRecordingStatus()
     }
     
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
+
+        if success {
+            print("recorded with succeess")
+        } else {
+            print("recording failed :(")
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func startRecording() {
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder.delegate = self
+            audioRecorder.record()
+
+        } catch {
+            finishRecording(success: false)
+        }
+    }
+    
     @IBAction func recordButtonPressed(_ sender: Any) {
         timeCounterLabel.isHidden = false
         
         recordAudioVM.isRecording = true
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
-        
-        updateDesignBasedOnRecordingStatus()
-        
-        addSublayer(color: UIColor.accentAccent31Main.cgColor)
-        
-        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        basicAnimation.toValue = 1
-        basicAnimation.duration = 120
-        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
-        basicAnimation.isRemovedOnCompletion = false
-        
-        shapeLayer.add(basicAnimation, forKey: "loader")
+        if audioRecorder == nil {
+             startRecording()
+
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
+            
+            updateDesignBasedOnRecordingStatus()
+            
+            addSublayer(color: UIColor.accentAccent31Main.cgColor)
+            
+            let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+            basicAnimation.toValue = 1
+            basicAnimation.duration = 120
+            basicAnimation.fillMode = CAMediaTimingFillMode.forwards
+            basicAnimation.isRemovedOnCompletion = false
+            
+            shapeLayer.add(basicAnimation, forKey: "loader")
+         } else {
+             finishRecording(success: true)
+         }
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         stopRecording()
+        finishRecording(success: true)
     }
     
     @IBAction func redoButtonPressed(_ sender: Any) {
@@ -151,6 +214,10 @@ class RecordAudioViewController: UIViewController {
     }
 }
 
-//extension RecordAudioViewController: AVAudioRecorderDelegate{
-//
-//}
+extension RecordAudioViewController: AVAudioRecorderDelegate{
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+          if !flag {
+              finishRecording(success: false)
+          }
+    }
+}
