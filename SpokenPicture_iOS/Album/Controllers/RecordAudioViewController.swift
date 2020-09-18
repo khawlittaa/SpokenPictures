@@ -17,6 +17,7 @@ class RecordAudioViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     
     var recordAudioVM = RecordAudioViewModel()
+    var editPhotoVm: EditPhotoViewModel?
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     
@@ -26,19 +27,23 @@ class RecordAudioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setRecordingSession()
         BindToViewModel()
+        addNavigationBarItem()
         selectedimage.roundImage()
         
+    }
+    
+    func setRecordingSession(){
         recordingSession = AVAudioSession.sharedInstance()
-
+        
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
             recordingSession.requestRecordPermission() { [unowned self] allowed in
                 DispatchQueue.main.async {
                     if allowed {
-//                        self.loadRecordingUI()
+                        //                        self.loadRecordingUI()
                     } else {
                         // failed to record!
                     }
@@ -47,6 +52,18 @@ class RecordAudioViewController: UIViewController {
         } catch {
             // failed to record!
         }
+        
+    }
+    
+    func addNavigationBarItem(){
+        self.navigationController?.navigationBar.tintColor = .accentBlack1Main
+        let continueuttonItem = UIBarButtonItem(title: "Continue", style: .plain, target: self, action: #selector(continueTapped))
+        self.navigationItem.rightBarButtonItem = continueuttonItem
+        
+    }
+    
+    @objc func continueTapped()  {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func BindToViewModel(){
@@ -145,10 +162,12 @@ class RecordAudioViewController: UIViewController {
     func finishRecording(success: Bool) {
         audioRecorder.stop()
         audioRecorder = nil
-
+        
         if success {
+            editPhotoVm?.hasAudio.onNext(true)
             print("recorded with succeess")
         } else {
+            editPhotoVm?.hasAudio.onNext(false)
             print("recording failed :(")
         }
     }
@@ -160,19 +179,19 @@ class RecordAudioViewController: UIViewController {
     
     func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-
+        
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
-
+        
         do {
             audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             audioRecorder.delegate = self
             audioRecorder.record()
-
+            
         } catch {
             finishRecording(success: false)
         }
@@ -184,8 +203,8 @@ class RecordAudioViewController: UIViewController {
         recordAudioVM.isRecording = true
         
         if audioRecorder == nil {
-             startRecording()
-
+            startRecording()
+            
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
             
             updateDesignBasedOnRecordingStatus()
@@ -199,9 +218,9 @@ class RecordAudioViewController: UIViewController {
             basicAnimation.isRemovedOnCompletion = false
             
             shapeLayer.add(basicAnimation, forKey: "loader")
-         } else {
-             finishRecording(success: true)
-         }
+        } else {
+            finishRecording(success: true)
+        }
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
@@ -216,8 +235,12 @@ class RecordAudioViewController: UIViewController {
 
 extension RecordAudioViewController: AVAudioRecorderDelegate{
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-          if !flag {
-              finishRecording(success: false)
-          }
+        if !flag {
+            finishRecording(success: false)
+        }
     }
+    
+    func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
+          print("Error while recording audio \(error!.localizedDescription)")
+      }
 }
