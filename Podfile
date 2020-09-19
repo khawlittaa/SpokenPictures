@@ -6,9 +6,11 @@ target 'SpokenPicture_iOS' do
   use_frameworks!
 
   # Pods for SpokenPicture_iOS
-
+  pod 'TOCropViewController'
   pod 'IQKeyboardManager'
   pod 'iOSDropDown'
+  pod 'PixelEngine'
+  pod 'PixelEditor'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
 

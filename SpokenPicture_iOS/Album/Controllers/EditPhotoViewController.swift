@@ -9,9 +9,13 @@
 import UIKit
 import RxSwift
 import AVFoundation
+import PixelEditor
+import PixelEngine
+import TOCropViewController
 
 class EditPhotoViewController: UIViewController {
     
+    @IBOutlet weak var albumImage: UIImageView!
     @IBOutlet weak var audioDurationLabel: UILabel!
     @IBOutlet weak var audioProgresssBar: UIProgressView!
     @IBOutlet weak var cancelButton: UIButton!
@@ -107,6 +111,28 @@ class EditPhotoViewController: UIViewController {
             audioProgresssBar.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: true)
         }
     }
+    
+    func presentCropViewController() {
+        let image: UIImage = albumImage.image!
+
+      let cropViewController = TOCropViewController(image: image)
+      cropViewController.delegate = self
+    
+      present(cropViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func cropButtonPressed(_ sender: Any) {
+    presentCropViewController()
+    }
+    
+    @IBAction func contrastButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func brightnessButtonPressed(_ sender: Any) {
+    }
+    @IBAction func undoButtonPressed(_ sender: Any) {
+    }
+    
     @IBAction func playButtonPressed(_ sender: Any) {
         preparePlayer()
         audioPlayer.play()
@@ -135,8 +161,18 @@ class EditPhotoViewController: UIViewController {
     }
     
 }
+// MARK:- TOCropViewControllerDelegate used to crop image
+extension EditPhotoViewController: TOCropViewControllerDelegate{
+    
+    func cropViewController(_ cropViewController: TOCropViewController, didCropTo image: UIImage, with cropRect: CGRect, angle: Int) {
+            // 'image' is the newly cropped version of the original image
+        albumImage.image = image
+        dismiss(animated: true, completion: nil)
+        }
+ 
+}
 
-
+// MARK:- AVAudioPlayerDelegate used to play audio
 extension EditPhotoViewController: AVAudioPlayerDelegate{
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -146,4 +182,20 @@ extension EditPhotoViewController: AVAudioPlayerDelegate{
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
         print("Error while playing audio \(error!.localizedDescription)")
     }
+}
+
+
+// MARK:- PixelEditViewControllerDelegate used to edit photo
+extension EditPhotoViewController : PixelEditViewControllerDelegate {
+    func pixelEditViewController(_ controller: PixelEditViewController, didEndEditing editingStack: EditingStack) {
+        
+        self.navigationController?.popToViewController(self, animated: true)
+    }
+    
+
+  func pixelEditViewControllerDidCancelEditing(in controller: PixelEditViewController) {
+  
+    self.navigationController?.popToViewController(self, animated: true)
+  }
+
 }
