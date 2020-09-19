@@ -107,29 +107,61 @@ class EditPhotoViewController: UIViewController {
     {
         if audioPlayer.isPlaying
         {
-            // Update progress
             audioProgresssBar.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: true)
         }
     }
     
     func presentCropViewController() {
         let image: UIImage = albumImage.image!
-
-      let cropViewController = TOCropViewController(image: image)
-      cropViewController.delegate = self
+        
+        let cropViewController = TOCropViewController(image: image)
+        cropViewController.delegate = self
+        
+        present(cropViewController, animated: true, completion: nil)
+    }
     
-      present(cropViewController, animated: true, completion: nil)
+    func showBrightnessEditor(){
+        
+        let image: UIImage = albumImage.image!
+        
+        var options = Options.default
+        options.classes.control.rootControl = EditRootControl.self
+        
+        options.classes.control.ignoredEditMenu = [.clarity , .fade, .gaussianBlur, .highlights, .shadows, .mask, .temperature, .vignette, .sharpen, .saturation, .adjustment, .contrast]
+        
+        let picker = PixelEditViewController(image: image, options: options)
+        picker.delegate = self
+        
+        navigationController?.pushViewController(picker, animated: true)
+    }
+    
+    func showContrastEditor(){
+        
+        let image: UIImage = albumImage.image!
+        
+        var options = Options.default
+        options.classes.control.rootControl = EditRootControl.self
+        
+        options.classes.control.ignoredEditMenu = [.clarity , .fade, .gaussianBlur, .highlights, .shadows, .mask, .temperature, .vignette, .sharpen, .saturation, .adjustment, .exposure]
+        
+        let picker = PixelEditViewController(image: image, options: options)
+        picker.delegate = self
+        
+        navigationController?.pushViewController(picker, animated: true)
     }
     
     @IBAction func cropButtonPressed(_ sender: Any) {
-    presentCropViewController()
+        presentCropViewController()
     }
     
     @IBAction func contrastButtonPressed(_ sender: Any) {
+        showContrastEditor()
     }
     
     @IBAction func brightnessButtonPressed(_ sender: Any) {
+        showBrightnessEditor()
     }
+    
     @IBAction func undoButtonPressed(_ sender: Any) {
     }
     
@@ -165,11 +197,11 @@ class EditPhotoViewController: UIViewController {
 extension EditPhotoViewController: TOCropViewControllerDelegate{
     
     func cropViewController(_ cropViewController: TOCropViewController, didCropTo image: UIImage, with cropRect: CGRect, angle: Int) {
-            // 'image' is the newly cropped version of the original image
+        // 'image' is the newly cropped version of the original image
         albumImage.image = image
         dismiss(animated: true, completion: nil)
-        }
- 
+    }
+    
 }
 
 // MARK:- AVAudioPlayerDelegate used to play audio
@@ -187,15 +219,15 @@ extension EditPhotoViewController: AVAudioPlayerDelegate{
 
 // MARK:- PixelEditViewControllerDelegate used to edit photo
 extension EditPhotoViewController : PixelEditViewControllerDelegate {
+    
     func pixelEditViewController(_ controller: PixelEditViewController, didEndEditing editingStack: EditingStack) {
-        
-        self.navigationController?.popToViewController(self, animated: true)
+        // end editing and back to main view
+        self.navigationController?.popToViewController(self, animated: false)
+        let image = editingStack.makeRenderer().render(resolution: .full)
+        self.albumImage.image = image
     }
     
-
-  func pixelEditViewControllerDidCancelEditing(in controller: PixelEditViewController) {
-  
-    self.navigationController?.popToViewController(self, animated: true)
-  }
-
+    func pixelEditViewControllerDidCancelEditing(in controller: PixelEditViewController) {
+        self.navigationController?.popToViewController(self, animated: true)
+    }
 }
