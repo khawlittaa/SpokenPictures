@@ -27,7 +27,7 @@ class EditPhotoViewController: UIViewController {
     
     let editPhotoVm = EditPhotoViewModel()
     let disposeBag = DisposeBag()
-    
+    var originalImage = UIImage()
     
     var audioPlayer:AVAudioPlayer!
     
@@ -36,6 +36,8 @@ class EditPhotoViewController: UIViewController {
         addNavigationBarItem()
         BindToViewModel()
         self.audioProgresssBar.progress = 0.0
+//        t0 be changed later with imge selected by user
+        originalImage = UIImage(named: "groupCopy")!
         
     }
     
@@ -163,6 +165,7 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func undoButtonPressed(_ sender: Any) {
+        self.albumImage.image = self.originalImage
     }
     
     @IBAction func playButtonPressed(_ sender: Any) {
