@@ -5,14 +5,19 @@ PODS:
     - PixelEngine (~> 0.2.2)
     - TransitionPatch (~> 1.0.0)
   - PixelEngine (0.2.3)
+  - PryntTrimmerView (4.0.2)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - SteviaLayout (4.7.3)
   - TOCropViewController (2.5.4)
   - TransitionPatch (1.0.2)
+  - YPImagePicker (4.3.1):
+    - PryntTrimmerView (~> 4.0.0)
+    - SteviaLayout (~> 4.7.3)
 
 DEPENDENCIES:
   - iOSDropDown
@@ -22,6 +27,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - TOCropViewController
+  - YPImagePicker
 
 SPEC REPOS:
   trunk:
@@ -29,23 +35,29 @@ SPEC REPOS:
     - IQKeyboardManager
     - PixelEditor
     - PixelEngine
+    - PryntTrimmerView
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SteviaLayout
     - TOCropViewController
     - TransitionPatch
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   PixelEditor: 908203d4c65c7acd83334babffca3033b25b0f22
   PixelEngine: 867df6a9938e5527c2ce43eb2784be589b36fc79
+  PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   TOCropViewController: 2a1ae1242600b1f2d996fd91a5268b2309a33b5c
   TransitionPatch: c02b48b1429255b14ef82b7e411034e0958b9681
+  YPImagePicker: 08bbb809ed62bf4149fc015c97249eb4b9463ff9
 
-PODFILE CHECKSUM: 2fa826e43d8cae896a86a5a75e2228bea0091a9e
+PODFILE CHECKSUM: 860cb2479d1b665747d54a135ab84fc5879cf86c
 
 COCOAPODS: 1.9.1

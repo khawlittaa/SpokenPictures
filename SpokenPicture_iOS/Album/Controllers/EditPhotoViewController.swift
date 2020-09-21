@@ -28,6 +28,7 @@ class EditPhotoViewController: UIViewController {
     let editPhotoVm = EditPhotoViewModel()
     let disposeBag = DisposeBag()
     var originalImage = UIImage()
+    var sourcePostcard: ChoosePostCardLayoutViewController?
     
     var audioPlayer:AVAudioPlayer!
     
@@ -37,7 +38,8 @@ class EditPhotoViewController: UIViewController {
         BindToViewModel()
         self.audioProgresssBar.progress = 0.0
 //        t0 be changed later with imge selected by user
-        originalImage = UIImage(named: "groupCopy")!
+        albumImage.image = originalImage
+//        originalImage = UIImage(named: "groupCopy")!
         
     }
     
@@ -103,6 +105,10 @@ class EditPhotoViewController: UIViewController {
     
     @objc func addTapped()  {
         self.navigationController?.popViewController(animated: true)
+//        if let postcard = sourcePostcard{
+//            postcard.postCardImage.image = albumImage.image
+//            navigationController?.pushViewController(postcard, animated: true)
+//        }
     }
     
     @objc  func updateAudioProgressView()

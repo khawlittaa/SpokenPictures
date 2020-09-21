@@ -44,7 +44,7 @@ class ChoosePostCardLayoutViewController: UIViewController {
         // Image between two unselected segments.
         postCardSideSegment.setDividerImage(myImage, forLeftSegmentState: UIControl.State.normal, rightSegmentState: UIControl.State.normal, barMetrics: UIBarMetrics.default)
         postCardSideSegment.backgroundColor = .white
-    
+        
     }
     
     
@@ -58,10 +58,11 @@ class ChoosePostCardLayoutViewController: UIViewController {
     
     @IBAction func chooseLayoutButtonClicked(_ sender: Any) {
         let popUp = postcard.instantiateViewController(withIdentifier: "PostCardLayoutPopUpVC") as! PostCardLayoutPopUpViewController
-               self.addChild(popUp)
-               popUp.view.frame = self.view.frame
-               self.view.addSubview(popUp.view)
-               popUp.didMove(toParent: self)
+        self.addChild(popUp)
+        popUp.view.frame = self.view.frame
+        popUp.postcardVC = self
+        self.view.addSubview(popUp.view)
+        popUp.didMove(toParent: self)
     }
     
 }
