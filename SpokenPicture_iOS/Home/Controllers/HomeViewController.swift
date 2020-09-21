@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var createView: UIView!
     @IBOutlet weak var scanView: UIView!
     
-    let home = UIStoryboard(name: "Home", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()

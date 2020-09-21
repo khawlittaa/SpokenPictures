@@ -17,12 +17,44 @@
 		6E36DB2E2510F662005203F3 /* MenuviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB2D2510F662005203F3 /* MenuviewModel.swift */; };
 		6E36DB302510FD84005203F3 /* MenuProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB2F2510FD84005203F3 /* MenuProfileViewController.swift */; };
 		6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB3125110499005203F3 /* ProfileViewModel.swift */; };
+		6E36DB3425111475005203F3 /* CreateAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */; };
+		6E3B628525121F9700DB862E /* ChooseLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */; };
+		6E3B6288251220FB00DB862E /* LayoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */; };
+		6E3B6289251220FB00DB862E /* LayoutCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */; };
+		6E3B628B2512368D00DB862E /* ChooseLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */; };
+		6E3B628E251236C900DB862E /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B628D251236C900DB862E /* Layout.swift */; };
+		6E3B62922512563300DB862E /* PageLayout1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B62902512563300DB862E /* PageLayout1TableViewCell.swift */; };
+		6E3B62932512563300DB862E /* PageLayout1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B62912512563300DB862E /* PageLayout1TableViewCell.xib */; };
+		6E3B62962512564E00DB862E /* PageLayout2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B62942512564E00DB862E /* PageLayout2TableViewCell.swift */; };
+		6E3B62972512564E00DB862E /* PageLayout2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B62952512564E00DB862E /* PageLayout2TableViewCell.xib */; };
+		6E3B629A2512566800DB862E /* PageLayout3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B62982512566800DB862E /* PageLayout3TableViewCell.swift */; };
+		6E3B629B2512566800DB862E /* PageLayout3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B62992512566800DB862E /* PageLayout3TableViewCell.xib */; };
+		6E3B629E2512567600DB862E /* PageLayout4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B629C2512567600DB862E /* PageLayout4TableViewCell.swift */; };
+		6E3B629F2512567600DB862E /* PageLayout4TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B629D2512567600DB862E /* PageLayout4TableViewCell.xib */; };
+		6E3B62A22512568700DB862E /* PageLayout5TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B62A02512568700DB862E /* PageLayout5TableViewCell.swift */; };
+		6E3B62A32512568700DB862E /* PageLayout5TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B62A12512568700DB862E /* PageLayout5TableViewCell.xib */; };
+		6E3B62A62512569600DB862E /* PageLayout6TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B62A42512569600DB862E /* PageLayout6TableViewCell.swift */; };
+		6E3B62A72512569600DB862E /* PageLayout6TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3B62A52512569600DB862E /* PageLayout6TableViewCell.xib */; };
 		6E4F8FDA250A41E500A2241B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FD9250A41E500A2241B /* WelcomeViewController.swift */; };
 		6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FDB250A659200A2241B /* OnBoarding1ViewController.swift */; };
 		6E4F8FDE250A65A200A2241B /* OnBoarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FDD250A65A200A2241B /* OnBoarding2ViewController.swift */; };
 		6E4F8FE0250A65B300A2241B /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FDF250A65B300A2241B /* OnBoarding3ViewController.swift */; };
 		6E4F8FE2250A65C000A2241B /* OnBoarding4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FE1250A65C000A2241B /* OnBoarding4ViewController.swift */; };
 		6E4F8FE6250A67B900A2241B /* CantataOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */; };
+		6E6B3F0F2513430700862D47 /* AlbumPagesViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F0E2513430700862D47 /* AlbumPagesViewModelItem.swift */; };
+		6E6B3F122513450C00862D47 /* AlbumPageLayout1Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F112513450C00862D47 /* AlbumPageLayout1Item.swift */; };
+		6E6B3F142513451F00862D47 /* AlbumPageLayout2Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F132513451F00862D47 /* AlbumPageLayout2Item.swift */; };
+		6E6B3F162513452D00862D47 /* AlbumPageLayout3Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F152513452D00862D47 /* AlbumPageLayout3Item.swift */; };
+		6E6B3F182513453F00862D47 /* AlbumPageLayout4Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F172513453F00862D47 /* AlbumPageLayout4Item.swift */; };
+		6E6B3F1A2513454D00862D47 /* AlbumPageLayout5Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */; };
+		6E6B3F1C2513455900862D47 /* AlbumPageLayout6Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */; };
+		6E6B3F1F251369F400862D47 /* CreateAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */; };
+		6E6B3F22251390C900862D47 /* Album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6B3F21251390C900862D47 /* Album.storyboard */; };
+		6E6B3F272513A49200862D47 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F262513A49200862D47 /* UIImageView.swift */; };
+		6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */; };
+		6E6B3F2B2513A53A00862D47 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F2A2513A53A00862D47 /* EditPhotoViewController.swift */; };
+		6E6B3F2D2513B31700862D47 /* RecordAudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F2C2513B31700862D47 /* RecordAudioViewModel.swift */; };
+		6E6E36732514D46C004C7F19 /* EditPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6E36722514D46C004C7F19 /* EditPhotoViewModel.swift */; };
 		6E71AF37250F6271001E8BF8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E71AF36250F6271001E8BF8 /* Home.storyboard */; };
 		6E71AF40250F68D4001E8BF8 /* CreatePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71AF3F250F68D4001E8BF8 /* CreatePopUpViewController.swift */; };
 		6E71AF43250F6D03001E8BF8 /* CreateMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E71AF41250F6D03001E8BF8 /* CreateMenuCell.swift */; };
@@ -47,6 +79,7 @@
 		6E81026B250A37A700B9BB43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E81026A250A37A700B9BB43 /* Assets.xcassets */; };
 		6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E81026C250A37A700B9BB43 /* LaunchScreen.storyboard */; };
 		6EB5FA51250D6ACC00D54A40 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5FA50250D6ACC00D54A40 /* UIViewController.swift */; };
+		6EF8A23A25169D27000C5A9D /* EditRootControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8A23925169D27000C5A9D /* EditRootControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,12 +95,44 @@
 		6E36DB2D2510F662005203F3 /* MenuviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuviewModel.swift; sourceTree = "<group>"; };
 		6E36DB2F2510FD84005203F3 /* MenuProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileViewController.swift; sourceTree = "<group>"; };
 		6E36DB3125110499005203F3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlbumViewController.swift; sourceTree = "<group>"; };
+		6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLayoutViewController.swift; sourceTree = "<group>"; };
+		6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutCollectionViewCell.xib; sourceTree = "<group>"; };
+		6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLayoutViewModel.swift; sourceTree = "<group>"; };
+		6E3B628D251236C900DB862E /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		6E3B62902512563300DB862E /* PageLayout1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout1TableViewCell.swift; sourceTree = "<group>"; };
+		6E3B62912512563300DB862E /* PageLayout1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageLayout1TableViewCell.xib; sourceTree = "<group>"; };
+		6E3B62942512564E00DB862E /* PageLayout2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout2TableViewCell.swift; sourceTree = "<group>"; };
+		6E3B62952512564E00DB862E /* PageLayout2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageLayout2TableViewCell.xib; sourceTree = "<group>"; };
+		6E3B62982512566800DB862E /* PageLayout3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout3TableViewCell.swift; sourceTree = "<group>"; };
+		6E3B62992512566800DB862E /* PageLayout3TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageLayout3TableViewCell.xib; sourceTree = "<group>"; };
+		6E3B629C2512567600DB862E /* PageLayout4TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout4TableViewCell.swift; sourceTree = "<group>"; };
+		6E3B629D2512567600DB862E /* PageLayout4TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageLayout4TableViewCell.xib; sourceTree = "<group>"; };
+		6E3B62A02512568700DB862E /* PageLayout5TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout5TableViewCell.swift; sourceTree = "<group>"; };
+		6E3B62A12512568700DB862E /* PageLayout5TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageLayout5TableViewCell.xib; sourceTree = "<group>"; };
+		6E3B62A42512569600DB862E /* PageLayout6TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLayout6TableViewCell.swift; sourceTree = "<group>"; };
+		6E3B62A52512569600DB862E /* PageLayout6TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageLayout6TableViewCell.xib; sourceTree = "<group>"; };
 		6E4F8FD9250A41E500A2241B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6E4F8FDB250A659200A2241B /* OnBoarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding1ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FDD250A65A200A2241B /* OnBoarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FDF250A65B300A2241B /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FE1250A65C000A2241B /* OnBoarding4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding4ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CantataOne-Regular.ttf"; sourceTree = "<group>"; };
+		6E6B3F0E2513430700862D47 /* AlbumPagesViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPagesViewModelItem.swift; sourceTree = "<group>"; };
+		6E6B3F112513450C00862D47 /* AlbumPageLayout1Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout1Item.swift; sourceTree = "<group>"; };
+		6E6B3F132513451F00862D47 /* AlbumPageLayout2Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout2Item.swift; sourceTree = "<group>"; };
+		6E6B3F152513452D00862D47 /* AlbumPageLayout3Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout3Item.swift; sourceTree = "<group>"; };
+		6E6B3F172513453F00862D47 /* AlbumPageLayout4Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout4Item.swift; sourceTree = "<group>"; };
+		6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout5Item.swift; sourceTree = "<group>"; };
+		6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout6Item.swift; sourceTree = "<group>"; };
+		6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlbumViewModel.swift; sourceTree = "<group>"; };
+		6E6B3F21251390C900862D47 /* Album.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Album.storyboard; sourceTree = "<group>"; };
+		6E6B3F262513A49200862D47 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
+		6E6B3F2A2513A53A00862D47 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		6E6B3F2C2513B31700862D47 /* RecordAudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewModel.swift; sourceTree = "<group>"; };
+		6E6E36722514D46C004C7F19 /* EditPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewModel.swift; sourceTree = "<group>"; };
 		6E71AF36250F6271001E8BF8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6E71AF3F250F68D4001E8BF8 /* CreatePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePopUpViewController.swift; sourceTree = "<group>"; };
 		6E71AF41250F6D03001E8BF8 /* CreateMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMenuCell.swift; sourceTree = "<group>"; };
@@ -94,6 +159,7 @@
 		6E81026D250A37A700B9BB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E81026F250A37A700B9BB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EB5FA50250D6ACC00D54A40 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		6EF8A23925169D27000C5A9D /* EditRootControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRootControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +210,33 @@
 				6E36DB3125110499005203F3 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6E3B628C251236B900DB862E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E3B628D251236C900DB862E /* Layout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E3B628F251255F300DB862E /* Pages Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				6E3B62902512563300DB862E /* PageLayout1TableViewCell.swift */,
+				6E3B62912512563300DB862E /* PageLayout1TableViewCell.xib */,
+				6E3B62942512564E00DB862E /* PageLayout2TableViewCell.swift */,
+				6E3B62952512564E00DB862E /* PageLayout2TableViewCell.xib */,
+				6E3B62982512566800DB862E /* PageLayout3TableViewCell.swift */,
+				6E3B62992512566800DB862E /* PageLayout3TableViewCell.xib */,
+				6E3B629C2512567600DB862E /* PageLayout4TableViewCell.swift */,
+				6E3B629D2512567600DB862E /* PageLayout4TableViewCell.xib */,
+				6E3B62A02512568700DB862E /* PageLayout5TableViewCell.swift */,
+				6E3B62A12512568700DB862E /* PageLayout5TableViewCell.xib */,
+				6E3B62A42512569600DB862E /* PageLayout6TableViewCell.swift */,
+				6E3B62A52512569600DB862E /* PageLayout6TableViewCell.xib */,
+			);
+			path = "Pages Layouts";
 			sourceTree = "<group>";
 		};
 		6E4F8FD3250A39D900A2241B /* OnBoarding */ = {
@@ -200,13 +293,82 @@
 				6E71AF45250F7C8B001E8BF8 /* UICollectionView.swift */,
 				6E71AF4F250FA2C3001E8BF8 /* UIView.swift */,
 				6E36DB2B2510EDD9005203F3 /* UITableView.swift */,
+				6E6B3F262513A49200862D47 /* UIImageView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E6B3F0D251342C000862D47 /* Album Pages  */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F10251344CC00862D47 /* AlbumPageItems */,
+				6E6B3F0E2513430700862D47 /* AlbumPagesViewModelItem.swift */,
+			);
+			path = "Album Pages ";
+			sourceTree = "<group>";
+		};
+		6E6B3F10251344CC00862D47 /* AlbumPageItems */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F112513450C00862D47 /* AlbumPageLayout1Item.swift */,
+				6E6B3F132513451F00862D47 /* AlbumPageLayout2Item.swift */,
+				6E6B3F152513452D00862D47 /* AlbumPageLayout3Item.swift */,
+				6E6B3F172513453F00862D47 /* AlbumPageLayout4Item.swift */,
+				6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */,
+				6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */,
+			);
+			path = AlbumPageItems;
+			sourceTree = "<group>";
+		};
+		6E6B3F1D2513489D00862D47 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */,
+				6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		6E6B3F20251390AF00862D47 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F25251392CE00862D47 /* ViewModels */,
+				6E6B3F24251392C600862D47 /* Controllers */,
+				6E6B3F23251392BE00862D47 /* Views */,
+				6E6B3F21251390C900862D47 /* Album.storyboard */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		6E6B3F23251392BE00862D47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E6B3F24251392C600862D47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */,
+				6E6B3F2A2513A53A00862D47 /* EditPhotoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6E6B3F25251392CE00862D47 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F2C2513B31700862D47 /* RecordAudioViewModel.swift */,
+				6E6E36722514D46C004C7F19 /* EditPhotoViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		6E71AF35250F623E001E8BF8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6E3B628C251236B900DB862E /* Models */,
 				6E71AF3A250F6765001E8BF8 /* ViewModels */,
 				6E71AF39250F675B001E8BF8 /* Controllers */,
 				6E71AF38250F6753001E8BF8 /* Views */,
@@ -218,12 +380,15 @@
 		6E71AF38250F6753001E8BF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E3B628F251255F300DB862E /* Pages Layouts */,
 				6E71AF41250F6D03001E8BF8 /* CreateMenuCell.swift */,
 				6E71AF42250F6D03001E8BF8 /* CreateMenuCell.xib */,
 				6E71AF47250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.swift */,
 				6E71AF48250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib */,
 				6E71AF53250FB80B001E8BF8 /* CreateAlbumCell.swift */,
 				6E71AF54250FB80B001E8BF8 /* CreateAlbumCell.xib */,
+				6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */,
+				6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +396,7 @@
 		6E71AF39250F675B001E8BF8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E6B3F1D2513489D00862D47 /* Album */,
 				6E71AF3F250F68D4001E8BF8 /* CreatePopUpViewController.swift */,
 				6E71AF4B250F9492001E8BF8 /* AlbumsViewController.swift */,
 				6E71AF4D250F94B7001E8BF8 /* HomeViewController.swift */,
@@ -241,7 +407,10 @@
 		6E71AF3A250F6765001E8BF8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6E6B3F0D251342C000862D47 /* Album Pages  */,
 				6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */,
+				6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */,
+				6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -259,6 +428,7 @@
 			children = (
 				6E74E86F250B67C000B6ABC7 /* Helper.swift */,
 				6E74E871250B776800B6ABC7 /* RegularExpressions.swift */,
+				6EF8A23925169D27000C5A9D /* EditRootControl.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -292,6 +462,7 @@
 				6E4F8FE4250A677200A2241B /* Extensions */,
 				6E36DB1F2510E421005203F3 /* Menu */,
 				6E71AF35250F623E001E8BF8 /* Home */,
+				6E6B3F20251390AF00862D47 /* Album */,
 				6E4F8FD3250A39D900A2241B /* OnBoarding */,
 				6E810267250A37A500B9BB43 /* Main.storyboard */,
 				6E81026A250A37A700B9BB43 /* Assets.xcassets */,
@@ -378,15 +549,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3B62A32512568700DB862E /* PageLayout5TableViewCell.xib in Resources */,
 				6E71AF4A250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib in Resources */,
 				6E71AF56250FB80B001E8BF8 /* CreateAlbumCell.xib in Resources */,
 				6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */,
 				6E36DB242510E472005203F3 /* Menu.storyboard in Resources */,
+				6E3B629B2512566800DB862E /* PageLayout3TableViewCell.xib in Resources */,
 				6E71AF44250F6D03001E8BF8 /* CreateMenuCell.xib in Resources */,
 				6E71AF37250F6271001E8BF8 /* Home.storyboard in Resources */,
+				6E6B3F22251390C900862D47 /* Album.storyboard in Resources */,
 				6E81026B250A37A700B9BB43 /* Assets.xcassets in Resources */,
 				6E810269250A37A500B9BB43 /* Main.storyboard in Resources */,
+				6E3B62932512563300DB862E /* PageLayout1TableViewCell.xib in Resources */,
+				6E3B6289251220FB00DB862E /* LayoutCollectionViewCell.xib in Resources */,
 				6E36DB2A2510E8B6005203F3 /* MenuTableViewCell.xib in Resources */,
+				6E3B62972512564E00DB862E /* PageLayout2TableViewCell.xib in Resources */,
+				6E3B62A72512569600DB862E /* PageLayout6TableViewCell.xib in Resources */,
+				6E3B629F2512567600DB862E /* PageLayout4TableViewCell.xib in Resources */,
 				6E4F8FE6250A67B900A2241B /* CantataOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,31 +622,56 @@
 				6EB5FA51250D6ACC00D54A40 /* UIViewController.swift in Sources */,
 				6E71AF40250F68D4001E8BF8 /* CreatePopUpViewController.swift in Sources */,
 				6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */,
+				6E6B3F162513452D00862D47 /* AlbumPageLayout3Item.swift in Sources */,
+				6E6B3F182513453F00862D47 /* AlbumPageLayout4Item.swift in Sources */,
 				6E74E870250B67C000B6ABC7 /* Helper.swift in Sources */,
+				6E6B3F2D2513B31700862D47 /* RecordAudioViewModel.swift in Sources */,
 				6E4F8FE2250A65C000A2241B /* OnBoarding4ViewController.swift in Sources */,
+				6E3B62A62512569600DB862E /* PageLayout6TableViewCell.swift in Sources */,
+				6E3B628B2512368D00DB862E /* ChooseLayoutViewModel.swift in Sources */,
 				6E74E874250B780200B6ABC7 /* WelcomeViewModel.swift in Sources */,
+				6E36DB3425111475005203F3 /* CreateAlbumViewController.swift in Sources */,
+				6E6B3F1A2513454D00862D47 /* AlbumPageLayout5Item.swift in Sources */,
 				6E4F8FDA250A41E500A2241B /* WelcomeViewController.swift in Sources */,
 				6E71AF55250FB80B001E8BF8 /* CreateAlbumCell.swift in Sources */,
+				6E6B3F122513450C00862D47 /* AlbumPageLayout1Item.swift in Sources */,
+				6E6B3F0F2513430700862D47 /* AlbumPagesViewModelItem.swift in Sources */,
 				6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */,
 				6E810262250A37A500B9BB43 /* AppDelegate.swift in Sources */,
 				6E74E86B250B588700B6ABC7 /* UIColor.swift in Sources */,
+				6E3B629E2512567600DB862E /* PageLayout4TableViewCell.swift in Sources */,
+				6E3B62A22512568700DB862E /* PageLayout5TableViewCell.swift in Sources */,
 				6E36DB2E2510F662005203F3 /* MenuviewModel.swift in Sources */,
+				6E6B3F1F251369F400862D47 /* CreateAlbumViewModel.swift in Sources */,
 				6E36DB302510FD84005203F3 /* MenuProfileViewController.swift in Sources */,
+				6E6B3F142513451F00862D47 /* AlbumPageLayout2Item.swift in Sources */,
 				6E74E86D250B5B3700B6ABC7 /* UIButton.swift in Sources */,
+				6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */,
+				6E6E36732514D46C004C7F19 /* EditPhotoViewModel.swift in Sources */,
 				6E71AF50250FA2C3001E8BF8 /* UIView.swift in Sources */,
 				6E71AF4C250F9492001E8BF8 /* AlbumsViewController.swift in Sources */,
 				6E810264250A37A500B9BB43 /* SceneDelegate.swift in Sources */,
 				6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */,
+				6E6B3F2B2513A53A00862D47 /* EditPhotoViewController.swift in Sources */,
+				6E3B629A2512566800DB862E /* PageLayout3TableViewCell.swift in Sources */,
 				6E74E872250B776800B6ABC7 /* RegularExpressions.swift in Sources */,
 				6E71AF49250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.swift in Sources */,
 				6E4F8FDE250A65A200A2241B /* OnBoarding2ViewController.swift in Sources */,
+				6E6B3F1C2513455900862D47 /* AlbumPageLayout6Item.swift in Sources */,
 				6E71AF4E250F94B7001E8BF8 /* HomeViewController.swift in Sources */,
 				6E4F8FE0250A65B300A2241B /* OnBoarding3ViewController.swift in Sources */,
 				6E71AF59250FC065001E8BF8 /* PinterestLayout.swift in Sources */,
+				6E3B62922512563300DB862E /* PageLayout1TableViewCell.swift in Sources */,
+				6E3B628E251236C900DB862E /* Layout.swift in Sources */,
 				6E71AF43250F6D03001E8BF8 /* CreateMenuCell.swift in Sources */,
+				6E3B62962512564E00DB862E /* PageLayout2TableViewCell.swift in Sources */,
 				6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */,
 				6E36DB2C2510EDD9005203F3 /* UITableView.swift in Sources */,
+				6E6B3F272513A49200862D47 /* UIImageView.swift in Sources */,
+				6EF8A23A25169D27000C5A9D /* EditRootControl.swift in Sources */,
 				6E71AF46250F7C8B001E8BF8 /* UICollectionView.swift in Sources */,
+				6E3B628525121F9700DB862E /* ChooseLayoutViewController.swift in Sources */,
+				6E3B6288251220FB00DB862E /* LayoutCollectionViewCell.swift in Sources */,
 				6E36DB292510E8B6005203F3 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

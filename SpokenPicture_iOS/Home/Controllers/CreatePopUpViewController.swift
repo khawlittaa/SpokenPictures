@@ -15,9 +15,13 @@ class CreatePopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createMenuCollectionView.dataSource = self
-        
         showAnimate()
+        setUpColllectionView()
+    }
+    
+    func setUpColllectionView(){
+        createMenuCollectionView.dataSource = self
+        createMenuCollectionView.delegate = self
         createMenuCollectionView.registerCell(nib: "CreateMenuCell", cellreuseIdentifier: "CreateMenuCell")
     }
     
@@ -53,6 +57,12 @@ class CreatePopUpViewController: UIViewController {
 }
 
 extension CreatePopUpViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            let createAlbum = home.instantiateViewController(withIdentifier: "CreateAlbumViewController")
+            self.navigationController?.pushViewController(createAlbum, animated: true)
+        }
+    }
     
 }
 extension CreatePopUpViewController: UICollectionViewDataSource{
