@@ -36,21 +36,23 @@
 			<array>
 				<dict>
 					<key>UISceneStoryboardFile</key>
-					<string>Album</string>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
+					<string>Home</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
-	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>this app requires microphone permision to record audio description </string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -62,9 +64,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>this app requires microphone permision to record audio description </string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
 </dict>
 </plist>

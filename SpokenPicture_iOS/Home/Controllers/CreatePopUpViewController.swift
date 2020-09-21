@@ -61,6 +61,11 @@ extension CreatePopUpViewController: UICollectionViewDelegate{
         if indexPath.row == 0{
             let createAlbum = home.instantiateViewController(withIdentifier: "CreateAlbumViewController")
             self.navigationController?.pushViewController(createAlbum, animated: true)
+        }else{
+            if indexPath.row == 1{
+              let creatPostCard = postcard.instantiateViewController(withIdentifier: "ChoosePostCardLayoutVC")
+                self.navigationController?.pushViewController(creatPostCard, animated: true)
+            }
         }
     }
     
