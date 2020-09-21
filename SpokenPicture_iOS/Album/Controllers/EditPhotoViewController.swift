@@ -127,9 +127,7 @@ class EditPhotoViewController: UIViewController {
         let image: UIImage = albumImage.image!
         
         var options = Options.default
-        options.classes.control.rootControl = EditRootControl.self
-        
-        options.classes.control.ignoredEditMenu = [.clarity , .fade, .gaussianBlur, .highlights, .shadows, .mask, .temperature, .vignette, .sharpen, .saturation, .adjustment, .contrast]
+        options.classes.control.rootControl = EditBrightnessRootControl.self
         
         let picker = PixelEditViewController(image: image, options: options)
         picker.delegate = self
@@ -142,9 +140,8 @@ class EditPhotoViewController: UIViewController {
         let image: UIImage = albumImage.image!
         
         var options = Options.default
-        options.classes.control.rootControl = EditRootControl.self
+        options.classes.control.rootControl = EditContrastRootControl.self
         
-        options.classes.control.ignoredEditMenu = [.clarity , .fade, .gaussianBlur, .highlights, .shadows, .mask, .temperature, .vignette, .sharpen, .saturation, .adjustment, .exposure]
         
         let picker = PixelEditViewController(image: image, options: options)
         picker.delegate = self
