@@ -49,13 +49,13 @@ class PostCardLayoutPopUpViewController: UIViewController {
   
     
     @IBAction func landscapeButtonClicked(_ sender: Any) {
-//        PostcardLandScapeLayoutVC
-//        showImagePicker()
+        let landscrapeVC = postcard.instantiateViewController(withIdentifier: "PostcardLandScapeLayoutVC") as! PostcardLandScapeLayoutViewController
+        navigationController?.pushViewController(landscrapeVC, animated: true)
     }
     
     @IBAction func portraitButtonClicked(_ sender: Any) {
-//        PostcardPortraitLayoutVC
-//        showImagePicker()
+let portraitVC = postcard.instantiateViewController(withIdentifier: "PostcardPortraitLayoutVC") as! PostcardPortraitLayoutViewController
+      navigationController?.pushViewController(portraitVC, animated: true)
     }
     
     

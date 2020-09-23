@@ -9,12 +9,23 @@
 import UIKit
 
 class PostcardPortraitLayoutViewController: UIViewController {
-
+    
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var postcardMainView: UIView!
+    @IBOutlet weak var postcardPortraitImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpUI()
     }
     
-
+    func setUpUI()  {
+        postcardMainView.addViewShadow()
+        saveButton.roundEdges()
+    }
+    
+    @IBAction func addImageBtnClicked(_ sender: Any) {
+        self.showImagePicker()
+    }
+    
 }

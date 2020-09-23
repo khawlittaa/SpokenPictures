@@ -9,12 +9,22 @@
 import UIKit
 
 class PostcardLandScapeLayoutViewController: UIViewController {
-
+    
+    @IBOutlet weak var postcardLanscapeImage: UIImageView!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var postcardMainView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpUI()
     }
     
-
+    func setUpUI()  {
+        postcardMainView.addViewShadow()
+        saveButton.roundEdges()
+    }
+    
+    @IBAction func addImageButtonClicked(_ sender: Any) {
+        self.showImagePicker()
+    }
 }

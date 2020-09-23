@@ -12,7 +12,6 @@ class ChoosePostCardLayoutViewController: UIViewController {
     @IBOutlet weak var postcardMainView: UIView!
     @IBOutlet weak var chooseLayoutButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var postCardSideSegment: UISegmentedControl!
     
     @IBOutlet weak var titleTextField: UITextField!
     override func viewDidLoad() {
@@ -36,12 +35,6 @@ class ChoosePostCardLayoutViewController: UIViewController {
         postcardMainView.addViewShadow()
         chooseLayoutButton.addButtonShadow()
         saveButton.roundEdges()
-        
-        let myImage = UIImage(named: "verticaLline")
-        // Image between two unselected segments.
-        postCardSideSegment.setDividerImage(myImage, forLeftSegmentState: UIControl.State.normal, rightSegmentState: UIControl.State.normal, barMetrics: UIBarMetrics.default)
-        postCardSideSegment.backgroundColor = .white
-        
     }
     
     
