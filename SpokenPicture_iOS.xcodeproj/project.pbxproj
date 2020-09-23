@@ -41,8 +41,7 @@
 		6E4F8FE0250A65B300A2241B /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FDF250A65B300A2241B /* OnBoarding3ViewController.swift */; };
 		6E4F8FE2250A65C000A2241B /* OnBoarding4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FE1250A65C000A2241B /* OnBoarding4ViewController.swift */; };
 		6E4F8FE6250A67B900A2241B /* CantataOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */; };
-		6E62C039251B3C8100C51851 /* PostcardLandScapeLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C038251B3C8100C51851 /* PostcardLandScapeLayoutViewController.swift */; };
-		6E62C03B251B3C9700C51851 /* PostcardPortraitLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C03A251B3C9700C51851 /* PostcardPortraitLayoutViewController.swift */; };
+		6E62C039251B3C8100C51851 /* PostCardLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C038251B3C8100C51851 /* PostCardLayoutViewController.swift */; };
 		6E62C03D251B3CAD00C51851 /* PostCardBackLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C03C251B3CAD00C51851 /* PostCardBackLayoutViewController.swift */; };
 		6E62C040251B505300C51851 /* EditedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C03F251B505300C51851 /* EditedImage.swift */; };
 		6E62C042251B548700C51851 /* PostcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C041251B548700C51851 /* PostcardViewModel.swift */; };
@@ -127,8 +126,7 @@
 		6E4F8FDF250A65B300A2241B /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FE1250A65C000A2241B /* OnBoarding4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding4ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CantataOne-Regular.ttf"; sourceTree = "<group>"; };
-		6E62C038251B3C8100C51851 /* PostcardLandScapeLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardLandScapeLayoutViewController.swift; sourceTree = "<group>"; };
-		6E62C03A251B3C9700C51851 /* PostcardPortraitLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardPortraitLayoutViewController.swift; sourceTree = "<group>"; };
+		6E62C038251B3C8100C51851 /* PostCardLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardLayoutViewController.swift; sourceTree = "<group>"; };
 		6E62C03C251B3CAD00C51851 /* PostCardBackLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardBackLayoutViewController.swift; sourceTree = "<group>"; };
 		6E62C03F251B505300C51851 /* EditedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedImage.swift; sourceTree = "<group>"; };
 		6E62C041251B548700C51851 /* PostcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardViewModel.swift; sourceTree = "<group>"; };
@@ -521,8 +519,7 @@
 			children = (
 				6EF8A2412518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift */,
 				6EF8A2432518B6E4000C5A9D /* PostCardLayoutPopUpViewController.swift */,
-				6E62C038251B3C8100C51851 /* PostcardLandScapeLayoutViewController.swift */,
-				6E62C03A251B3C9700C51851 /* PostcardPortraitLayoutViewController.swift */,
+				6E62C038251B3C8100C51851 /* PostCardLayoutViewController.swift */,
 				6E62C03C251B3CAD00C51851 /* PostCardBackLayoutViewController.swift */,
 			);
 			path = ViewControllers;
@@ -685,7 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB5FA51250D6ACC00D54A40 /* UIViewController.swift in Sources */,
-				6E62C039251B3C8100C51851 /* PostcardLandScapeLayoutViewController.swift in Sources */,
+				6E62C039251B3C8100C51851 /* PostCardLayoutViewController.swift in Sources */,
 				6E71AF40250F68D4001E8BF8 /* CreatePopUpViewController.swift in Sources */,
 				6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */,
 				6E6B3F162513452D00862D47 /* AlbumPageLayout3Item.swift in Sources */,
@@ -706,7 +703,6 @@
 				6E6B3F0F2513430700862D47 /* AlbumPagesViewModelItem.swift in Sources */,
 				6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */,
 				6E810262250A37A500B9BB43 /* AppDelegate.swift in Sources */,
-				6E62C03B251B3C9700C51851 /* PostcardPortraitLayoutViewController.swift in Sources */,
 				6EF8A2422518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift in Sources */,
 				6E74E86B250B588700B6ABC7 /* UIColor.swift in Sources */,
 				6E3B629E2512567600DB862E /* PageLayout4TableViewCell.swift in Sources */,

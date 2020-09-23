@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="832" y="151"/>
         </scene>
-        <!--Postcard Land Scape Layout View Controller-->
+        <!--Post Card Layout View Controller-->
         <scene sceneID="0Kw-ed-1Jx">
             <objects>
-                <viewController storyboardIdentifier="PostcardLandScapeLayoutVC" id="Q4C-Iw-sEG" customClass="PostcardLandScapeLayoutViewController" customModule="SpokenPicture_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostCardLayoutVC" id="Q4C-Iw-sEG" customClass="PostCardLayoutViewController" customModule="SpokenPicture_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t5C-1n-nsg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,6 +292,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="XhP-N5-4QC" firstAttribute="centerX" secondItem="t5C-1n-nsg" secondAttribute="centerX" id="3dT-W7-azc"/>
                             <constraint firstItem="2Vr-V6-P1R" firstAttribute="centerX" secondItem="t5C-1n-nsg" secondAttribute="centerX" id="4IX-bS-chH"/>
                             <constraint firstItem="2Vr-V6-P1R" firstAttribute="top" secondItem="XhP-N5-4QC" secondAttribute="bottom" constant="8" id="SgC-N5-fqh"/>
                             <constraint firstItem="411-FO-yl0" firstAttribute="bottom" secondItem="Aph-Yw-O8b" secondAttribute="bottom" constant="20" id="TWI-GA-zzd"/>
@@ -302,11 +303,12 @@
                             <constraint firstItem="411-FO-yl0" firstAttribute="trailing" secondItem="oAt-7B-4SD" secondAttribute="trailing" constant="20" id="i5B-H8-8zE"/>
                             <constraint firstItem="oAt-7B-4SD" firstAttribute="leading" secondItem="411-FO-yl0" secondAttribute="leading" constant="20" id="sWa-dG-d1u"/>
                             <constraint firstItem="oAt-7B-4SD" firstAttribute="top" secondItem="411-FO-yl0" secondAttribute="top" constant="10" id="stG-Pc-sJc"/>
-                            <constraint firstItem="411-FO-yl0" firstAttribute="trailing" secondItem="XhP-N5-4QC" secondAttribute="trailing" constant="20" id="tvJ-zP-XGI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="411-FO-yl0"/>
                     </view>
                     <connections>
+                        <outlet property="postacarsMainViewLeadingConstraint" destination="XV1-PZ-f2Y" id="USw-n4-Beu"/>
+                        <outlet property="postcardImageHeightConstraint" destination="TFt-PN-Qpd" id="mL9-kd-e2f"/>
                         <outlet property="postcardLanscapeImage" destination="S34-E2-Zg9" id="MC9-yh-gfZ"/>
                         <outlet property="postcardMainView" destination="XhP-N5-4QC" id="ONB-6V-dnu"/>
                         <outlet property="saveButton" destination="Aph-Yw-O8b" id="iDf-vo-FAl"/>
@@ -315,130 +317,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIC-qD-bqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-39.375" y="857.5"/>
-        </scene>
-        <!--Postcard Portrait Layout View Controller-->
-        <scene sceneID="mvO-Ke-Sgb">
-            <objects>
-                <viewController storyboardIdentifier="PostcardPortraitLayoutVC" id="0xg-af-esb" customClass="PostcardPortraitLayoutViewController" customModule="SpokenPicture_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bf6-rn-ahu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My Postcard" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-JB-vTH">
-                                <rect key="frame" x="20" y="10" width="280" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="oet-9S-bFh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jrW-WD-bxw">
-                                <rect key="frame" x="60" y="72" width="200" height="300"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3NE-QE-yGZ">
-                                        <rect key="frame" x="10" y="10" width="180" height="280"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1If-DV-5V2">
-                                        <rect key="frame" x="20" y="10" width="160" height="280"/>
-                                        <connections>
-                                            <action selector="addImageBtnClicked:" destination="0xg-af-esb" eventType="touchUpInside" id="Ppq-sd-QE9"/>
-                                            <action selector="chooseLayoutButtonClicked:" destination="uKF-kx-0sm" eventType="touchUpInside" id="seq-Gm-Mri"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="3NE-QE-yGZ" firstAttribute="top" secondItem="jrW-WD-bxw" secondAttribute="top" constant="10" id="0Ou-Fn-pLt"/>
-                                    <constraint firstAttribute="bottom" secondItem="3NE-QE-yGZ" secondAttribute="bottom" constant="10" id="4r1-zb-2Im"/>
-                                    <constraint firstItem="3NE-QE-yGZ" firstAttribute="leading" secondItem="jrW-WD-bxw" secondAttribute="leading" constant="10" id="E6d-66-tPc"/>
-                                    <constraint firstAttribute="trailing" secondItem="3NE-QE-yGZ" secondAttribute="trailing" constant="10" id="ELO-fv-vWp"/>
-                                    <constraint firstItem="1If-DV-5V2" firstAttribute="leading" secondItem="jrW-WD-bxw" secondAttribute="leading" constant="20" id="OzQ-PQ-D5O"/>
-                                    <constraint firstAttribute="trailing" secondItem="1If-DV-5V2" secondAttribute="trailing" constant="20" id="duD-OW-lYP"/>
-                                    <constraint firstAttribute="bottom" secondItem="1If-DV-5V2" secondAttribute="bottom" constant="10" id="j9r-05-WuN"/>
-                                    <constraint firstItem="1If-DV-5V2" firstAttribute="top" secondItem="jrW-WD-bxw" secondAttribute="top" constant="10" id="oDI-f3-j72"/>
-                                    <constraint firstAttribute="height" constant="300" id="obF-y1-cVd"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mt4-Fw-4zu">
-                                <rect key="frame" x="99" y="380" width="122" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV7-dA-j9a">
-                                        <rect key="frame" x="72" y="10" width="40" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="F6b-4x-tQp"/>
-                                        </constraints>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUJ-wb-176">
-                                        <rect key="frame" x="60" y="20" width="2" height="10"/>
-                                        <color key="backgroundColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="2" id="QfL-TL-jNi"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08p-0e-a8y">
-                                        <rect key="frame" x="10" y="10" width="40" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="CnE-uz-GNs"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Front">
-                                            <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="DV7-dA-j9a" secondAttribute="bottom" constant="10" id="DJP-Tl-B08"/>
-                                    <constraint firstItem="DV7-dA-j9a" firstAttribute="leading" secondItem="pUJ-wb-176" secondAttribute="trailing" constant="10" id="DKr-Ik-e5V"/>
-                                    <constraint firstItem="DV7-dA-j9a" firstAttribute="top" secondItem="mt4-Fw-4zu" secondAttribute="top" constant="10" id="EXP-pL-bD1"/>
-                                    <constraint firstAttribute="bottom" secondItem="08p-0e-a8y" secondAttribute="bottom" constant="10" id="GAU-pD-0I2"/>
-                                    <constraint firstAttribute="bottom" secondItem="pUJ-wb-176" secondAttribute="bottom" constant="20" id="NB1-en-G5i"/>
-                                    <constraint firstItem="08p-0e-a8y" firstAttribute="leading" secondItem="mt4-Fw-4zu" secondAttribute="leading" constant="10" id="hpK-Oe-zjD"/>
-                                    <constraint firstItem="08p-0e-a8y" firstAttribute="top" secondItem="mt4-Fw-4zu" secondAttribute="top" constant="10" id="ow0-KM-YS0"/>
-                                    <constraint firstItem="pUJ-wb-176" firstAttribute="top" secondItem="mt4-Fw-4zu" secondAttribute="top" constant="20" id="tXp-ru-r16"/>
-                                    <constraint firstItem="pUJ-wb-176" firstAttribute="leading" secondItem="08p-0e-a8y" secondAttribute="trailing" constant="10" id="xZW-Pc-Nnk"/>
-                                    <constraint firstAttribute="trailing" secondItem="DV7-dA-j9a" secondAttribute="trailing" constant="10" id="xgp-TN-aiR"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQQ-gR-NDA">
-                                <rect key="frame" x="42" y="506" width="236" height="42"/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.75686274509999996" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="KLh-eV-hjD"/>
-                                </constraints>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="wTM-ph-T2p" firstAttribute="bottom" secondItem="DQQ-gR-NDA" secondAttribute="bottom" constant="20" id="EJo-Lz-fNh"/>
-                            <constraint firstItem="wTM-ph-T2p" firstAttribute="trailing" secondItem="DQQ-gR-NDA" secondAttribute="trailing" constant="42" id="IXP-Lt-O0j"/>
-                            <constraint firstItem="wTM-ph-T2p" firstAttribute="trailing" secondItem="jrW-WD-bxw" secondAttribute="trailing" constant="60" id="JTS-AR-uXf"/>
-                            <constraint firstItem="mt4-Fw-4zu" firstAttribute="top" secondItem="jrW-WD-bxw" secondAttribute="bottom" constant="8" id="Ox8-7q-6P4"/>
-                            <constraint firstItem="jrW-WD-bxw" firstAttribute="centerX" secondItem="bf6-rn-ahu" secondAttribute="centerX" id="Rmi-jC-lsU"/>
-                            <constraint firstItem="mt4-Fw-4zu" firstAttribute="centerX" secondItem="bf6-rn-ahu" secondAttribute="centerX" id="S8i-tx-Rar"/>
-                            <constraint firstItem="DQQ-gR-NDA" firstAttribute="centerX" secondItem="bf6-rn-ahu" secondAttribute="centerX" id="TMH-wr-e2j"/>
-                            <constraint firstItem="N3D-JB-vTH" firstAttribute="leading" secondItem="wTM-ph-T2p" secondAttribute="leading" constant="20" id="bfN-zi-zbd"/>
-                            <constraint firstItem="N3D-JB-vTH" firstAttribute="top" secondItem="wTM-ph-T2p" secondAttribute="top" constant="10" id="fCq-ss-np8"/>
-                            <constraint firstItem="jrW-WD-bxw" firstAttribute="top" secondItem="N3D-JB-vTH" secondAttribute="bottom" constant="20" id="m6m-ca-jEa"/>
-                            <constraint firstItem="wTM-ph-T2p" firstAttribute="trailing" secondItem="N3D-JB-vTH" secondAttribute="trailing" constant="20" id="nph-QQ-fYJ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="wTM-ph-T2p"/>
-                    </view>
-                    <connections>
-                        <outlet property="postcardMainView" destination="jrW-WD-bxw" id="Qdp-KQ-Dp1"/>
-                        <outlet property="postcardPortraitImage" destination="3NE-QE-yGZ" id="GV8-y3-d3s"/>
-                        <outlet property="saveButton" destination="DQQ-gR-NDA" id="fBc-3N-oRS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJc-tm-XTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="798.75" y="857.74647887323943"/>
         </scene>
         <!--Post Card Back Layout View Controller-->
         <scene sceneID="N15-6j-uDF">
@@ -542,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDa-Ez-Hrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="858"/>
+            <point key="canvasLocation" x="831" y="857"/>
         </scene>
     </scenes>
     <resources>
