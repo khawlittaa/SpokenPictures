@@ -11,7 +11,6 @@ import UIKit
 class ChoosePostCardLayoutViewController: UIViewController {
     @IBOutlet weak var postcardMainView: UIView!
     @IBOutlet weak var chooseLayoutButton: UIButton!
-    @IBOutlet weak var postCardImage: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var postCardSideSegment: UISegmentedControl!
     
@@ -37,8 +36,6 @@ class ChoosePostCardLayoutViewController: UIViewController {
         postcardMainView.addViewShadow()
         chooseLayoutButton.addButtonShadow()
         saveButton.roundEdges()
-        postCardImage.addViewShadow()
-        postCardImage.isHidden = true
         
         let myImage = UIImage(named: "verticaLline")
         // Image between two unselected segments.

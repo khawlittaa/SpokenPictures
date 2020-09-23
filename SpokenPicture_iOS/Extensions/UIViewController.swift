@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YPImagePicker
 
 extension UIViewController{
     
@@ -15,5 +16,25 @@ extension UIViewController{
         backgroundImage.image = UIImage(named: imageName)
         backgroundImage.contentMode =  UIView.ContentMode.scaleToFill
         self.view.insertSubview(backgroundImage, at: 0)
+    }
+    
+    func showImagePicker(){
+        var config = YPImagePickerConfiguration()
+        config.showsPhotoFilters = false
+        config.screens = [.library]
+        // Build a picker with your configuration
+        let picker = YPImagePicker(configuration: config)
+        picker.didFinishPicking { [unowned picker] items, _ in
+            if let photo = items.singlePhoto {
+                print(photo.fromCamera) // Image source (camera or library)
+                print(photo.image) // Final image selected by the user
+                print(photo.originalImage) // original image selected by the user, unfiltered
+                let editVc = album.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
+                editVc.originalImage = photo.originalImage
+                self.navigationController?.pushViewController(editVc, animated: true)
+            }
+            picker.dismiss(animated: true, completion: nil)
+        }
+        present(picker, animated: true, completion: nil)
     }
 }

@@ -46,32 +46,16 @@ class PostCardLayoutPopUpViewController: UIViewController {
             }
         })
     }
-    func showImagePicker(){
-        var config = YPImagePickerConfiguration()
-        config.showsPhotoFilters = false
-        // Build a picker with your configuration
-        let picker = YPImagePicker(configuration: config)
-        picker.didFinishPicking { [unowned picker] items, _ in
-            if let photo = items.singlePhoto {
-                print(photo.fromCamera) // Image source (camera or library)
-                print(photo.image) // Final image selected by the user
-                print(photo.originalImage) // original image selected by the user, unfiltered
-                let editVc = album.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
-                editVc.originalImage = photo.originalImage
-                editVc.sourcePostcard = self.postcardVC
-                self.navigationController?.pushViewController(editVc, animated: true)
-            }
-            picker.dismiss(animated: true, completion: nil)
-        }
-        present(picker, animated: true, completion: nil)
-    }
+  
     
     @IBAction func landscapeButtonClicked(_ sender: Any) {
-        showImagePicker()
+//        PostcardLandScapeLayoutVC
+//        showImagePicker()
     }
     
     @IBAction func portraitButtonClicked(_ sender: Any) {
-        showImagePicker()
+//        PostcardPortraitLayoutVC
+//        showImagePicker()
     }
     
     

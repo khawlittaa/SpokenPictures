@@ -27,9 +27,6 @@
                             <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFW-6T-nmQ">
                                 <rect key="frame" x="20" y="58" width="280" height="200"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="o2a-gS-XnR">
-                                        <rect key="frame" x="10" y="10" width="260" height="180"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVi-dC-p9S">
                                         <rect key="frame" x="10" y="10" width="260" height="180"/>
                                         <state key="normal" image="group"/>
@@ -40,15 +37,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="o2a-gS-XnR" secondAttribute="trailing" constant="10" id="O7W-pM-OoD"/>
                                     <constraint firstItem="gVi-dC-p9S" firstAttribute="leading" secondItem="PFW-6T-nmQ" secondAttribute="leading" constant="10" id="R8G-ig-Nhf"/>
-                                    <constraint firstItem="o2a-gS-XnR" firstAttribute="leading" secondItem="PFW-6T-nmQ" secondAttribute="leading" constant="10" id="bxI-WP-HJV"/>
                                     <constraint firstAttribute="trailing" secondItem="gVi-dC-p9S" secondAttribute="trailing" constant="10" id="e8U-w6-7Hl"/>
                                     <constraint firstItem="gVi-dC-p9S" firstAttribute="top" secondItem="PFW-6T-nmQ" secondAttribute="top" constant="10" id="hhl-Ci-cNU"/>
                                     <constraint firstAttribute="bottom" secondItem="gVi-dC-p9S" secondAttribute="bottom" constant="10" id="tSF-Dk-JZT"/>
-                                    <constraint firstAttribute="bottom" secondItem="o2a-gS-XnR" secondAttribute="bottom" constant="10" id="veF-uK-u0E"/>
                                     <constraint firstAttribute="height" constant="200" id="vtD-Cy-qr8"/>
-                                    <constraint firstItem="o2a-gS-XnR" firstAttribute="top" secondItem="PFW-6T-nmQ" secondAttribute="top" constant="10" id="xmH-Jq-gy0"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpw-M1-OZ2">
@@ -71,8 +64,8 @@
                                     <segment title="Front"/>
                                     <segment title="back"/>
                                 </segments>
-                                <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="selectedSegmentTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -94,7 +87,6 @@
                     <navigationItem key="navigationItem" id="cKw-Gk-341"/>
                     <connections>
                         <outlet property="chooseLayoutButton" destination="gVi-dC-p9S" id="bfJ-0f-ybh"/>
-                        <outlet property="postCardImage" destination="o2a-gS-XnR" id="ZWR-td-J12"/>
                         <outlet property="postCardSideSegment" destination="ng9-ko-0Df" id="0cn-IH-C7v"/>
                         <outlet property="postcardMainView" destination="PFW-6T-nmQ" id="9qA-hA-ORb"/>
                         <outlet property="saveButton" destination="qpw-M1-OZ2" id="10W-Aw-Dl2"/>
@@ -167,11 +159,55 @@
             </objects>
             <point key="canvasLocation" x="832" y="151"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0Kw-ed-1Jx">
+            <objects>
+                <viewController storyboardIdentifier="PostcardLandScapeLayoutVC" id="Q4C-Iw-sEG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t5C-1n-nsg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="411-FO-yl0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zIC-qD-bqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="858"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mvO-Ke-Sgb">
+            <objects>
+                <viewController storyboardIdentifier="PostcardPortraitLayoutVC" id="0xg-af-esb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bf6-rn-ahu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wTM-ph-T2p"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJc-tm-XTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="858"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="N15-6j-uDF">
+            <objects>
+                <viewController storyboardIdentifier="PostCardBackLayoutVC" id="9Ax-iO-pj3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z6J-7d-pIC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Kub-jR-ura"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDa-Ez-Hrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607" y="858"/>
+        </scene>
     </scenes>
     <resources>
         <image name="group" width="152" height="20"/>
         <image name="landscapePhoto" width="121" height="79"/>
-        <image name="placeHolderImageIcon" width="95" height="89"/>
         <image name="portraitPhoto" width="78" height="121"/>
     </resources>
 </document>
