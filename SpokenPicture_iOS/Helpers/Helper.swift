@@ -17,4 +17,13 @@ func secondsToMinutesSeconds (seconds : Int) -> ( Int, Int) {
   return ((seconds % 3600) / 60, (seconds % 3600) % 60)
 }
 
+func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
 
+
+func getFileURL() -> URL {
+     let path = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+     return path as URL
+ }

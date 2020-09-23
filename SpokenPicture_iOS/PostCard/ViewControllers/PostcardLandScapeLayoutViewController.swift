@@ -14,9 +14,12 @@ class PostcardLandScapeLayoutViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var postcardMainView: UIView!
     
+    var postCardVm = PostsCardViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        postCardVm.isLandScape = true
     }
     
     func setUpUI()  {
@@ -25,6 +28,6 @@ class PostcardLandScapeLayoutViewController: UIViewController {
     }
     
     @IBAction func addImageButtonClicked(_ sender: Any) {
-        self.showImagePicker()
+        self.showImagePicker(sourceVm: postCardVm)
     }
 }

@@ -18,7 +18,7 @@ extension UIViewController{
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
-    func showImagePicker(){
+    func showImagePicker(sourceVm: PostsCardViewModel?){
         var config = YPImagePickerConfiguration()
         config.showsPhotoFilters = false
         config.screens = [.library]
@@ -31,6 +31,7 @@ extension UIViewController{
                 print(photo.originalImage) // original image selected by the user, unfiltered
                 let editVc = album.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
                 editVc.originalImage = photo.originalImage
+                editVc.sourcePostcardVM = sourceVm
                 self.navigationController?.pushViewController(editVc, animated: true)
             }
             picker.dismiss(animated: true, completion: nil)

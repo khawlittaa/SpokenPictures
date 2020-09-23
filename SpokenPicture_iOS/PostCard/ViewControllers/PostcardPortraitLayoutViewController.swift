@@ -14,9 +14,12 @@ class PostcardPortraitLayoutViewController: UIViewController {
     @IBOutlet weak var postcardMainView: UIView!
     @IBOutlet weak var postcardPortraitImage: UIImageView!
     
+    var postCardVm = PostsCardViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        postCardVm.isPortarait = true
     }
     
     func setUpUI()  {
@@ -25,7 +28,7 @@ class PostcardPortraitLayoutViewController: UIViewController {
     }
     
     @IBAction func addImageBtnClicked(_ sender: Any) {
-        self.showImagePicker()
+        self.showImagePicker(sourceVm: postCardVm)
     }
     
 }

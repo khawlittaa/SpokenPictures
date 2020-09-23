@@ -34,8 +34,7 @@ class ChoosePostCardLayoutViewController: UIViewController {
     func setUpUI()  {
         postcardMainView.addViewShadow()
         chooseLayoutButton.addButtonShadow()
-        saveButton.roundEdges()
-    }
+        saveButton.roundEdges()    }
     
     
     @objc func menuTapped()  {

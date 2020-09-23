@@ -28,7 +28,7 @@ class EditPhotoViewController: UIViewController {
     let editPhotoVm = EditPhotoViewModel()
     let disposeBag = DisposeBag()
     var originalImage = UIImage()
-    var sourcePostcard: ChoosePostCardLayoutViewController?
+    var sourcePostcardVM: PostsCardViewModel?
     
     var audioPlayer:AVAudioPlayer!
     
@@ -37,32 +37,25 @@ class EditPhotoViewController: UIViewController {
         addNavigationBarItem()
         BindToViewModel()
         self.audioProgresssBar.progress = 0.0
-//        t0 be changed later with imge selected by user
-        albumImage.image = originalImage
-//        originalImage = UIImage(named: "groupCopy")!
+//        imge selected by user
+        setImageToEdit()
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         
-        //        audioPlayer.stop()
     }
     
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
+    func setImageToEdit(){
+        albumImage.image = originalImage
     }
+
     
     func showAudioDuration(){
         let duration =  (Int(audioPlayer.duration))
         
         let (m, s) = secondsToMinutesSeconds(seconds: duration)
         audioDurationLabel.text = "\(m) : \(s)"
-    }
-    
-    func getFileURL() -> URL {
-        let path = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-        return path as URL
     }
     
     func preparePlayer() {
@@ -105,10 +98,7 @@ class EditPhotoViewController: UIViewController {
     
     @objc func addTapped()  {
         self.navigationController?.popViewController(animated: true)
-//        if let postcard = sourcePostcard{
-//            postcard.postCardImage.image = albumImage.image
-//            navigationController?.pushViewController(postcard, animated: true)
-//        }
+     // show postcard view with edited image + audio here 
     }
     
     @objc  func updateAudioProgressView()
