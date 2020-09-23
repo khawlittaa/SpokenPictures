@@ -12,6 +12,6 @@ class PostsCardViewModel{
     var isLandScape: Bool = false
     var isPortarait: Bool = false
     var hasAudio: Bool = false
-    var postcardNote: String?
-    var postCardimage: EditedImage?
+    var postcardNote: String = ""
+    var postCardimage: EditedImage = EditedImage()
 }

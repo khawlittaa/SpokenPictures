@@ -98,7 +98,12 @@ class EditPhotoViewController: UIViewController {
     
     @objc func addTapped()  {
         self.navigationController?.popViewController(animated: true)
-     // show postcard view with edited image + audio here 
+     // show postcard view with edited image + audio here
+        let postcardVC = postcard.instantiateViewController(withIdentifier: "PostCardLayoutVC") as! PostCardLayoutViewController
+        if let postacdVM = sourcePostcardVM{
+            postcardVC.postCardVm = postacdVM
+            postcardVC.postCardVm.postCardimage.finalImage = albumImage.image
+        }
     }
     
     @objc  func updateAudioProgressView()
