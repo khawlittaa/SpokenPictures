@@ -13,7 +13,7 @@ class PostCardLayoutViewController: UIViewController {
     
     @IBOutlet weak var audioMessageView: UIView!
     
-    @IBOutlet weak var postacarsMainViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var postcardImaheWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var postcardImageHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var postcardLanscapeImage: UIImageView!
@@ -37,19 +37,20 @@ class PostCardLayoutViewController: UIViewController {
     
     func setUpUI()  {
         postcardMainView.addViewShadow()
+        postcardMainView.setBackgrouudImage(imageName: "postcardBackground")
         saveButton.roundEdges()
      
     }
     
    func setUPLayout(){
         if postCardVm.isLandScape{
-                 postacarsMainViewLeadingConstraint.constant = 20
-                 postcardImageHeightConstraint.constant = 200
+                 postcardImaheWidthConstraint.constant = 325
+                 postcardImageHeightConstraint.constant = 248
                  
              }else{
                  if postCardVm.isPortarait{
-                     postacarsMainViewLeadingConstraint.constant = 60
-                     postcardImageHeightConstraint.constant = 300
+                     postcardImaheWidthConstraint.constant = 248
+                     postcardImageHeightConstraint.constant = 325
                      
                  }
              }
@@ -61,6 +62,12 @@ class PostCardLayoutViewController: UIViewController {
     }
     }
     @IBAction func playAudioMessage(_ sender: Any) {
+    }
+    
+    @IBAction func backButtonClicked(_ sender: Any) {
+        let back = postcard.instantiateViewController(withIdentifier: "PostCardBackLayoutVC") as! PostCardBackLayoutViewController
+//        back.postCardVM = self.postCardVm
+        navigationController?.pushViewController(back, animated: true)
     }
     
     @IBAction func addImageButtonClicked(_ sender: Any) {

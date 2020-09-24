@@ -45,6 +45,9 @@ class ChoosePostCardLayoutViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func backButtonClicked(_ sender: Any) {
+    }
+    
     @IBAction func chooseLayoutButtonClicked(_ sender: Any) {
         let popUp = postcard.instantiateViewController(withIdentifier: "PostCardLayoutPopUpVC") as! PostCardLayoutPopUpViewController
         self.addChild(popUp)
