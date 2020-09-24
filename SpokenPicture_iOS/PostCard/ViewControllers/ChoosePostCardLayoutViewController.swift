@@ -17,7 +17,7 @@ class ChoosePostCardLayoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        addNavigationBarItems()
+        addNavigationBarItemsWithMenu()
     }
     
     

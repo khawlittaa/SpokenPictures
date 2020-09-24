@@ -18,6 +18,7 @@ class PostCardTextEditorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setPlaceHolderText()
+        addNavigationBarItemsWithMenu()
     }
     
     func setPlaceHolderText(){

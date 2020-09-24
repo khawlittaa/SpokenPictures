@@ -18,6 +18,25 @@ extension UIViewController{
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
+    func addNavigationBarItemsWithMenu(){
+        self.navigationController?.navigationBar.tintColor = .accentBlack1Main
+        let complete = UIImage(named: "complete")
+        let menu = UIImage(named: "menuBar")
+        let menuButtonItem = UIBarButtonItem(image: menu, style: .plain, target: self, action: #selector(menuOptionTapped))
+        let completeButtonItem = UIBarButtonItem(image: complete, style: .plain, target: self, action: #selector(completeOptionTapped))
+        self.navigationItem.rightBarButtonItems = [menuButtonItem, completeButtonItem]
+//        self.navigationItem.backBarButtonItem?.title = ""
+        
+    }
+    @objc func menuOptionTapped()  {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func completeOptionTapped()  {
+        // call API
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func showImagePicker(sourceVm: PostsCardViewModel?){
         var config = YPImagePickerConfiguration()
         config.showsPhotoFilters = false
