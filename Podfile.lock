@@ -13,6 +13,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SteviaLayout (4.7.3)
+  - TBDropdownMenu (4.1.0)
   - TOCropViewController (2.5.4)
   - TransitionPatch (1.0.2)
   - YPImagePicker (4.3.1):
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - PixelEngine
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - TBDropdownMenu
   - TOCropViewController
   - YPImagePicker
 
@@ -40,6 +42,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SteviaLayout
+    - TBDropdownMenu
     - TOCropViewController
     - TransitionPatch
     - YPImagePicker
@@ -54,10 +57,11 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  TBDropdownMenu: 9201924bf459a3ae426b992f3db032d377020636
   TOCropViewController: 2a1ae1242600b1f2d996fd91a5268b2309a33b5c
   TransitionPatch: c02b48b1429255b14ef82b7e411034e0958b9681
   YPImagePicker: 08bbb809ed62bf4149fc015c97249eb4b9463ff9
 
-PODFILE CHECKSUM: 860cb2479d1b665747d54a135ab84fc5879cf86c
+PODFILE CHECKSUM: 534d68a9d7d13ced3355d4f0809130b1144ff508
 
 COCOAPODS: 1.9.1

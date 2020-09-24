@@ -21,7 +21,7 @@ class PostCardBackLayoutViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
         setPlaceHolderText()
-        addNavigationBarItemsWithMenu()
+        addNavigationBarItemsWithMenu(iscomplete: false)
     }
     
     func setPlaceHolderText(){

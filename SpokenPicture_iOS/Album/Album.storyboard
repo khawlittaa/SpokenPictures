@@ -12,11 +12,12 @@
         <scene sceneID="5SG-ee-0Zc">
             <objects>
                 <navigationController id="OKg-98-q1H" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZJO-IS-06a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="blackBack" backIndicatorTransitionMaskImage="blackBack" id="ZJO-IS-06a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.90588235294117647" green="0.93725490196078431" blue="0.96470588235294119" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="wKa-J6-9KQ" kind="relationship" relationship="rootViewController" id="pnn-RR-3x6"/>
@@ -360,7 +361,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uyt-cA-DLF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RFh-Ws-tG6"/>
+                    <navigationItem key="navigationItem" id="RFh-Ws-tG6">
+                        <barButtonItem key="backBarButtonItem" title="  " id="JgE-4a-vA0"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="albumImage" destination="YlZ-Pv-tkn" id="qf5-ux-LQq"/>
                         <outlet property="audioDurationLabel" destination="yHa-Zh-Yie" id="iYb-w1-JhO"/>
@@ -538,6 +541,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blackBack" width="30" height="30"/>
         <image name="brightness" width="30" height="30"/>
         <image name="contrast" width="30" height="30"/>
         <image name="crop" width="30" height="30"/>

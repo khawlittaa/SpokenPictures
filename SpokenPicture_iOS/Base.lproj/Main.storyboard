@@ -140,7 +140,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sEi-VS-VpM"/>
+                    <navigationItem key="navigationItem" id="sEi-VS-VpM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fZv-kb-9qF"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="skipButton" destination="dAk-Gl-u1Z" id="kTK-P2-EZ6"/>
                     </connections>

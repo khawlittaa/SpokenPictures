@@ -8,6 +8,7 @@
 
 import UIKit
 import YPImagePicker
+import TBDropdownMenu
 
 extension UIViewController{
     
@@ -18,18 +19,37 @@ extension UIViewController{
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
-    func addNavigationBarItemsWithMenu(){
+    func addNavigationBarItemsWithMenu(iscomplete: Bool){
         self.navigationController?.navigationBar.tintColor = .accentBlack1Main
         let complete = UIImage(named: "complete")
         let menu = UIImage(named: "menuBar")
         let menuButtonItem = UIBarButtonItem(image: menu, style: .plain, target: self, action: #selector(menuOptionTapped))
         let completeButtonItem = UIBarButtonItem(image: complete, style: .plain, target: self, action: #selector(completeOptionTapped))
+        completeButtonItem.isEnabled = iscomplete
         self.navigationItem.rightBarButtonItems = [menuButtonItem, completeButtonItem]
-//        self.navigationItem.backBarButtonItem?.title = ""
+        self.navigationItem.backBarButtonItem?.title = ""
         
     }
     @objc func menuOptionTapped()  {
-        self.navigationController?.popViewController(animated: true)
+        let item1 = DropdownItem(image: UIImage(named: "orderBlackMaterial")!,title: "Order")
+        let item2 = DropdownItem(image: UIImage(named: "editBlack")!, title: "Edit")
+        let item3 = DropdownItem(image: UIImage(named: "shareBlack")!, title: "Share")
+        let item4 = DropdownItem(image: UIImage(named: "deleteBlack")!, title: "Delete")
+
+        let items = [item1, item2, item3, item4]
+        
+        let menuView = DropdownMenu(navigationController: navigationController!, items: items)
+        menuView.tintColor = UIColor.accentBlack1Main
+        menuView.cellBackgroundColor = UIColor.pastelPastel11Main
+        menuView.displaySelected = false
+
+        menuView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
+        menuView.updateConstraints()
+        menuView.reloadInputViews()
+        menuView.tableView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
+
+        menuView.delegate = self
+        menuView.showMenu()
     }
     
     @objc func completeOptionTapped()  {
@@ -56,5 +76,15 @@ extension UIViewController{
             picker.dismiss(animated: true, completion: nil)
         }
         present(picker, animated: true, completion: nil)
+    }
+}
+
+extension UIViewController: DropdownMenuDelegate {
+    func dropdownMenu(dropdownMenu: DropdownMenu, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("DropdownMenu didselect \(indexPath.row)")
+    }
+
+    func dropUpMenuCancel(_ dropUpMenu: DropUpMenu) {
+        print("select cancel")
     }
 }

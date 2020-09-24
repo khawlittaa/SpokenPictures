@@ -6,6 +6,7 @@ target 'SpokenPicture_iOS' do
   pod 'YPImagePicker'
   use_frameworks!
   # Pods for SpokenPicture_iOS
+  pod 'TBDropdownMenu'
   pod 'TOCropViewController'
   pod 'IQKeyboardManager'
   pod 'iOSDropDown'

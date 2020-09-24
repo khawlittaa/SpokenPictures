@@ -16,7 +16,7 @@ class PostCardLayoutPopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showAnimate()
-        addNavigationBarItemsWithMenu()
+        addNavigationBarItemsWithMenu(iscomplete: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
