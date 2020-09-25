@@ -9,11 +9,17 @@
 import UIKit
 
 class ChoosePostCardLayoutViewController: UIViewController {
+    
     @IBOutlet weak var postcardMainView: UIView!
+    @IBOutlet weak var fromtBackView: UIView!
+    
     @IBOutlet weak var chooseLayoutButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var titleTextField: UITextField!
+    
+    var isPostcard: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -34,7 +40,12 @@ class ChoosePostCardLayoutViewController: UIViewController {
     func setUpUI()  {
         postcardMainView.addViewShadow()
         chooseLayoutButton.addButtonShadow()
-        saveButton.roundEdges()    }
+        saveButton.roundEdges()
+        if !isPostcard {
+            fromtBackView.isHidden = true
+            titleTextField.placeholder = "My Photo"
+        }
+    }
     
     
     @objc func menuTapped()  {

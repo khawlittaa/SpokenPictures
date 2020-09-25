@@ -12,6 +12,7 @@ import AVFoundation
 class PostCardLayoutViewController: UIViewController {
     
     @IBOutlet weak var audioMessageView: UIView!
+    @IBOutlet weak var frontBackView: UIView!
     
     @IBOutlet weak var postcardImaheWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var postcardImageHeightConstraint: NSLayoutConstraint!
@@ -22,7 +23,10 @@ class PostCardLayoutViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var addImageButton: UIButton!
     
+    @IBOutlet weak var titleTextField: UITextField!
+    
     var postCardVm = PostsCardViewModel()
+    var isPostcard: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,10 @@ class PostCardLayoutViewController: UIViewController {
         postcardMainView.addViewShadow()
         postcardMainView.setBackgrouudImage(imageName: "postcardBackground")
         saveButton.roundEdges()
+        if !isPostcard{
+            frontBackView.isHidden = true
+            titleTextField.placeholder = "My Photo"
+        }
      
     }
     

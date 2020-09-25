@@ -13,6 +13,7 @@ class PostCardLayoutPopUpViewController: UIViewController {
     
     var postcardVC: ChoosePostCardLayoutViewController?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showAnimate()
@@ -47,20 +48,25 @@ class PostCardLayoutPopUpViewController: UIViewController {
             }
         })
     }
-  
+    
     
     @IBAction func landscapeButtonClicked(_ sender: Any) {
-        let landscrapeVC = postcard.instantiateViewController(withIdentifier: "PostCardLayoutVC") as! PostCardLayoutViewController
-        landscrapeVC.postCardVm.isLandScape = true
-        landscrapeVC.postCardVm.isPortarait = false
-        navigationController?.pushViewController(landscrapeVC, animated: true)
+            let  landscrapeVC = postcard.instantiateViewController(withIdentifier: "PostCardLayoutVC") as! PostCardLayoutViewController
+            landscrapeVC.postCardVm.isLandScape = true
+            landscrapeVC.postCardVm.isPortarait = false
+            landscrapeVC.isPostcard = postcardVC!.isPostcard
+            navigationController?.pushViewController(landscrapeVC, animated: true)
+    
     }
     
     @IBAction func portraitButtonClicked(_ sender: Any) {
-let portraitVC = postcard.instantiateViewController(withIdentifier: "PostCardLayoutVC") as! PostCardLayoutViewController
+        
+        let portraitVC = postcard.instantiateViewController(withIdentifier: "PostCardLayoutVC") as! PostCardLayoutViewController
         portraitVC.postCardVm.isPortarait = true
         portraitVC.postCardVm.isLandScape = false
-      navigationController?.pushViewController(portraitVC, animated: true)
+        portraitVC.isPostcard = postcardVC!.isPostcard
+        navigationController?.pushViewController(portraitVC, animated: true)
+        
     }
     
     

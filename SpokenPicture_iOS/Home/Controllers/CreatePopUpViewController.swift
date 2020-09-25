@@ -38,7 +38,7 @@ class CreatePopUpViewController: UIViewController {
             self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     func removeAnimate()
     {
         UIView.animate(withDuration: 0.25, animations: {
@@ -62,10 +62,18 @@ extension CreatePopUpViewController: UICollectionViewDelegate{
             let createAlbum = home.instantiateViewController(withIdentifier: "CreateAlbumViewController")
             self.navigationController?.pushViewController(createAlbum, animated: true)
         }else{
+            
+            let chooselayout = postcard.instantiateViewController(withIdentifier: "ChoosePostCardLayoutVC")as! ChoosePostCardLayoutViewController
+            
             if indexPath.row == 1{
-              let creatPostCard = postcard.instantiateViewController(withIdentifier: "ChoosePostCardLayoutVC")
-                self.navigationController?.pushViewController(creatPostCard, animated: true)
+                chooselayout.isPostcard = true
+            }else{
+                if indexPath.row == 2{
+                    chooselayout.isPostcard = false
+                }
             }
+            
+            self.navigationController?.pushViewController(chooselayout, animated: true)
         }
     }
     
