@@ -9,7 +9,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Album</string>
+	<string>Main</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>UILaunchStoryboardName</key>
@@ -36,7 +36,7 @@
 			<array>
 				<dict>
 					<key>UISceneStoryboardFile</key>
-					<string>Album</string>
+					<string>Home</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneConfigurationName</key>
@@ -66,5 +66,9 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Spoken Picture needs access to your photo library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Spoken Picture needs access to your camera</string>
 </dict>
 </plist>

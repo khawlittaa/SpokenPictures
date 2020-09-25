@@ -17,7 +17,7 @@
         <scene sceneID="wqH-I5-J4E">
             <objects>
                 <navigationController id="ezI-D1-NRz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2au-oQ-lZa">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="blackBack" id="2au-oQ-lZa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -140,7 +140,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sEi-VS-VpM"/>
+                    <navigationItem key="navigationItem" id="sEi-VS-VpM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fZv-kb-9qF"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="skipButton" destination="dAk-Gl-u1Z" id="kTK-P2-EZ6"/>
                     </connections>
@@ -605,13 +607,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite friends and family to build an album together!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW5-Sr-cpa">
-                                <rect key="frame" x="24" y="528" width="261" height="41"/>
+                                <rect key="frame" x="24" y="524.5" width="261" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62s-iA-rCC">
-                                <rect key="frame" x="172.5" y="624" width="30" height="33"/>
+                                <rect key="frame" x="172.5" y="620.5" width="30" height="36.5"/>
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -642,7 +644,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collaborate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-g9-i6S">
-                                <rect key="frame" x="24" y="483.5" width="327" height="38.5"/>
+                                <rect key="frame" x="24" y="483.5" width="327" height="35"/>
                                 <fontDescription key="fontDescription" name="CantataOne-Regular" family="Cantata One" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -683,6 +685,7 @@
     </scenes>
     <resources>
         <image name="Onboarding_welcome" width="360" height="827"/>
+        <image name="blackBack" width="30" height="30"/>
         <image name="empty_rogress_Indicator" width="12" height="12"/>
         <image name="full_Progress_Indicator" width="12" height="12"/>
         <image name="onBoarding_Background2" width="360" height="761"/>
