@@ -291,7 +291,7 @@
                         <viewLayoutGuide key="safeArea" id="OF7-SW-RKB"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="MdH-Z3-ddL">
-                        <barButtonItem key="backBarButtonItem" title="  " id="mUm-ac-elF"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="mUm-ac-elF"/>
                     </navigationItem>
                     <connections>
                         <outlet property="albumsView" destination="GZr-Qb-pMI" id="vAM-c2-dH1"/>

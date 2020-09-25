@@ -644,7 +644,7 @@
                         <viewLayoutGuide key="safeArea" id="SOA-rK-Nxc"/>
                     </view>
                     <navigationItem key="navigationItem" id="VEa-Ux-NVT">
-                        <barButtonItem key="backBarButtonItem" title=" " id="mZE-gp-3S8"/>
+                        <barButtonItem key="backBarButtonItem" title="  " id="mZE-gp-3S8"/>
                     </navigationItem>
                     <connections>
                         <outlet property="thumbnailImage" destination="iYY-ZR-Abn" id="OKv-fT-y7X"/>

@@ -60,7 +60,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6YL-HE-KF1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="avQ-4B-uy5"/>
+                    <navigationItem key="navigationItem" id="avQ-4B-uy5">
+                        <barButtonItem key="backBarButtonItem" title=" " id="c4U-fm-hxp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuTableView" destination="8l0-gG-FvI" id="DpA-S1-Lte"/>
                     </connections>
