@@ -37,8 +37,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="965-h3-jWJ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="0.0"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="965-h3-jWJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpY-iy-jGw">
                                 <rect key="frame" x="24" y="490.5" width="200" height="38.5"/>
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="width" constant="40" id="ZQI-6e-9MB"/>
                                     <constraint firstAttribute="height" constant="40" id="mq8-Zy-mWa"/>
                                 </constraints>
-                                <state key="normal" title="&gt;" image="smallArrowRight"/>
+                                <state key="normal" image="smallArrowRight"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yOM-TI-BuJ"/>
                                 </connections>
@@ -125,16 +125,16 @@
                             <constraint firstAttribute="trailing" secondItem="Lww-XP-fCL" secondAttribute="trailing" constant="42" id="Rv8-3V-Mgc"/>
                             <constraint firstItem="7Ia-b1-1dU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="140" id="TYk-z5-95e"/>
                             <constraint firstItem="Lww-XP-fCL" firstAttribute="top" secondItem="JpY-iy-jGw" secondAttribute="bottom" constant="5" id="Vpr-b7-IaK"/>
-                            <constraint firstItem="965-h3-jWJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xaq-8E-rRL"/>
                             <constraint firstItem="zQJ-fv-ATC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XoB-Vx-9Yo"/>
                             <constraint firstItem="965-h3-jWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="csT-Ft-Z3P"/>
+                            <constraint firstItem="965-h3-jWJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ejB-46-Lbd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JpY-iy-jGw" secondAttribute="trailing" constant="20" id="f9z-LI-wZF"/>
                             <constraint firstItem="dAk-Gl-u1Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gZS-gI-TVc"/>
                             <constraint firstItem="Lww-XP-fCL" firstAttribute="leading" secondItem="JpY-iy-jGw" secondAttribute="leading" id="hDY-8F-WhA"/>
+                            <constraint firstAttribute="bottom" secondItem="965-h3-jWJ" secondAttribute="bottom" id="mDa-3n-1TW"/>
                             <constraint firstItem="JpY-iy-jGw" firstAttribute="leading" secondItem="7Ia-b1-1dU" secondAttribute="leading" id="ohs-wq-VuR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="965-h3-jWJ" secondAttribute="trailing" id="qsS-41-QmH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAk-Gl-u1Z" secondAttribute="bottom" constant="10" id="trj-EW-8ZM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="965-h3-jWJ" secondAttribute="bottom" id="uDX-V9-aby"/>
                             <constraint firstItem="dAk-Gl-u1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="uk5-er-8fn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zQJ-fv-ATC" secondAttribute="trailing" constant="30" id="wcp-WA-3nn"/>
                         </constraints>
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="107.88177339901478"/>
+            <point key="canvasLocation" x="136.80000000000001" y="107.49625187406298"/>
         </scene>
         <!--On Boarding4 View Controller-->
         <scene sceneID="Eh9-K9-m1n">
@@ -685,6 +685,7 @@
     </scenes>
     <resources>
         <image name="Onboarding_welcome" width="360" height="827"/>
+        <image name="background1" width="648" height="1366"/>
         <image name="blackBack" width="30" height="30"/>
         <image name="empty_rogress_Indicator" width="12" height="12"/>
         <image name="full_Progress_Indicator" width="12" height="12"/>
