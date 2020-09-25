@@ -14,6 +14,7 @@ class ProfileViewModel{
     
     let languages = ["Swidish","English","French","Arabic"]
     let disposeBag = DisposeBag()
+    var user: User?
     
     // mail and name to biend to VC
     var userName = PublishSubject<String>()

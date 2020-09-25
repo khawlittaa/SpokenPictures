@@ -14,28 +14,28 @@
 	<string>1</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Spoken Picture needs access to your camera</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Home</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>       r   </string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Spoken Picture needs access to your Microphone </string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
@@ -53,11 +53,11 @@
 			<array>
 				<dict>
 					<key>UISceneStoryboardFile</key>
-					<string>Home</string>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
+					<string>Main</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
 				</dict>
 			</array>
 		</dict>

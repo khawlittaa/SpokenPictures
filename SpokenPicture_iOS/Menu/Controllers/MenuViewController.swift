@@ -13,7 +13,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     
     let menuViewModel = MenuviewModel()
-    let menu = UIStoryboard(name: "Menu", bundle: nil)
+    var user: User?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,9 @@ extension MenuViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if (indexPath.row == 1){
-            selectMenuItem(itemTitle: "MenuProfileViewController")
+            let userVC = menu.instantiateViewController(withIdentifier: "MenuProfileViewController") as! MenuProfileViewController
+            userVC.profileVM.user = user
+            self.navigationController?.pushViewController(userVC, animated: true)
         }
     }
 }

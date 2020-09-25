@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+let menu = UIStoryboard(name: "Menu", bundle: nil)
 let home = UIStoryboard(name: "Home", bundle: nil)
 let album = UIStoryboard(name: "Album", bundle: nil)
 let postcard = UIStoryboard(name: "PostCard", bundle: nil)
@@ -27,3 +27,4 @@ func getFileURL() -> URL {
      let path = getDocumentsDirectory().appendingPathComponent("recording.m4a")
      return path as URL
  }
+

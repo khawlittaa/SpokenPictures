@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scanView: UIView!
     
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUpBAckgoudsforViews()
@@ -50,8 +52,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func menuButtonClicked(_ sender: Any) {
-        let menu = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
-        self.navigationController?.pushViewController(menu, animated: true)
+        let menuVC = menu.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        menuVC.user = user
+        self.navigationController?.pushViewController(menuVC, animated: true)
     }
     
     @IBAction func createButtonClicked(_ sender: Any) {

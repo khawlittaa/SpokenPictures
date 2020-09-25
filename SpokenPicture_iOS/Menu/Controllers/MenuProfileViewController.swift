@@ -21,13 +21,24 @@ class MenuProfileViewController: UIViewController {
     
     let profileVM = ProfileViewModel()
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setBackgrouudImage(imageName: "background_menu")
         setUpBinding()
         setsubtitleList()
         setButtonApperance()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setUserData()
+    }
+    
+    func setUserData(){
+        emailTextField.text = profileVM.user?.email
+        nameTextField.text = profileVM.user?.name
+        subtitleDropDown.text = profileVM.user?.language
     }
     
     func setButtonApperance(){
@@ -73,7 +84,11 @@ class MenuProfileViewController: UIViewController {
      }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-    
+        // API call to update user Info here
+        profileVM.user?.updateName(name: nameTextField.text!)
+        profileVM.user?.updateEmail(email: emailTextField.text!)
+        profileVM.user?.updateLanguage(language: subtitleDropDown.text!)
+        navigationController?.popViewController(animated: false)
     }
     
 }

@@ -76,11 +76,14 @@ class WelcomeViewController: UIViewController {
         }
         
     }
+ 
     
     @IBAction func getStartedbuttonClicked(_ sender: Any) {
-
+        let user = User(name: nameTextField.text!, email: emailTextField.text!, language: subtitleDropDown.text!)
         let home = UIStoryboard(name: "Home", bundle: nil)
-        let homeNav = home.instantiateViewController(withIdentifier: "HomeViewController")
+        let homeNav = home.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+//        Register user API call here
+        homeNav.user = user
         navigationController?.pushViewController(homeNav, animated: true)
     }
 }
