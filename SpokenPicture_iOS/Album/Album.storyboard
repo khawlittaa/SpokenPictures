@@ -13,11 +13,12 @@
         <scene sceneID="5SG-ee-0Zc">
             <objects>
                 <navigationController id="OKg-98-q1H" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZJO-IS-06a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="blackBack" backIndicatorTransitionMaskImage="blackBack" id="ZJO-IS-06a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.90588235294117647" green="0.93725490196078431" blue="0.96470588235294119" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="XXY-Xl-A7T" kind="relationship" relationship="rootViewController" id="w7A-m7-We2"/>
@@ -642,7 +643,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOA-rK-Nxc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VEa-Ux-NVT"/>
+                    <navigationItem key="navigationItem" id="VEa-Ux-NVT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="mZE-gp-3S8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="thumbnailImage" destination="iYY-ZR-Abn" id="OKv-fT-y7X"/>
                         <outlet property="thumbnailSuggestionsCollectionView" destination="wyL-6C-o9H" id="Ybb-uV-7vJ"/>
@@ -655,6 +658,7 @@
     </scenes>
     <resources>
         <image name="Shuffle" width="18" height="15"/>
+        <image name="blackBack" width="30" height="30"/>
         <image name="brightness" width="30" height="30"/>
         <image name="ckturistando3XxocVqC2AiUnsplash" width="176" height="174"/>
         <image name="contrast" width="30" height="30"/>

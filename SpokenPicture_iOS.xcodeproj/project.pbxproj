@@ -78,6 +78,7 @@
 		6E74E870250B67C000B6ABC7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74E86F250B67C000B6ABC7 /* Helper.swift */; };
 		6E74E872250B776800B6ABC7 /* RegularExpressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74E871250B776800B6ABC7 /* RegularExpressions.swift */; };
 		6E74E874250B780200B6ABC7 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74E873250B780200B6ABC7 /* WelcomeViewModel.swift */; };
+		6E767D8C251DCA7200D4879E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E767D8B251DCA7200D4879E /* Default-568h@2x.png */; };
 		6E7A0044251CD98A00B29AD1 /* VideoThummbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A0043251CD98A00B29AD1 /* VideoThummbnailViewController.swift */; };
 		6E7A0049251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A0047251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.swift */; };
 		6E7A004A251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7A0048251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.xib */; };
@@ -167,6 +168,7 @@
 		6E74E86F250B67C000B6ABC7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6E74E871250B776800B6ABC7 /* RegularExpressions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularExpressions.swift; sourceTree = "<group>"; };
 		6E74E873250B780200B6ABC7 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		6E767D8B251DCA7200D4879E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6E7A0043251CD98A00B29AD1 /* VideoThummbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThummbnailViewController.swift; sourceTree = "<group>"; };
 		6E7A0047251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailSuggestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		6E7A0048251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailSuggestionCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 		6E810255250A37A500B9BB43 = {
 			isa = PBXGroup;
 			children = (
+				6E767D8B251DCA7200D4879E /* Default-568h@2x.png */,
 				6E810260250A37A500B9BB43 /* SpokenPicture_iOS */,
 				6E81025F250A37A500B9BB43 /* Products */,
 				F5AF6F73B646123ED02567F7 /* Pods */,
@@ -627,6 +630,7 @@
 				6E71AF56250FB80B001E8BF8 /* CreateAlbumCell.xib in Resources */,
 				6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */,
 				6E36DB242510E472005203F3 /* Menu.storyboard in Resources */,
+				6E767D8C251DCA7200D4879E /* Default-568h@2x.png in Resources */,
 				6E3B629B2512566800DB862E /* PageLayout3TableViewCell.xib in Resources */,
 				6E71AF44250F6D03001E8BF8 /* CreateMenuCell.xib in Resources */,
 				6EF8A24025189FC7000C5A9D /* PostCard.storyboard in Resources */,
