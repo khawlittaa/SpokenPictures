@@ -41,6 +41,7 @@
 		6E4F8FE0250A65B300A2241B /* OnBoarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FDF250A65B300A2241B /* OnBoarding3ViewController.swift */; };
 		6E4F8FE2250A65C000A2241B /* OnBoarding4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F8FE1250A65C000A2241B /* OnBoarding4ViewController.swift */; };
 		6E4F8FE6250A67B900A2241B /* CantataOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */; };
+		6E592C43251E5CA60085205E /* splashScreenReallyFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E592C42251E5CA60085205E /* splashScreenReallyFinal.png */; };
 		6E62C039251B3C8100C51851 /* PostCardLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C038251B3C8100C51851 /* PostCardLayoutViewController.swift */; };
 		6E62C03D251B3CAD00C51851 /* PostCardBackLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C03C251B3CAD00C51851 /* PostCardBackLayoutViewController.swift */; };
 		6E62C040251B505300C51851 /* EditedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C03F251B505300C51851 /* EditedImage.swift */; };
@@ -132,6 +133,7 @@
 		6E4F8FDF250A65B300A2241B /* OnBoarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding3ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FE1250A65C000A2241B /* OnBoarding4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding4ViewController.swift; sourceTree = "<group>"; };
 		6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CantataOne-Regular.ttf"; sourceTree = "<group>"; };
+		6E592C42251E5CA60085205E /* splashScreenReallyFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreenReallyFinal.png; sourceTree = "<group>"; };
 		6E62C038251B3C8100C51851 /* PostCardLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardLayoutViewController.swift; sourceTree = "<group>"; };
 		6E62C03C251B3CAD00C51851 /* PostCardBackLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardBackLayoutViewController.swift; sourceTree = "<group>"; };
 		6E62C03F251B505300C51851 /* EditedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedImage.swift; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 				6EF8A23B25189F65000C5A9D /* PostCard */,
 				6E810267250A37A500B9BB43 /* Main.storyboard */,
 				6E81026A250A37A700B9BB43 /* Assets.xcassets */,
+				6E592C42251E5CA60085205E /* splashScreenReallyFinal.png */,
 				6E81026C250A37A700B9BB43 /* LaunchScreen.storyboard */,
 				6E81026F250A37A700B9BB43 /* Info.plist */,
 			);
@@ -638,6 +641,7 @@
 			files = (
 				6E3B62A32512568700DB862E /* PageLayout5TableViewCell.xib in Resources */,
 				6E71AF4A250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib in Resources */,
+				6E592C43251E5CA60085205E /* splashScreenReallyFinal.png in Resources */,
 				6E71AF56250FB80B001E8BF8 /* CreateAlbumCell.xib in Resources */,
 				6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */,
 				6E36DB242510E472005203F3 /* Menu.storyboard in Resources */,
