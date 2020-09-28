@@ -181,7 +181,7 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func recordAudioPressed(_ sender: Any) {
-        let recordVC = album.instantiateViewController(withIdentifier: "RecordAudioVC") as! RecordAudioViewController
+        let recordVC = editing.instantiateViewController(withIdentifier: "RecordAudioVC") as! RecordAudioViewController
         recordVC.editPhotoVm = self.editPhotoVm
         navigationController?.pushViewController(recordVC, animated: true)
     }

@@ -68,7 +68,7 @@ extension UIViewController{
                 print(photo.fromCamera) // Image source (camera or library)
                 print(photo.image) // Final image selected by the user
                 print(photo.originalImage) // original image selected by the user, unfiltered
-                let editVc = album.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
+                let editVc = editing.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
                 editVc.originalImage = photo.originalImage
                 editVc.sourcePostcardVM = sourceVm
                 self.navigationController?.pushViewController(editVc, animated: true)

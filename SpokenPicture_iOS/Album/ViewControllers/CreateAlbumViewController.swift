@@ -86,7 +86,7 @@ class CreateAlbumViewController: UIViewController {
     
     @IBAction func addPageButtonClicked(_ sender: Any){
         
-        let popUp = home.instantiateViewController(withIdentifier: "ChooseLayoutViewController") as! ChooseLayoutViewController
+        let popUp = album.instantiateViewController(withIdentifier: "ChooseLayoutViewController") as! ChooseLayoutViewController
         popUp.createAlbumVM = self.createAlbumsVM
         self.addChild(popUp)
         popUp.view.frame = self.view.frame

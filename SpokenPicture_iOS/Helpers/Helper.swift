@@ -10,6 +10,7 @@ import UIKit
 
 let menu = UIStoryboard(name: "Menu", bundle: nil)
 let home = UIStoryboard(name: "Home", bundle: nil)
+let editing = UIStoryboard(name: "Editing", bundle: nil)
 let album = UIStoryboard(name: "Album", bundle: nil)
 let postcard = UIStoryboard(name: "PostCard", bundle: nil)
 
