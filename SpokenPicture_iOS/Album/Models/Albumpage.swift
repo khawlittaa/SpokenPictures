@@ -19,9 +19,9 @@ enum AlbumPagesLayout {
 
 class AlbumPage{
     
-    var pageLayout: AlbumPagesLayout
+    var pageLayout: AlbumPagesLayout = .layout1
     var pageNumber: Int = 1
-    var numberPictures: Int
+    var numberPictures: Int = 1
     
     init(pageLayout: AlbumPagesLayout, pageNumber: Int, numberPictures: Int) {
         self.pageLayout = pageLayout

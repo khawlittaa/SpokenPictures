@@ -10,9 +10,9 @@ import UIKit
 
 class CreateAlbumViewController: UIViewController {
     
-//    @IBOutlet weak var titleTextField: UITextField!
-//    @IBOutlet weak var dateTextField: UITextField!
-//    @IBOutlet weak var albumCoverImage: UIImageView!
+    //    @IBOutlet weak var titleTextField: UITextField!
+    //    @IBOutlet weak var dateTextField: UITextField!
+    //    @IBOutlet weak var albumCoverImage: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var albumContentTableView: UITableView!
@@ -60,7 +60,7 @@ class CreateAlbumViewController: UIViewController {
         // call API
         self.navigationController?.popViewController(animated: true)
     }
- 
+    
     @IBAction func addPageButtonClicked(_ sender: Any){
         
         let popUp = album.instantiateViewController(withIdentifier: "ChooseLayoutViewController") as! ChooseLayoutViewController
@@ -77,37 +77,20 @@ class CreateAlbumViewController: UIViewController {
 
 extension CreateAlbumViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return createAlbumsVM.pages.count
+        return createAlbumsVM.album.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let page = createAlbumsVM.pages[indexPath.row]
-        switch page.type {
-        case .layout1:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout1TableViewCell", for: indexPath) as? PageLayout1TableViewCell {
-                //                cell.item = item
-                return cell}
-        case .layout2:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout2TableViewCell", for: indexPath) as? PageLayout2TableViewCell {
-                return cell}
-            
-        case .layout3:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout3TableViewCell", for: indexPath) as? PageLayout3TableViewCell {
+        let album = createAlbumsVM.album[indexPath.row]
+        switch album.type {
+        case .cover:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCoverCell", for: indexPath) as? AlbumCoverCell {
+                //               cell.item = item
                 return cell
             }
-            
-        case .layout4:
+        case .pages:
+            // TO Do fix with approriate Layout here
             if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout4TableViewCell", for: indexPath) as? PageLayout4TableViewCell {
-                return cell
-            }
-            
-        case .layout5:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout5TableViewCell", for: indexPath) as? PageLayout5TableViewCell {
-                return cell
-            }
-            
-        case .layout6:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout6TableViewCell", for: indexPath) as? PageLayout6TableViewCell {
                 return cell
             }
         }

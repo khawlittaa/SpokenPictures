@@ -16,6 +16,4 @@ class AlbumCoverViewModelItem: AlbumViewModelItem{
     var albumtitle: String = ""
     var albumCreationDate: String = ""
     var coverImageURl: String = ""
-    
-    
 }
