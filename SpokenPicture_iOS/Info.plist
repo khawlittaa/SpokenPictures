@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Album</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Spoken Picture needs access to your Microphone </string>
 	<key>CFBundleShortVersionString</key>
@@ -53,11 +53,11 @@
 			<array>
 				<dict>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<string>Album</string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 				</dict>
 			</array>
 		</dict>

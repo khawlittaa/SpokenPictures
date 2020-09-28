@@ -24,10 +24,16 @@ class CreateAlbumViewController: UIViewController {
         saveButton.roundEdges()
         addNavigationBarItems()
         setUpTableView()
+        setUpBinding()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         albumContentTableView.reloadData()
+    }
+    
+    func setUpBinding(){
+        
     }
     
     func setUpTableView(){
@@ -77,7 +83,7 @@ class CreateAlbumViewController: UIViewController {
 
 extension CreateAlbumViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return createAlbumsVM.album.count
+        return createAlbumsVM.album[section].rowCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,9 +96,34 @@ extension CreateAlbumViewController: UITableViewDataSource{
             }
         case .pages:
             // TO Do fix with approriate Layout here
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout4TableViewCell", for: indexPath) as? PageLayout4TableViewCell {
-                return cell
+            let albumPages = album as! AlbumPagesViewModelItem
+            let cellLayout = albumPages.albumPages[indexPath.row].pageLayout
+            switch cellLayout {
+            case .layout1:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout1TableViewCell", for: indexPath) as? PageLayout1TableViewCell {
+                    //        cell.item = item
+                    return cell}
+            case .layout2:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout2TableViewCell", for: indexPath) as? PageLayout2TableViewCell {
+                    return cell}
+            case .layout3:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout3TableViewCell", for: indexPath) as? PageLayout3TableViewCell {
+                    return cell
+                }
+            case .layout4:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout4TableViewCell", for: indexPath) as? PageLayout4TableViewCell {
+                    return cell
+                }
+            case .layout5:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout5TableViewCell", for: indexPath) as? PageLayout5TableViewCell {
+                    return cell
+                }
+            case .layout6:
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout6TableViewCell", for: indexPath) as? PageLayout6TableViewCell {
+                    return cell
+                }
             }
+            
         }
         // return the default cell if none of above succeed
         return UITableViewCell()
