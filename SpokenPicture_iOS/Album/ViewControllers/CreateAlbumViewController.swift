@@ -10,12 +10,12 @@ import UIKit
 
 class CreateAlbumViewController: UIViewController {
     
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var albumCoverImage: UIImageView!
+//    @IBOutlet weak var titleTextField: UITextField!
+//    @IBOutlet weak var dateTextField: UITextField!
+//    @IBOutlet weak var albumCoverImage: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     
-    @IBOutlet weak var pagesTableView: UITableView!
+    @IBOutlet weak var albumContentTableView: UITableView!
     
     let createAlbumsVM = CreateAlbumViewModel()
     
@@ -27,18 +27,19 @@ class CreateAlbumViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        pagesTableView.reloadData()
+        albumContentTableView.reloadData()
     }
     
     func setUpTableView(){
-        pagesTableView.dataSource = self
+        albumContentTableView.dataSource = self
         
-        pagesTableView.registerCell(nib: "PageLayout1TableViewCell", cellreuseIdentifier: "PageLayout1TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout2TableViewCell", cellreuseIdentifier: "PageLayout2TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout3TableViewCell", cellreuseIdentifier: "PageLayout3TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout4TableViewCell", cellreuseIdentifier: "PageLayout4TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout5TableViewCell", cellreuseIdentifier: "PageLayout5TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout6TableViewCell", cellreuseIdentifier: "PageLayout6TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout1TableViewCell", cellreuseIdentifier: "PageLayout1TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout2TableViewCell", cellreuseIdentifier: "PageLayout2TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout3TableViewCell", cellreuseIdentifier: "PageLayout3TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout4TableViewCell", cellreuseIdentifier: "PageLayout4TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout5TableViewCell", cellreuseIdentifier: "PageLayout5TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout6TableViewCell", cellreuseIdentifier: "PageLayout6TableViewCell")
+        albumContentTableView.registerCell(nib: "AlbumCoverCell", cellreuseIdentifier: "AlbumCoverCell")
         
     }
     
@@ -59,31 +60,7 @@ class CreateAlbumViewController: UIViewController {
         // call API
         self.navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func yellowButtonClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected yellow color ")
-    }
-    
-    @IBAction func purpleButtonClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected purple color ")
-    }
-    
-    @IBAction func whiteBtnClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected white color ")
-    }
-    
-    @IBAction func blueButtonClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected blue color ")
-    }
-    
+ 
     @IBAction func addPageButtonClicked(_ sender: Any){
         
         let popUp = album.instantiateViewController(withIdentifier: "ChooseLayoutViewController") as! ChooseLayoutViewController
