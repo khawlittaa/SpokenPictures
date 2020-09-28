@@ -360,13 +360,14 @@
 		6E6B3F1D2513489D00862D47 /* Album */ = {
 			isa = PBXGroup;
 			children = (
-				6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */,
-				6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */,
+				6EE732E32521E3170075D0CE /* Views */,
+				6EE732E22521E30C0075D0CE /* ViewModels */,
+				6EE732E12521E2FB0075D0CE /* ViewControllers */,
 			);
 			path = Album;
 			sourceTree = "<group>";
 		};
-		6E6B3F20251390AF00862D47 /* Album */ = {
+		6E6B3F20251390AF00862D47 /* Editing */ = {
 			isa = PBXGroup;
 			children = (
 				6E62C03E251B501700C51851 /* Models */,
@@ -375,7 +376,7 @@
 				6E6B3F23251392BE00862D47 /* Views */,
 				6E6B3F21251390C900862D47 /* Album.storyboard */,
 			);
-			path = Album;
+			path = Editing;
 			sourceTree = "<group>";
 		};
 		6E6B3F23251392BE00862D47 /* Views */ = {
@@ -421,15 +422,12 @@
 		6E71AF38250F6753001E8BF8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6E3B628F251255F300DB862E /* Pages Layouts */,
 				6E71AF41250F6D03001E8BF8 /* CreateMenuCell.swift */,
 				6E71AF42250F6D03001E8BF8 /* CreateMenuCell.xib */,
 				6E71AF47250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.swift */,
 				6E71AF48250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib */,
 				6E71AF53250FB80B001E8BF8 /* CreateAlbumCell.swift */,
 				6E71AF54250FB80B001E8BF8 /* CreateAlbumCell.xib */,
-				6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */,
-				6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,7 +435,6 @@
 		6E71AF39250F675B001E8BF8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6E6B3F1D2513489D00862D47 /* Album */,
 				6E71AF3F250F68D4001E8BF8 /* CreatePopUpViewController.swift */,
 				6E71AF4B250F9492001E8BF8 /* AlbumsViewController.swift */,
 				6E71AF4D250F94B7001E8BF8 /* HomeViewController.swift */,
@@ -448,7 +445,6 @@
 		6E71AF3A250F6765001E8BF8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				6E6B3F0D251342C000862D47 /* Album Pages  */,
 				6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */,
 				6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */,
 				6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */,
@@ -511,8 +507,9 @@
 				6E74E86E250B67AB00B6ABC7 /* Helpers */,
 				6E4F8FE4250A677200A2241B /* Extensions */,
 				6E36DB1F2510E421005203F3 /* Menu */,
+				6E6B3F1D2513489D00862D47 /* Album */,
 				6E71AF35250F623E001E8BF8 /* Home */,
-				6E6B3F20251390AF00862D47 /* Album */,
+				6E6B3F20251390AF00862D47 /* Editing */,
 				6E4F8FD3250A39D900A2241B /* OnBoarding */,
 				6EF8A23B25189F65000C5A9D /* PostCard */,
 				6E810267250A37A500B9BB43 /* Main.storyboard */,
@@ -522,6 +519,33 @@
 				6E81026F250A37A700B9BB43 /* Info.plist */,
 			);
 			path = SpokenPicture_iOS;
+			sourceTree = "<group>";
+		};
+		6EE732E12521E2FB0075D0CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E36DB3325111475005203F3 /* CreateAlbumViewController.swift */,
+				6E3B628425121F9700DB862E /* ChooseLayoutViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6EE732E22521E30C0075D0CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6E6B3F0D251342C000862D47 /* Album Pages  */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6EE732E32521E3170075D0CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E3B628F251255F300DB862E /* Pages Layouts */,
+				6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */,
+				6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6EF8A23B25189F65000C5A9D /* PostCard */ = {
