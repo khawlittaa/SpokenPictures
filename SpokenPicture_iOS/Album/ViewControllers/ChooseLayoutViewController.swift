@@ -12,7 +12,7 @@ class ChooseLayoutViewController: UIViewController {
     @IBOutlet weak var layoutsCollectionView: UICollectionView!
     
     let layoutsVM = ChooseLayoutViewModel()
-    var createAlbumVM: CreateAlbumViewModel?
+    var createAlbumVM: ?
     
     override func viewDidLoad() {
         super.viewDidLoad()

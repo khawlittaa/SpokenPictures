@@ -8,23 +8,18 @@
 
 import Foundation
 
-enum AlbumPagesViewModelItemType {
-    case layout1
-    case layout2
-    case layout3
-    case layout4
-    case layout5
-    case layout6
+enum AlbumSectionViewModelItemType{
+    case cover
+    case pages
 }
 
-protocol AlbumPagesViewModelItem {
-    var type: AlbumPagesViewModelItemType { get }
-    var pageTitle: String  { get  set }
-    var numberPictures: Int { get }
+protocol AlbumViewModelItem {
+    var type: AlbumSectionViewModelItemType{ get }
+    var rowCount: Int { get }
 }
 
-extension AlbumPagesViewModelItem{
-    var pageTitle: String {
-        return "Page 1"
-    }
+extension AlbumViewModelItem{
+    var rowCount: Int {
+         return 1
+      }
 }

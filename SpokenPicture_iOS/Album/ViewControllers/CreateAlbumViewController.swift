@@ -17,7 +17,7 @@ class CreateAlbumViewController: UIViewController {
     
     @IBOutlet weak var albumContentTableView: UITableView!
     
-    let createAlbumsVM = CreateAlbumViewModel()
+    let createAlbumsVM = AlbumViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

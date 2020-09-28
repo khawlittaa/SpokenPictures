@@ -8,12 +8,12 @@
 
 import Foundation
 
-class CreateAlbumViewModel {
+class AlbumViewModel {
     
-    var pages:[AlbumPagesViewModelItem] = [AlbumPagesViewModelItem] ()
+    var album: [AlbumViewModelItem] = [AlbumViewModelItem] ()
     
     init() {
-        let page = AlbumPageLayout1Item()
-        pages.append(page)
+        let cover = AlbumCoverViewModelItem()
+        album.append(cover)
     }
 }
