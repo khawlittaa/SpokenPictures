@@ -86,8 +86,13 @@ extension CreateAlbumViewController: UITableViewDataSource{
         return createAlbumsVM.album[section].rowCount
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return createAlbumsVM.album.count
+    }
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let album = createAlbumsVM.album[indexPath.row]
+        let album = createAlbumsVM.album[indexPath.section]
         switch album.type {
         case .cover:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCoverCell", for: indexPath) as? AlbumCoverCell {

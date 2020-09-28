@@ -15,7 +15,10 @@ class AlbumViewModel {
     init() {
         let cover = AlbumCoverViewModelItem()
         album.append(cover)
-//        let pages = AlbumPagesViewModelItem()
-//        album.append(pages)
+        let pages = AlbumPagesViewModelItem()
+        let page = AlbumPage(pageLayout: .layout5 , pageNumber: 1, numberPictures: 3)
+        pages.albumPages.append(page)
+        album.append(pages)
+        
     }
 }
