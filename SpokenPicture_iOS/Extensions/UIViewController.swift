@@ -30,7 +30,7 @@ extension UIViewController{
         self.navigationItem.backBarButtonItem?.title = ""
         
     }
-    @objc func menuOptionTapped()  {
+    func showMenu(){
         let item1 = DropdownItem(image: UIImage(named: "orderBlackMaterial")!,title: "Order")
         let item2 = DropdownItem(image: UIImage(named: "editBlack")!, title: "Edit")
         let item3 = DropdownItem(image: UIImage(named: "shareBlack")!, title: "Share")
@@ -50,6 +50,10 @@ extension UIViewController{
 
         menuView.delegate = self
         menuView.showMenu()
+    }
+    
+    @objc func menuOptionTapped()  {
+        
     }
     
     @objc func completeOptionTapped()  {

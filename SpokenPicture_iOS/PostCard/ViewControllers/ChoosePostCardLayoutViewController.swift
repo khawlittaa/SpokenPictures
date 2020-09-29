@@ -12,6 +12,7 @@ class ChoosePostCardLayoutViewController: UIViewController {
     
     @IBOutlet weak var postcardMainView: UIView!
     @IBOutlet weak var fromtBackView: UIView!
+    @IBOutlet weak var dropDownMenuView: DropDownMenuView!
     
     @IBOutlet weak var chooseLayoutButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -24,6 +25,7 @@ class ChoosePostCardLayoutViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
         addNavigationBarItemsWithMenu(iscomplete: true)
+        dropDownMenuView.SetUpTableView()
     }
     
     

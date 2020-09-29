@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		005E3C3E48D32200EBD87E7A /* Pods_SpokenPicture_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485F04CAAC0CC8C5D76BAACC /* Pods_SpokenPicture_iOS.framework */; };
+		6E35583A2523150500058EA6 /* DropMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3558382523150500058EA6 /* DropMenuCell.swift */; };
+		6E35583B2523150500058EA6 /* DropMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3558392523150500058EA6 /* DropMenuCell.xib */; };
+		6E35583D252315D200058EA6 /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E35583C252315D200058EA6 /* DropDownView.xib */; };
+		6E35583F25231AA200058EA6 /* DropDownMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35583E25231AA200058EA6 /* DropDownMenuView.swift */; };
 		6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */; };
 		6E36DB242510E472005203F3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E36DB232510E472005203F3 /* Menu.storyboard */; };
 		6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB252510E52F005203F3 /* MenuViewController.swift */; };
@@ -101,6 +105,10 @@
 		485F04CAAC0CC8C5D76BAACC /* Pods_SpokenPicture_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpokenPicture_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55528C53CB2055495F663EEF /* Pods-SpokenPicture_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpokenPicture_iOS.release.xcconfig"; path = "Target Support Files/Pods-SpokenPicture_iOS/Pods-SpokenPicture_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		6981AAA64011AFAC65AF093F /* Pods-SpokenPicture_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpokenPicture_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SpokenPicture_iOS/Pods-SpokenPicture_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6E3558382523150500058EA6 /* DropMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropMenuCell.swift; sourceTree = "<group>"; };
+		6E3558392523150500058EA6 /* DropMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropMenuCell.xib; sourceTree = "<group>"; };
+		6E35583C252315D200058EA6 /* DropDownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
+		6E35583E25231AA200058EA6 /* DropDownMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuView.swift; sourceTree = "<group>"; };
 		6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMenuPopUpViewModel.swift; sourceTree = "<group>"; };
 		6E36DB232510E472005203F3 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		6E36DB252510E52F005203F3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +212,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E355837252314B400058EA6 /* DropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6E3558382523150500058EA6 /* DropMenuCell.swift */,
+				6E3558392523150500058EA6 /* DropMenuCell.xib */,
+				6E35583C252315D200058EA6 /* DropDownView.xib */,
+				6E35583E25231AA200058EA6 /* DropDownMenuView.swift */,
+			);
+			path = DropDownMenu;
+			sourceTree = "<group>";
+		};
 		6E36DB1F2510E421005203F3 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +534,7 @@
 				6E6B3F20251390AF00862D47 /* Editing */,
 				6E4F8FD3250A39D900A2241B /* OnBoarding */,
 				6EF8A23B25189F65000C5A9D /* PostCard */,
+				6E355837252314B400058EA6 /* DropDownMenu */,
 				6E810267250A37A500B9BB43 /* Main.storyboard */,
 				6E81026A250A37A700B9BB43 /* Assets.xcassets */,
 				6E592C42251E5CA60085205E /* splashScreenReallyFinal.png */,
@@ -669,6 +689,7 @@
 				6E3B62A32512568700DB862E /* PageLayout5TableViewCell.xib in Resources */,
 				6E71AF4A250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib in Resources */,
 				6E592C43251E5CA60085205E /* splashScreenReallyFinal.png in Resources */,
+				6E35583B2523150500058EA6 /* DropMenuCell.xib in Resources */,
 				6E71AF56250FB80B001E8BF8 /* CreateAlbumCell.xib in Resources */,
 				6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */,
 				6E36DB242510E472005203F3 /* Menu.storyboard in Resources */,
@@ -685,6 +706,7 @@
 				6E7A004A251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.xib in Resources */,
 				6E3B6289251220FB00DB862E /* LayoutCollectionViewCell.xib in Resources */,
 				6E36DB2A2510E8B6005203F3 /* MenuTableViewCell.xib in Resources */,
+				6E35583D252315D200058EA6 /* DropDownView.xib in Resources */,
 				6E3B62972512564E00DB862E /* PageLayout2TableViewCell.xib in Resources */,
 				6E3B62A72512569600DB862E /* PageLayout6TableViewCell.xib in Resources */,
 				6E3B629F2512567600DB862E /* PageLayout4TableViewCell.xib in Resources */,
@@ -778,6 +800,7 @@
 				6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */,
 				6E6E36732514D46C004C7F19 /* EditPhotoViewModel.swift in Sources */,
 				6E71AF50250FA2C3001E8BF8 /* UIView.swift in Sources */,
+				6E35583A2523150500058EA6 /* DropMenuCell.swift in Sources */,
 				6E62C040251B505300C51851 /* EditedImage.swift in Sources */,
 				6E71AF4C250F9492001E8BF8 /* AlbumsViewController.swift in Sources */,
 				6E810264250A37A500B9BB43 /* SceneDelegate.swift in Sources */,
@@ -794,6 +817,7 @@
 				6E3B62922512563300DB862E /* PageLayout1TableViewCell.swift in Sources */,
 				6E62C03D251B3CAD00C51851 /* PostCardBackLayoutViewController.swift in Sources */,
 				6E3B628E251236C900DB862E /* Layout.swift in Sources */,
+				6E35583F25231AA200058EA6 /* DropDownMenuView.swift in Sources */,
 				6E71AF43250F6D03001E8BF8 /* CreateMenuCell.swift in Sources */,
 				6E3B62962512564E00DB862E /* PageLayout2TableViewCell.swift in Sources */,
 				6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */,

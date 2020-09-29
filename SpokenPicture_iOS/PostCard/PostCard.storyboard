@@ -108,6 +108,14 @@
                                     <color key="titleColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq6-fF-Exu" customClass="DropDownMenuView" customModule="SpokenPicture_iOS" customModuleProvider="target">
+                                <rect key="frame" x="200" y="0.0" width="140" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="HjW-4S-tvt"/>
+                                    <constraint firstAttribute="height" constant="200" id="zUc-GZ-Oot"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -116,12 +124,14 @@
                             <constraint firstItem="2pv-QB-bK1" firstAttribute="top" secondItem="uop-D2-sJz" secondAttribute="top" constant="20" id="8fK-ZH-P9X"/>
                             <constraint firstItem="zAN-Bi-yFq" firstAttribute="bottom" secondItem="3A9-0y-w90" secondAttribute="bottom" id="EwT-24-8mm"/>
                             <constraint firstItem="PFW-6T-nmQ" firstAttribute="centerX" secondItem="3A9-0y-w90" secondAttribute="centerX" id="EyU-QX-leS"/>
+                            <constraint firstItem="Bq6-fF-Exu" firstAttribute="top" secondItem="3A9-0y-w90" secondAttribute="top" id="FUF-nW-5Qy"/>
                             <constraint firstItem="PFW-6T-nmQ" firstAttribute="top" secondItem="2pv-QB-bK1" secondAttribute="bottom" constant="16" id="KPl-AQ-gGc"/>
                             <constraint firstItem="uop-D2-sJz" firstAttribute="trailing" secondItem="2pv-QB-bK1" secondAttribute="trailing" constant="20" id="Knj-Gq-K7f"/>
                             <constraint firstItem="y60-sS-sbj" firstAttribute="centerX" secondItem="3A9-0y-w90" secondAttribute="centerX" id="LWa-TK-tae"/>
                             <constraint firstItem="uop-D2-sJz" firstAttribute="trailing" secondItem="qpw-M1-OZ2" secondAttribute="trailing" constant="61" id="La2-bw-RKJ"/>
                             <constraint firstItem="zAN-Bi-yFq" firstAttribute="leading" secondItem="uop-D2-sJz" secondAttribute="leading" id="S6t-LQ-w9d"/>
                             <constraint firstItem="2pv-QB-bK1" firstAttribute="leading" secondItem="uop-D2-sJz" secondAttribute="leading" constant="20" id="bVw-bT-vCU"/>
+                            <constraint firstItem="Bq6-fF-Exu" firstAttribute="trailing" secondItem="uop-D2-sJz" secondAttribute="trailing" constant="20" id="kMh-Q4-P0u"/>
                             <constraint firstItem="uop-D2-sJz" firstAttribute="bottom" secondItem="qpw-M1-OZ2" secondAttribute="bottom" constant="40" id="peH-ct-h2j"/>
                             <constraint firstItem="qpw-M1-OZ2" firstAttribute="centerX" secondItem="3A9-0y-w90" secondAttribute="centerX" id="tQQ-3N-TVW"/>
                         </constraints>
@@ -132,6 +142,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chooseLayoutButton" destination="gVi-dC-p9S" id="bfJ-0f-ybh"/>
+                        <outlet property="dropDownMenuView" destination="Bq6-fF-Exu" id="ceJ-QO-gxd"/>
                         <outlet property="fromtBackView" destination="y60-sS-sbj" id="BtA-CB-93I"/>
                         <outlet property="postcardMainView" destination="PFW-6T-nmQ" id="9qA-hA-ORb"/>
                         <outlet property="saveButton" destination="qpw-M1-OZ2" id="10W-Aw-Dl2"/>
