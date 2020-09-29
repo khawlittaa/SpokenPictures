@@ -13,6 +13,8 @@ class MenuOrderViewController: UIViewController {
     @IBOutlet weak var ordersTableView: UITableView!
     @IBOutlet weak var noOrdersView: UIView!
     
+    let ordersVM = OrdersViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
@@ -28,11 +30,13 @@ class MenuOrderViewController: UIViewController {
 
 extension MenuOrderViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return ordersVM.orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuOrderCell") as! MenuOrderCell
+        cell.order = ordersVM.orders[indexPath.row]
+        cell.UpdateUI()
         return cell
     }
 }
