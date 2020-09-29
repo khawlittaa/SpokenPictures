@@ -11,6 +11,8 @@ import UIKit
 class MenuNotificationViewController: UIViewController {
     @IBOutlet weak var notificationsTableView: UITableView!
     
+    var notificationsVM = NotificationsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
@@ -26,11 +28,13 @@ class MenuNotificationViewController: UIViewController {
 
 extension MenuNotificationViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return notificationsVM.notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuNotificationCell")as! MenuNotificationCell
+        cell.notification = notificationsVM.notifications[indexPath.row]
+        cell.setUpUI()
         return cell
     }
     

@@ -17,6 +17,8 @@ class MenuNotificationCell: UITableViewCell {
     @IBOutlet weak var notificationBodyLabel: UILabel!
     @IBOutlet weak var notificatiobDateLabel: UILabel!
     
+    var notification: Notification?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         roundEdges()
@@ -25,6 +27,20 @@ class MenuNotificationCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    func setUpUI(){
+        if notification?.isNew == true{
+            contentView.backgroundColor = .accentBlack2Low
+            cancelButton.setImage(UIImage(named: "closeWhite"), for: .normal)
+            notificationBodyLabel.textColor = .white
+            notificationTitleLabel.textColor = .white
+        }else{
+            contentView.backgroundColor = .pastelPastel11Main
+            cancelButton.setImage(UIImage(named: "closeBlack"), for: .normal)
+            notificationBodyLabel.textColor = .accentBlack1Main
+            notificationTitleLabel.textColor = .accentBlack1Main
+        }
     }
     func roundEdges(){
           syncButton.layer.cornerRadius = 10

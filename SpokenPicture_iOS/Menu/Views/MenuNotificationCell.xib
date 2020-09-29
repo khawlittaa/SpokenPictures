@@ -49,13 +49,13 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The album Winter Holiday has an update, sync it now to see the latest updates." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBd-Sa-Eoq">
-                        <rect key="frame" x="48" y="39.5" width="266" height="64.5"/>
+                        <rect key="frame" x="48" y="39.5" width="266" height="67.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="29/07/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-Pw-Rh7">
-                        <rect key="frame" x="48" y="117" width="66.5" height="17"/>
+                        <rect key="frame" x="48" y="120" width="66.5" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="ddI-7x-eN8"/>
                         </constraints>
@@ -63,22 +63,32 @@
                         <color key="textColor" red="0.58823529411764708" green="0.62745098039215685" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjW-Sl-4Gq">
+                        <rect key="frame" x="16" y="156" width="298" height="1"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.29803921570000003" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="nfK-ub-EVi"/>
+                        </constraints>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" red="0.066666666666666666" green="0.29803921568627451" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.066666666669999999" green="0.29803921570000003" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FjW-Sl-4Gq" secondAttribute="bottom" constant="1" id="40o-E6-RkU"/>
                     <constraint firstAttribute="trailing" secondItem="qBd-Sa-Eoq" secondAttribute="trailing" constant="16" id="67V-OW-7kQ"/>
                     <constraint firstItem="qBd-Sa-Eoq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="48" id="Atb-pG-77W"/>
                     <constraint firstItem="DP7-As-ZYj" firstAttribute="leading" secondItem="Ha1-fh-bmH" secondAttribute="trailing" constant="18" id="DMi-ry-JRg"/>
+                    <constraint firstItem="FjW-Sl-4Gq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="E43-Av-lq8"/>
                     <constraint firstItem="Ha1-fh-bmH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Gri-2d-bP2"/>
                     <constraint firstAttribute="trailing" secondItem="XLo-k4-P9O" secondAttribute="trailing" constant="16" id="Ova-do-gKX"/>
                     <constraint firstItem="Ha1-fh-bmH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Uyc-EL-6Wq"/>
                     <constraint firstItem="XLo-k4-P9O" firstAttribute="leading" secondItem="DP7-As-ZYj" secondAttribute="trailing" constant="11" id="eOJ-hJ-Q78"/>
                     <constraint firstItem="AnV-Pw-Rh7" firstAttribute="top" secondItem="qBd-Sa-Eoq" secondAttribute="bottom" constant="13" id="ePB-gF-NKT"/>
                     <constraint firstItem="AnV-Pw-Rh7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="28" id="mCG-Qj-n72"/>
+                    <constraint firstItem="FjW-Sl-4Gq" firstAttribute="top" secondItem="AnV-Pw-Rh7" secondAttribute="bottom" constant="19" id="qJV-9w-VCw"/>
                     <constraint firstItem="DP7-As-ZYj" firstAttribute="centerY" secondItem="Ha1-fh-bmH" secondAttribute="centerY" id="qbh-mm-7vT"/>
                     <constraint firstItem="qBd-Sa-Eoq" firstAttribute="top" secondItem="XLo-k4-P9O" secondAttribute="bottom" constant="3" id="xlp-3c-ljc"/>
+                    <constraint firstAttribute="trailing" secondItem="FjW-Sl-4Gq" secondAttribute="trailing" constant="16" id="yNn-fG-1U0"/>
                     <constraint firstItem="XLo-k4-P9O" firstAttribute="centerY" secondItem="Ha1-fh-bmH" secondAttribute="centerY" id="yPM-CB-EmV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="AnV-Pw-Rh7" secondAttribute="bottom" constant="13" id="zwp-tc-GhA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
