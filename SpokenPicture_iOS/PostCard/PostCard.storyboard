@@ -108,7 +108,7 @@
                                     <color key="titleColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq6-fF-Exu" customClass="DropDownMenuView" customModule="SpokenPicture_iOS" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq6-fF-Exu" customClass="DropDownMenuView" customModule="SpokenPicture_iOS" customModuleProvider="target">
                                 <rect key="frame" x="200" y="0.0" width="140" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
