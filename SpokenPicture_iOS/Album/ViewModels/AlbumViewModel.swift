@@ -12,30 +12,63 @@ import RxCocoa
 import RxDataSources
 import Differentiator
 
-class AlbumViewModel {
+enum TableViewEditingCommand{
+    case AppendItem(item: AlbumSectionItem, section: Int)
+    case DeleteItem(IndexPath)
+}
+
+class AlbumViewModel{
     
-    var album: [AlbumViewModelItem] = [AlbumViewModelItem] ()
+    var sections: [AlbumSectionItem]
     
-    init() {
-        let cover = AlbumCoverViewModelItem()
-        album.append(cover)
+    init(){
         let pages = AlbumPagesViewModelItem()
         let page = AlbumPage(pageLayout: .layout5 , pageNumber: 1, numberPictures: 3)
-        pages.albumPages.append(page)
-        album.append(pages)
-        
+        pages.albumPage = page
+        let pages1 = AlbumPagesViewModelItem()
+        let pagge1 = AlbumPage(pageLayout: .layout2, pageNumber: 2, numberPictures: 3)
+        pages1.albumPage = pagge1
+        sections = [
+            AlbumSectionItem(header: "First section", items: [AlbumCoverViewModelItem()]),
+            AlbumSectionItem(header: "Second section", items: [pages]),
+            AlbumSectionItem(header: "Second section", items: [pages1])
+        ]
     }
+    
+    init(sections: [AlbumSectionItem]) {
+        self.sections = sections
+    }
+    
+//    func execute(command: TableViewEditingCommand) -> AlbumViewModel {
+//        switch command {
+//        case .AppendItem(let appendEvent):
+//            var sections = self.sections
+//            let items = sections[appendEvent.section].items + appendEvent.item 
+//            sections[appendEvent.section] = AlbumSectionItem(original: sections[appendEvent.section], items: items)
+//            return AlbumViewModel(sections: sections)
+//        case .DeleteItem(let indexPath):
+//            var sections = self.sections
+//            var items = sections[indexPath.section].items
+//            items.remove(at: indexPath.row)
+//            sections[indexPath.section] = AlbumSectionItem(original: sections[indexPath.section], items: items)
+//            return AlbumViewModel(sections: sections)
+//        }
+//    }
+    
 }
 
-struct SectionOfCustomData {
-  var header: String
-  var items: [AlbumViewModelItem]
+struct AlbumSectionItem {
+    
+    var header: String
+    var items: [AlbumViewModelItem]
+    
+    
 }
-extension SectionOfCustomData: SectionModelType {
-  typealias Item = AlbumViewModelItem
-
-   init(original: SectionOfCustomData, items: [Item]) {
-    self = original
-    self.items = items
-  }
+extension AlbumSectionItem: SectionModelType {
+    typealias Item = AlbumViewModelItem
+    
+    init(original: AlbumSectionItem, items: [Item]) {
+        self = original
+        self.items = items
+    }
 }

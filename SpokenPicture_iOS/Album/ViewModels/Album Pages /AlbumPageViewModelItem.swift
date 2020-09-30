@@ -12,9 +12,6 @@ class AlbumPagesViewModelItem: AlbumViewModelItem{
         return .pages
     }
     
-    var albumPages: [AlbumPage] = [AlbumPage]()
+    var albumPage: AlbumPage?
     
-    var rowCount: Int{
-        return albumPages.count
-    }
 }

@@ -29,3 +29,8 @@ func getFileURL() -> URL {
      return path as URL
  }
 
+func + <T>(lhs: [T], rhs: T) -> [T] {
+    var copy = lhs
+    copy.append(rhs)
+    return copy
+}
