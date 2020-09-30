@@ -7,6 +7,10 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import RxDataSources
+import Differentiator
 
 class AlbumViewModel {
     
@@ -21,4 +25,17 @@ class AlbumViewModel {
         album.append(pages)
         
     }
+}
+
+struct SectionOfCustomData {
+  var header: String
+  var items: [AlbumViewModelItem]
+}
+extension SectionOfCustomData: SectionModelType {
+  typealias Item = AlbumViewModelItem
+
+   init(original: SectionOfCustomData, items: [Item]) {
+    self = original
+    self.items = items
+  }
 }
