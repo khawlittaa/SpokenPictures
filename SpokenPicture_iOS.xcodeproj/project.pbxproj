@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		005E3C3E48D32200EBD87E7A /* Pods_SpokenPicture_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485F04CAAC0CC8C5D76BAACC /* Pods_SpokenPicture_iOS.framework */; };
+		6E35583A2523150500058EA6 /* DropMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3558382523150500058EA6 /* DropMenuCell.swift */; };
+		6E35583B2523150500058EA6 /* DropMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3558392523150500058EA6 /* DropMenuCell.xib */; };
+		6E35583D252315D200058EA6 /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E35583C252315D200058EA6 /* DropDownView.xib */; };
+		6E35583F25231AA200058EA6 /* DropDownMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35583E25231AA200058EA6 /* DropDownMenuView.swift */; };
+		6E35584125235B2D00058EA6 /* MenuOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584025235B2D00058EA6 /* MenuOrderViewController.swift */; };
+		6E35584325235B5500058EA6 /* MenuNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584225235B5500058EA6 /* MenuNotificationViewController.swift */; };
+		6E3558462523640900058EA6 /* MenuOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3558442523640900058EA6 /* MenuOrderCell.swift */; };
+		6E3558472523640900058EA6 /* MenuOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3558452523640900058EA6 /* MenuOrderCell.xib */; };
+		6E35584A252366F200058EA6 /* MenuNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E355848252366F200058EA6 /* MenuNotificationCell.swift */; };
+		6E35584B252366F200058EA6 /* MenuNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E355849252366F200058EA6 /* MenuNotificationCell.xib */; };
+		6E35584E2523738300058EA6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584D2523738300058EA6 /* Notification.swift */; };
+		6E3558502523766D00058EA6 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584F2523766D00058EA6 /* NotificationsViewModel.swift */; };
+		6E355852252388C300058EA6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E355851252388C300058EA6 /* Order.swift */; };
+		6E3558542523898E00058EA6 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3558532523898E00058EA6 /* OrdersViewModel.swift */; };
 		6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */; };
 		6E36DB242510E472005203F3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E36DB232510E472005203F3 /* Menu.storyboard */; };
 		6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB252510E52F005203F3 /* MenuViewController.swift */; };
@@ -101,6 +115,20 @@
 		485F04CAAC0CC8C5D76BAACC /* Pods_SpokenPicture_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpokenPicture_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55528C53CB2055495F663EEF /* Pods-SpokenPicture_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpokenPicture_iOS.release.xcconfig"; path = "Target Support Files/Pods-SpokenPicture_iOS/Pods-SpokenPicture_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		6981AAA64011AFAC65AF093F /* Pods-SpokenPicture_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpokenPicture_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SpokenPicture_iOS/Pods-SpokenPicture_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6E3558382523150500058EA6 /* DropMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropMenuCell.swift; sourceTree = "<group>"; };
+		6E3558392523150500058EA6 /* DropMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropMenuCell.xib; sourceTree = "<group>"; };
+		6E35583C252315D200058EA6 /* DropDownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
+		6E35583E25231AA200058EA6 /* DropDownMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuView.swift; sourceTree = "<group>"; };
+		6E35584025235B2D00058EA6 /* MenuOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrderViewController.swift; sourceTree = "<group>"; };
+		6E35584225235B5500058EA6 /* MenuNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNotificationViewController.swift; sourceTree = "<group>"; };
+		6E3558442523640900058EA6 /* MenuOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrderCell.swift; sourceTree = "<group>"; };
+		6E3558452523640900058EA6 /* MenuOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuOrderCell.xib; sourceTree = "<group>"; };
+		6E355848252366F200058EA6 /* MenuNotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNotificationCell.swift; sourceTree = "<group>"; };
+		6E355849252366F200058EA6 /* MenuNotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuNotificationCell.xib; sourceTree = "<group>"; };
+		6E35584D2523738300058EA6 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		6E35584F2523766D00058EA6 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		6E355851252388C300058EA6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		6E3558532523898E00058EA6 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMenuPopUpViewModel.swift; sourceTree = "<group>"; };
 		6E36DB232510E472005203F3 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		6E36DB252510E52F005203F3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -204,9 +232,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E355837252314B400058EA6 /* DropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6E3558382523150500058EA6 /* DropMenuCell.swift */,
+				6E3558392523150500058EA6 /* DropMenuCell.xib */,
+				6E35583C252315D200058EA6 /* DropDownView.xib */,
+				6E35583E25231AA200058EA6 /* DropDownMenuView.swift */,
+			);
+			path = DropDownMenu;
+			sourceTree = "<group>";
+		};
+		6E35584C2523736100058EA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E35584D2523738300058EA6 /* Notification.swift */,
+				6E355851252388C300058EA6 /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6E36DB1F2510E421005203F3 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				6E35584C2523736100058EA6 /* Models */,
 				6E36DB222510E45C005203F3 /* ViewModels */,
 				6E36DB212510E452005203F3 /* Controllers */,
 				6E36DB202510E44A005203F3 /* Views */,
@@ -220,6 +269,10 @@
 			children = (
 				6E36DB272510E8B6005203F3 /* MenuTableViewCell.swift */,
 				6E36DB282510E8B6005203F3 /* MenuTableViewCell.xib */,
+				6E3558442523640900058EA6 /* MenuOrderCell.swift */,
+				6E3558452523640900058EA6 /* MenuOrderCell.xib */,
+				6E355848252366F200058EA6 /* MenuNotificationCell.swift */,
+				6E355849252366F200058EA6 /* MenuNotificationCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +282,8 @@
 			children = (
 				6E36DB252510E52F005203F3 /* MenuViewController.swift */,
 				6E36DB2F2510FD84005203F3 /* MenuProfileViewController.swift */,
+				6E35584025235B2D00058EA6 /* MenuOrderViewController.swift */,
+				6E35584225235B5500058EA6 /* MenuNotificationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +293,8 @@
 			children = (
 				6E36DB2D2510F662005203F3 /* MenuviewModel.swift */,
 				6E36DB3125110499005203F3 /* ProfileViewModel.swift */,
+				6E35584F2523766D00058EA6 /* NotificationsViewModel.swift */,
+				6E3558532523898E00058EA6 /* OrdersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -515,6 +572,7 @@
 				6E6B3F20251390AF00862D47 /* Editing */,
 				6E4F8FD3250A39D900A2241B /* OnBoarding */,
 				6EF8A23B25189F65000C5A9D /* PostCard */,
+				6E355837252314B400058EA6 /* DropDownMenu */,
 				6E810267250A37A500B9BB43 /* Main.storyboard */,
 				6E81026A250A37A700B9BB43 /* Assets.xcassets */,
 				6E592C42251E5CA60085205E /* splashScreenReallyFinal.png */,
@@ -669,6 +727,7 @@
 				6E3B62A32512568700DB862E /* PageLayout5TableViewCell.xib in Resources */,
 				6E71AF4A250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib in Resources */,
 				6E592C43251E5CA60085205E /* splashScreenReallyFinal.png in Resources */,
+				6E35583B2523150500058EA6 /* DropMenuCell.xib in Resources */,
 				6E71AF56250FB80B001E8BF8 /* CreateAlbumCell.xib in Resources */,
 				6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */,
 				6E36DB242510E472005203F3 /* Menu.storyboard in Resources */,
@@ -677,14 +736,17 @@
 				6E71AF44250F6D03001E8BF8 /* CreateMenuCell.xib in Resources */,
 				6EE732E52521E4FC0075D0CE /* Album.storyboard in Resources */,
 				6EF8A24025189FC7000C5A9D /* PostCard.storyboard in Resources */,
+				6E35584B252366F200058EA6 /* MenuNotificationCell.xib in Resources */,
 				6E71AF37250F6271001E8BF8 /* Home.storyboard in Resources */,
 				6E6B3F22251390C900862D47 /* Editing.storyboard in Resources */,
 				6E81026B250A37A700B9BB43 /* Assets.xcassets in Resources */,
+				6E3558472523640900058EA6 /* MenuOrderCell.xib in Resources */,
 				6E810269250A37A500B9BB43 /* Main.storyboard in Resources */,
 				6E3B62932512563300DB862E /* PageLayout1TableViewCell.xib in Resources */,
 				6E7A004A251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.xib in Resources */,
 				6E3B6289251220FB00DB862E /* LayoutCollectionViewCell.xib in Resources */,
 				6E36DB2A2510E8B6005203F3 /* MenuTableViewCell.xib in Resources */,
+				6E35583D252315D200058EA6 /* DropDownView.xib in Resources */,
 				6E3B62972512564E00DB862E /* PageLayout2TableViewCell.xib in Resources */,
 				6E3B62A72512569600DB862E /* PageLayout6TableViewCell.xib in Resources */,
 				6E3B629F2512567600DB862E /* PageLayout4TableViewCell.xib in Resources */,
@@ -746,6 +808,8 @@
 				6E71AF40250F68D4001E8BF8 /* CreatePopUpViewController.swift in Sources */,
 				6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */,
 				6E767D97251E0E3E00D4879E /* User.swift in Sources */,
+				6E3558502523766D00058EA6 /* NotificationsViewModel.swift in Sources */,
+				6E3558462523640900058EA6 /* MenuOrderCell.swift in Sources */,
 				6E6B3F162513452D00862D47 /* AlbumPageLayout3Item.swift in Sources */,
 				6E6B3F182513453F00862D47 /* AlbumPageLayout4Item.swift in Sources */,
 				6E74E870250B67C000B6ABC7 /* Helper.swift in Sources */,
@@ -764,9 +828,12 @@
 				6E6B3F0F2513430700862D47 /* AlbumPagesViewModelItem.swift in Sources */,
 				6E7A0049251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.swift in Sources */,
 				6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */,
+				6E355852252388C300058EA6 /* Order.swift in Sources */,
+				6E35584E2523738300058EA6 /* Notification.swift in Sources */,
 				6E810262250A37A500B9BB43 /* AppDelegate.swift in Sources */,
 				6EF8A2422518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift in Sources */,
 				6E74E86B250B588700B6ABC7 /* UIColor.swift in Sources */,
+				6E35584A252366F200058EA6 /* MenuNotificationCell.swift in Sources */,
 				6E3B629E2512567600DB862E /* PageLayout4TableViewCell.swift in Sources */,
 				6E3B62A22512568700DB862E /* PageLayout5TableViewCell.swift in Sources */,
 				6E36DB2E2510F662005203F3 /* MenuviewModel.swift in Sources */,
@@ -778,10 +845,12 @@
 				6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */,
 				6E6E36732514D46C004C7F19 /* EditPhotoViewModel.swift in Sources */,
 				6E71AF50250FA2C3001E8BF8 /* UIView.swift in Sources */,
+				6E35583A2523150500058EA6 /* DropMenuCell.swift in Sources */,
 				6E62C040251B505300C51851 /* EditedImage.swift in Sources */,
 				6E71AF4C250F9492001E8BF8 /* AlbumsViewController.swift in Sources */,
 				6E810264250A37A500B9BB43 /* SceneDelegate.swift in Sources */,
 				6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */,
+				6E35584325235B5500058EA6 /* MenuNotificationViewController.swift in Sources */,
 				6E6B3F2B2513A53A00862D47 /* EditPhotoViewController.swift in Sources */,
 				6E3B629A2512566800DB862E /* PageLayout3TableViewCell.swift in Sources */,
 				6E74E872250B776800B6ABC7 /* RegularExpressions.swift in Sources */,
@@ -791,11 +860,14 @@
 				6E71AF4E250F94B7001E8BF8 /* HomeViewController.swift in Sources */,
 				6E4F8FE0250A65B300A2241B /* OnBoarding3ViewController.swift in Sources */,
 				6E71AF59250FC065001E8BF8 /* PinterestLayout.swift in Sources */,
+				6E3558542523898E00058EA6 /* OrdersViewModel.swift in Sources */,
 				6E3B62922512563300DB862E /* PageLayout1TableViewCell.swift in Sources */,
 				6E62C03D251B3CAD00C51851 /* PostCardBackLayoutViewController.swift in Sources */,
 				6E3B628E251236C900DB862E /* Layout.swift in Sources */,
+				6E35583F25231AA200058EA6 /* DropDownMenuView.swift in Sources */,
 				6E71AF43250F6D03001E8BF8 /* CreateMenuCell.swift in Sources */,
 				6E3B62962512564E00DB862E /* PageLayout2TableViewCell.swift in Sources */,
+				6E35584125235B2D00058EA6 /* MenuOrderViewController.swift in Sources */,
 				6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */,
 				6E36DB2C2510EDD9005203F3 /* UITableView.swift in Sources */,
 				6E6B3F272513A49200862D47 /* UIImageView.swift in Sources */,
@@ -949,6 +1021,7 @@
 			baseConfigurationReference = 6981AAA64011AFAC65AF093F /* Pods-SpokenPicture_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2D4NJ62UU;
 				INFOPLIST_FILE = SpokenPicture_iOS/Info.plist;
@@ -958,6 +1031,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BothofUS.SpokenPicture-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -968,6 +1042,7 @@
 			baseConfigurationReference = 55528C53CB2055495F663EEF /* Pods-SpokenPicture_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2D4NJ62UU;
 				INFOPLIST_FILE = SpokenPicture_iOS/Info.plist;
@@ -977,6 +1052,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BothofUS.SpokenPicture-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
