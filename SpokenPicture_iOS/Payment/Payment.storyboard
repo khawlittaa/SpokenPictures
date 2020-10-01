@@ -58,6 +58,9 @@
                                 <state key="normal" title="Checkout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkOutButtonClicked:" destination="XLn-7G-LJR" eventType="touchUpInside" id="C2x-nM-VSx"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1r7-P1-R73">
                                 <rect key="frame" x="247" y="664" width="151" height="100"/>
@@ -150,6 +153,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cartItemstableView" destination="XJh-AF-hnn" id="yI6-Yn-TPS"/>
+                        <outlet property="checkoutButton" destination="OKp-cF-f0j" id="WhH-DT-aT9"/>
                         <outlet property="shippingLabel" destination="vwz-xI-1ZO" id="m8h-nV-QQG"/>
                         <outlet property="subtotalLabel" destination="1IS-BF-kQW" id="2fG-9o-cAA"/>
                         <outlet property="taxLabel" destination="knA-jw-kcJ" id="FnU-pp-JGo"/>

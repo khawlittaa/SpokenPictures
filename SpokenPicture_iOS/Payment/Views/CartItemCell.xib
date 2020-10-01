@@ -115,7 +115,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="230 kr" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTg-03-eW7">
-                        <rect key="frame" x="288" y="88.5" width="76" height="24"/>
+                        <rect key="frame" x="288" y="88.5" width="70" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -152,7 +152,7 @@
                     <constraint firstItem="YL4-ur-SmL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ljh-vy-te8"/>
                     <constraint firstItem="Kt9-rN-5aG" firstAttribute="leading" secondItem="YL4-ur-SmL" secondAttribute="trailing" constant="15" id="ONY-gi-h6r"/>
                     <constraint firstItem="Kt9-rN-5aG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RY8-gH-gIQ"/>
-                    <constraint firstItem="aTg-03-eW7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="16" id="YFL-0f-fhb"/>
+                    <constraint firstItem="aTg-03-eW7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="YFL-0f-fhb"/>
                     <constraint firstItem="GCI-Vo-Syb" firstAttribute="top" secondItem="ni4-e3-6na" secondAttribute="bottom" constant="22" id="agX-4j-b6u"/>
                     <constraint firstItem="GCI-Vo-Syb" firstAttribute="top" secondItem="Kt9-rN-5aG" secondAttribute="bottom" constant="22" id="d1V-y6-0ui"/>
                     <constraint firstItem="gOc-yE-WAF" firstAttribute="top" secondItem="YL4-ur-SmL" secondAttribute="top" id="e8M-Si-rcG"/>

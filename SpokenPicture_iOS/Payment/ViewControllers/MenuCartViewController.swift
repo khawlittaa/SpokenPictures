@@ -17,9 +17,11 @@ class MenuCartViewController: UIViewController {
     
     @IBOutlet weak var cartItemstableView: UITableView!
     
+    @IBOutlet weak var checkoutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         setUptableView()
+        checkoutButton.roundEdges()
         
     }
     
@@ -28,6 +30,8 @@ class MenuCartViewController: UIViewController {
         cartItemstableView.dataSource = self
     }
     
+    @IBAction func checkOutButtonClicked(_ sender: Any) {
+    }
 }
 
 extension MenuCartViewController: UITableViewDataSource{
