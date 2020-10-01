@@ -31,6 +31,8 @@ class MenuCartViewController: UIViewController {
     }
     
     @IBAction func checkOutButtonClicked(_ sender: Any) {
+        let ShippingDetailsVC = payment.instantiateViewController(withIdentifier: "ShippingDetailsVC")
+        navigationController?.pushViewController(ShippingDetailsVC, animated: true)
     }
 }
 
