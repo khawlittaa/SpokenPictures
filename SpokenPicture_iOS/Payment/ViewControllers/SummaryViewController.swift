@@ -36,6 +36,8 @@ class SummaryViewController: UIViewController {
     }
     
     @IBAction func orderButtonClicked(_ sender: Any) {
+        let ConfirmationVC = payment.instantiateViewController(withIdentifier: "ConfirmationVC") as! ConfirmationViewController
+        navigationController?.pushViewController(ConfirmationVC, animated: true)
     }
     
 }

@@ -14,12 +14,15 @@ class ShippingDetailsViewController: UIViewController {
     
     @IBOutlet weak var progressImage: UIImageView!
     
+    @IBOutlet weak var billingAddressViewheightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.roundEdges()
     }
     
     @IBAction func checkmarkButtonClicked(_ sender: Any) {
+//        height 387
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
