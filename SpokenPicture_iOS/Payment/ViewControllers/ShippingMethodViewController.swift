@@ -33,6 +33,8 @@ class ShippingMethodViewController: UIViewController {
     
     
     @IBAction func nextButtonClicked(_ sender: Any) {
+        let PaymentVC = payment.instantiateViewController(withIdentifier: "PaymentVC")
+        navigationController?.pushViewController(PaymentVC, animated: true)
     }
 }
 
