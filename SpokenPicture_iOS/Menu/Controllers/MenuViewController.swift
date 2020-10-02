@@ -52,6 +52,11 @@ extension MenuViewController: UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.row == 0{
+            let cartVC = payment.instantiateViewController(withIdentifier: "MenuCartViewController")
+            self.navigationController?.pushViewController(cartVC, animated: true)
+            
+        }else{
         if (indexPath.row == 1){
             let userVC = menu.instantiateViewController(withIdentifier: "MenuProfileViewController") as! MenuProfileViewController
             userVC.profileVM.user = user
@@ -66,9 +71,14 @@ extension MenuViewController: UITableViewDelegate{
                     let notificationVC = menu.instantiateViewController(withIdentifier: "MenuNotificationViewController")
                     self.navigationController?.pushViewController(notificationVC, animated: true)
                     
+                }else{
+                    if indexPath.row == 4{
+                        
+                    }
                 }
             }
         }
+           }
     }
 }
     extension MenuViewController: UITableViewDataSource{
