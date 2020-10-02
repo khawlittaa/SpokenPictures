@@ -14,15 +14,20 @@ class ShippingDetailsViewController: UIViewController {
     
     @IBOutlet weak var progressImage: UIImageView!
     
+    @IBOutlet weak var billingAdreesView: UIView!
     @IBOutlet weak var billingAddressViewheightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.roundEdges()
+        billingAdreesView.isHidden = true
+        billingAddressViewheightConstraint.constant = 0
     }
-    
+    //MARK: NOTE: needs a VM and state binding here using rxSwift
     @IBAction func checkmarkButtonClicked(_ sender: Any) {
-//        height 387
+        billingAdreesView.isHidden = false
+        checkMarkButton.setImage(UIImage(named: "checkYellow"), for: .normal)
+billingAddressViewheightConstraint.constant = 387
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
