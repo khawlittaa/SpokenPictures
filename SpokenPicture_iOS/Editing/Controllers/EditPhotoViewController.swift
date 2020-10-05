@@ -29,6 +29,7 @@ class EditPhotoViewController: UIViewController {
     let disposeBag = DisposeBag()
     var originalImage = UIImage()
     var sourcePostcardVM: PostsCardViewModel?
+    var albumItem: AlbumViewModelItem?
     
     var audioPlayer:AVAudioPlayer!
     
@@ -95,7 +96,7 @@ class EditPhotoViewController: UIViewController {
         
     }
     
-    
+//MARK: set selected image to its original destination
     @objc func addTapped()  {
         self.navigationController?.popViewController(animated: true)
      // show postcard view with edited image + audio here

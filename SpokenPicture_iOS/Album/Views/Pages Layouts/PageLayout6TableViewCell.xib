@@ -38,12 +38,56 @@
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y4O-hu-wu6">
                         <rect key="frame" x="10" y="40" width="310" height="213"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fcm-D2-UeQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMz-ac-Ub7">
                                 <rect key="frame" x="0.0" y="0.0" width="151" height="213"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="U7J-Sv-c1f">
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fcm-D2-UeQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="213"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmZ-5B-RbA">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="213"/>
+                                        <connections>
+                                            <action selector="leftImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3YN-zW-bCi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="NmZ-5B-RbA" firstAttribute="top" secondItem="CMz-ac-Ub7" secondAttribute="top" id="5ct-ac-mA8"/>
+                                    <constraint firstAttribute="trailing" secondItem="fcm-D2-UeQ" secondAttribute="trailing" id="6Le-UI-ZXs"/>
+                                    <constraint firstItem="NmZ-5B-RbA" firstAttribute="leading" secondItem="CMz-ac-Ub7" secondAttribute="leading" id="Cyl-qY-vFh"/>
+                                    <constraint firstAttribute="bottom" secondItem="NmZ-5B-RbA" secondAttribute="bottom" id="L6Y-EN-SIV"/>
+                                    <constraint firstAttribute="bottom" secondItem="fcm-D2-UeQ" secondAttribute="bottom" id="OOF-gs-652"/>
+                                    <constraint firstItem="fcm-D2-UeQ" firstAttribute="top" secondItem="CMz-ac-Ub7" secondAttribute="top" id="Rgm-O9-tFq"/>
+                                    <constraint firstAttribute="trailing" secondItem="NmZ-5B-RbA" secondAttribute="trailing" id="bta-jh-4Fq"/>
+                                    <constraint firstItem="fcm-D2-UeQ" firstAttribute="leading" secondItem="CMz-ac-Ub7" secondAttribute="leading" id="oOa-sf-rP8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86B-yl-tui">
                                 <rect key="frame" x="159" y="0.0" width="151" height="213"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="U7J-Sv-c1f">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="213"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPQ-zz-hPP">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="213"/>
+                                        <connections>
+                                            <action selector="rightImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8JQ-Pj-blN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qPQ-zz-hPP" secondAttribute="bottom" id="2ay-yd-CLO"/>
+                                    <constraint firstItem="qPQ-zz-hPP" firstAttribute="top" secondItem="86B-yl-tui" secondAttribute="top" id="8b8-ej-l5w"/>
+                                    <constraint firstAttribute="trailing" secondItem="U7J-Sv-c1f" secondAttribute="trailing" id="CoN-Km-bPW"/>
+                                    <constraint firstAttribute="bottom" secondItem="U7J-Sv-c1f" secondAttribute="bottom" id="N46-5O-hT6"/>
+                                    <constraint firstItem="U7J-Sv-c1f" firstAttribute="top" secondItem="86B-yl-tui" secondAttribute="top" id="PeV-yh-nEr"/>
+                                    <constraint firstItem="qPQ-zz-hPP" firstAttribute="leading" secondItem="86B-yl-tui" secondAttribute="leading" id="RDJ-26-0em"/>
+                                    <constraint firstAttribute="trailing" secondItem="qPQ-zz-hPP" secondAttribute="trailing" id="WZW-S7-em0"/>
+                                    <constraint firstItem="U7J-Sv-c1f" firstAttribute="leading" secondItem="86B-yl-tui" secondAttribute="leading" id="o08-yL-S9b"/>
+                                </constraints>
+                            </view>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -59,6 +103,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="leftImageButton" destination="NmZ-5B-RbA" id="cU6-wc-TTk"/>
+                <outlet property="leftImageView" destination="fcm-D2-UeQ" id="sai-BL-NzL"/>
+                <outlet property="rightImageButton" destination="qPQ-zz-hPP" id="m2K-MC-2Qr"/>
+                <outlet property="rightImageView" destination="U7J-Sv-c1f" id="OKX-Ma-oen"/>
+            </connections>
             <point key="canvasLocation" x="143.47826086956522" y="162.38839285714286"/>
         </tableViewCell>
     </objects>

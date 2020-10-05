@@ -38,18 +38,84 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JuY-qY-sNY">
                         <rect key="frame" x="10" y="40" width="217" height="208"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-zr-spS">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-Pf-TS9">
                                 <rect key="frame" x="0.0" y="0.0" width="217" height="99"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-zr-spS">
+                                        <rect key="frame" x="0.0" y="0.0" width="217" height="99"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGd-xf-BvG">
+                                        <rect key="frame" x="0.0" y="0.0" width="217" height="99"/>
+                                        <connections>
+                                            <action selector="addTopImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CQx-VM-INK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="zaJ-zr-spS" firstAttribute="top" secondItem="uYJ-Pf-TS9" secondAttribute="top" id="LXM-VB-BBL"/>
+                                    <constraint firstAttribute="bottom" secondItem="zaJ-zr-spS" secondAttribute="bottom" id="R1Z-SU-Jzm"/>
+                                    <constraint firstAttribute="trailing" secondItem="zaJ-zr-spS" secondAttribute="trailing" id="U9T-fm-zcD"/>
+                                    <constraint firstAttribute="trailing" secondItem="OGd-xf-BvG" secondAttribute="trailing" id="UdR-Oo-N9D"/>
+                                    <constraint firstItem="OGd-xf-BvG" firstAttribute="leading" secondItem="uYJ-Pf-TS9" secondAttribute="leading" id="gFv-gS-CyK"/>
+                                    <constraint firstItem="OGd-xf-BvG" firstAttribute="top" secondItem="uYJ-Pf-TS9" secondAttribute="top" id="ljz-d8-D23"/>
+                                    <constraint firstItem="zaJ-zr-spS" firstAttribute="leading" secondItem="uYJ-Pf-TS9" secondAttribute="leading" id="o4K-sP-Y7T"/>
+                                    <constraint firstAttribute="bottom" secondItem="OGd-xf-BvG" secondAttribute="bottom" id="ptp-N6-Rax"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xOs-Bb-QJc">
                                 <rect key="frame" x="0.0" y="109" width="217" height="99"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ind-HX-H9K">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBQ-Ap-Fbo">
                                         <rect key="frame" x="0.0" y="0.0" width="103.5" height="99"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-JI-Z5o">
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ind-HX-H9K">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="99"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrX-Wy-zVG">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="99"/>
+                                                <connections>
+                                                    <action selector="addButtomLeftImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="A8A-S2-KTW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ind-HX-H9K" secondAttribute="bottom" id="0v9-Ax-AwP"/>
+                                            <constraint firstAttribute="trailing" secondItem="UrX-Wy-zVG" secondAttribute="trailing" id="9Eg-kW-jwI"/>
+                                            <constraint firstAttribute="bottom" secondItem="UrX-Wy-zVG" secondAttribute="bottom" id="Df1-cY-cL4"/>
+                                            <constraint firstItem="Ind-HX-H9K" firstAttribute="leading" secondItem="ZBQ-Ap-Fbo" secondAttribute="leading" id="I92-ig-2zg"/>
+                                            <constraint firstItem="UrX-Wy-zVG" firstAttribute="leading" secondItem="ZBQ-Ap-Fbo" secondAttribute="leading" id="L4G-sp-7YG"/>
+                                            <constraint firstItem="UrX-Wy-zVG" firstAttribute="top" secondItem="ZBQ-Ap-Fbo" secondAttribute="top" id="b9g-DW-BOX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ind-HX-H9K" secondAttribute="trailing" id="kNv-fC-7Jq"/>
+                                            <constraint firstItem="Ind-HX-H9K" firstAttribute="top" secondItem="ZBQ-Ap-Fbo" secondAttribute="top" id="sch-Mu-6WC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0k-Zj-P7l">
                                         <rect key="frame" x="113.5" y="0.0" width="103.5" height="99"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-JI-Z5o">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="99"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmJ-Hq-R60">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="99"/>
+                                                <connections>
+                                                    <action selector="addButtomRightImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6hc-XB-949"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="H3z-JI-Z5o" firstAttribute="top" secondItem="i0k-Zj-P7l" secondAttribute="top" id="5C5-UT-khW"/>
+                                            <constraint firstItem="WmJ-Hq-R60" firstAttribute="top" secondItem="i0k-Zj-P7l" secondAttribute="top" id="5U6-6f-UI2"/>
+                                            <constraint firstAttribute="bottom" secondItem="H3z-JI-Z5o" secondAttribute="bottom" id="HiV-ci-xYe"/>
+                                            <constraint firstAttribute="bottom" secondItem="WmJ-Hq-R60" secondAttribute="bottom" id="SPj-QZ-RWs"/>
+                                            <constraint firstAttribute="trailing" secondItem="WmJ-Hq-R60" secondAttribute="trailing" id="XOC-gq-2Qq"/>
+                                            <constraint firstAttribute="trailing" secondItem="H3z-JI-Z5o" secondAttribute="trailing" id="fr7-4W-3Oy"/>
+                                            <constraint firstItem="H3z-JI-Z5o" firstAttribute="leading" secondItem="i0k-Zj-P7l" secondAttribute="leading" id="glH-m9-xKp"/>
+                                            <constraint firstItem="WmJ-Hq-R60" firstAttribute="leading" secondItem="i0k-Zj-P7l" secondAttribute="leading" id="vCD-8U-GiV"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -68,6 +134,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addBottomLeftImageButton" destination="UrX-Wy-zVG" id="lrP-0z-n1v"/>
+                <outlet property="addBottomRightImageButton" destination="WmJ-Hq-R60" id="6C1-I0-hDe"/>
+                <outlet property="addTopImageButton" destination="OGd-xf-BvG" id="tu5-rp-TJj"/>
+                <outlet property="bottomLeftImageImageView" destination="Ind-HX-H9K" id="rrZ-B1-RND"/>
+                <outlet property="bottomRightImageImageView" destination="H3z-JI-Z5o" id="xYc-Fn-Eu8"/>
+                <outlet property="topImageImageView" destination="zaJ-zr-spS" id="Trs-zJ-UA8"/>
+            </connections>
             <point key="canvasLocation" x="-25.362318840579711" y="99.776785714285708"/>
         </tableViewCell>
     </objects>

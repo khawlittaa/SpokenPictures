@@ -63,9 +63,8 @@ extension UIButton{
         config.screens = [.library]
         config.library.mediaType = .photoAndVideo
         config.video.fileType = .mov
-        config.video.recordingTimeLimit = 15.0
-        config.video.libraryTimeLimit = 15.0
-        config.video.minimumTimeLimit = 3.0
+        config.video.libraryTimeLimit = 20.0
+        config.video.minimumTimeLimit = 15.0
         // Build a picker with your configuration
         let picker = YPImagePicker(configuration: config)
         picker.didFinishPicking { [unowned picker] items, _ in
@@ -75,6 +74,7 @@ extension UIButton{
                 print(photo.originalImage) // original image selected by the user, unfiltered
                 let editVc = editing.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
                 editVc.originalImage = photo.originalImage
+//                editVc.albumItem = item
                 sourceVC.navigationController?.pushViewController(editVc, animated: true)
             }else{
                 if let video = items.singleVideo {

@@ -9,16 +9,41 @@
 import UIKit
 
 class PageLayout4TableViewCell: UITableViewCell {
-
+    
+    private  var sourceVC: UIViewController?
+    @IBOutlet weak var topImageImageView: UIImageView!
+    @IBOutlet weak var bottomLeftImageImageView: UIImageView!
+    @IBOutlet weak var bottomRightImageImageView: UIImageView!
+    
+    @IBOutlet weak var addBottomRightImageButton: UIButton!
+    @IBOutlet weak var addBottomLeftImageButton: UIButton!
+    @IBOutlet weak var addTopImageButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func setSourceVC(sourceVC: UIViewController){
+        self.sourceVC = sourceVC
+    }
+    
+    @IBAction func addButtomRightImageButtonClicked(_ sender: Any) {
+        addBottomRightImageButton.showImagePicker(sourceVC: sourceVC!)
+        addBottomRightImageButton.isHidden = true
+    }
+    
+    @IBAction func addButtomLeftImageButtonClicked(_ sender: Any) {
+        addBottomLeftImageButton.showImagePicker(sourceVC: sourceVC!)
+        addBottomLeftImageButton.isHidden = true
+    }
+    
+    @IBAction func addTopImageButtonClicked(_ sender: Any) {
+        addTopImageButton.showImagePicker(sourceVC: sourceVC!)
+        addTopImageButton.isHidden = true
     }
     
 }

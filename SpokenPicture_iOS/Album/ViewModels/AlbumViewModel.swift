@@ -23,10 +23,10 @@ class AlbumViewModel{
     
     init(){
         let pages = AlbumPagesViewModelItem()
-        let page = AlbumPage(pageLayout: .layout5 , pageNumber: 1, numberPictures: 3)
+        let page = AlbumPage(pageLayout: .layout4 , pageNumber: 1, numberPictures: 3)
         pages.albumPage = page
         let pages1 = AlbumPagesViewModelItem()
-        let pagge1 = AlbumPage(pageLayout: .layout2, pageNumber: 2, numberPictures: 3)
+        let pagge1 = AlbumPage(pageLayout: .layout2, pageNumber: 2, numberPictures: 2)
         pages1.albumPage = pagge1
         sections = [
             AlbumSectionItem(header: "First section", items: [AlbumCoverViewModelItem()]),

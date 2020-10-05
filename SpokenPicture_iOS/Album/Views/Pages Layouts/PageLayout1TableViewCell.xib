@@ -34,20 +34,36 @@
                         </constraints>
                         <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" image="trash.fill" catalog="system"/>
+                        <connections>
+                            <action selector="deletePageBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i7F-ft-qen"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-Dj-1em">
+                        <rect key="frame" x="30" y="45.5" width="285" height="113.5"/>
+                        <connections>
+                            <action selector="addImageBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YXi-oj-bf9"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="DUh-o2-OLO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GTk-3M-B4l"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="D6t-Dj-1em" secondAttribute="trailing" constant="10" id="Hqb-XN-Z00"/>
                     <constraint firstItem="n4i-Fi-dc5" firstAttribute="centerY" secondItem="Kdi-2j-SVy" secondAttribute="centerY" id="J7a-ZS-QX9"/>
                     <constraint firstItem="DUh-o2-OLO" firstAttribute="top" secondItem="Kdi-2j-SVy" secondAttribute="bottom" constant="10" id="Ltr-uM-DB0"/>
+                    <constraint firstItem="D6t-Dj-1em" firstAttribute="top" secondItem="Kdi-2j-SVy" secondAttribute="bottom" constant="10" id="M5E-jV-fjG"/>
                     <constraint firstItem="DUh-o2-OLO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Mls-cC-ePI"/>
                     <constraint firstItem="Kdi-2j-SVy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VcE-ms-A51"/>
                     <constraint firstItem="n4i-Fi-dc5" firstAttribute="leading" secondItem="Kdi-2j-SVy" secondAttribute="trailing" constant="10" id="b3H-C8-dUe"/>
+                    <constraint firstItem="D6t-Dj-1em" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="gJR-Qr-y1j"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="D6t-Dj-1em" secondAttribute="bottom" constant="10" id="jcL-hR-f3N"/>
                     <constraint firstItem="Kdi-2j-SVy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ndV-9I-E4F"/>
                     <constraint firstItem="DUh-o2-OLO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="p6R-Rl-ChQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addImageBtn" destination="D6t-Dj-1em" id="dUU-Ob-xr5"/>
+            </connections>
             <point key="canvasLocation" x="22.463768115942031" y="101.78571428571428"/>
         </tableViewCell>
     </objects>

@@ -16,6 +16,18 @@ class PageLayout2TableViewCell: UITableViewCell {
     @IBOutlet weak var addTopImageButton: UIButton!
     private  var sourceVC: UIViewController?
     
+    var item : AlbumPagesViewModelItem?{
+        didSet{
+            print("album page layout 2 did set")
+        }
+    }
+    
+    var TopImage: UIImage?{
+        didSet{
+            self.topImageView.image = TopImage
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

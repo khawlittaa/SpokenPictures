@@ -9,7 +9,10 @@
 import UIKit
 
 class PageLayout1TableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var addImageBtn: UIButton!
+    private  var sourceVC: UIViewController?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,8 +20,17 @@ class PageLayout1TableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func setSourceVC(sourceVC: UIViewController){
+        self.sourceVC = sourceVC
+    }
+    
+    @IBAction func addImageBtnClicked(_ sender: Any) {
+        addImageBtn.showImagePicker(sourceVC: sourceVC!)
+        addImageBtn.isHidden = true
+    }
+    @IBAction func deletePageBtnClicked(_ sender: Any) {
     }
     
 }
