@@ -81,6 +81,7 @@ class CreateAlbumViewController: UIViewController {
                     case .layout2:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout2TableViewCell", for: indexPath) as! PageLayout2TableViewCell
                         //        cell.item = item
+                        cell.setSourceVC(sourceVC: self)
                         return cell
                     case .layout3:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout3TableViewCell", for: indexPath) as! PageLayout3TableViewCell

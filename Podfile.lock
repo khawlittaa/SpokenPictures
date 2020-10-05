@@ -19,7 +19,7 @@ PODS:
   - RxSwift (5.1.1)
   - SteviaLayout (4.7.3)
   - TBDropdownMenu (4.1.0)
-  - TOCropViewController (2.5.4)
+  - TOCropViewController (2.5.5)
   - TransitionPatch (1.0.2)
   - YPImagePicker (4.4.0):
     - PryntTrimmerView (~> 4.0.2)
@@ -68,7 +68,7 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   TBDropdownMenu: 9201924bf459a3ae426b992f3db032d377020636
-  TOCropViewController: 2a1ae1242600b1f2d996fd91a5268b2309a33b5c
+  TOCropViewController: da59f531f8ac8a94ef6d6c0fc34009350f9e8bfe
   TransitionPatch: c02b48b1429255b14ef82b7e411034e0958b9681
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
