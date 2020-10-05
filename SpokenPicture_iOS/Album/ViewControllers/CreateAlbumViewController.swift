@@ -22,7 +22,7 @@ class CreateAlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.roundEdges()
-        addNavigationBarItems()
+        addNavigationBarItemsWithMenu(iscomplete: true)
         setUpTableView()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -42,23 +42,6 @@ class CreateAlbumViewController: UIViewController {
         
     }
     
-    func addNavigationBarItems(){
-        self.navigationController?.navigationBar.tintColor = .accentBlack1Main
-        let complete = UIImage(named: "complete")
-        let menu = UIImage(named: "menuBar")
-        let menuButtonItem = UIBarButtonItem(image: menu, style: .plain, target: self, action: #selector(menuTapped))
-        let completeButtonItem = UIBarButtonItem(image: complete, style: .plain, target: self, action: #selector(completeTapped))
-        self.navigationItem.rightBarButtonItems = [menuButtonItem, completeButtonItem]
-        
-    }
-    @objc func menuTapped()  {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @objc func completeTapped()  {
-        // call API
-        self.navigationController?.popViewController(animated: true)
-    }
     
     @IBAction func yellowButtonClicked(_ sender: Any) {
         let btn = sender as! UIButton

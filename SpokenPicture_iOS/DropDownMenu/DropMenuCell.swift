@@ -9,7 +9,9 @@
 import UIKit
 
 class DropMenuCell: UITableViewCell {
-
+    @IBOutlet weak var menuItemImage: UIImageView!
+    
+    @IBOutlet weak var menuItemLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,6 +19,11 @@ class DropMenuCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func setCellDate(menuItem: MenuItem){
+        menuItemImage.image = menuItem.image
+        menuItemLabel.text = menuItem.title
     }
     
 }
