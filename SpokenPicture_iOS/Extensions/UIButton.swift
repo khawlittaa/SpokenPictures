@@ -56,7 +56,7 @@ extension UIButton{
         self.layer.cornerRadius = 4.0
     }
     
-    func showImagePicker(sourceVC: UIViewController){
+    func showImagePicker(sourceVC: UIViewController, pageItem: AlbumPagesViewModelItem? = nil, coverItem: AlbumCoverViewModelItem? = nil ){
         var config = YPImagePickerConfiguration()
         config.showsPhotoFilters = false
         config.showsVideoTrimmer = false
@@ -74,7 +74,7 @@ extension UIButton{
                 print(photo.originalImage) // original image selected by the user, unfiltered
                 let editVc = editing.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
                 editVc.originalImage = photo.originalImage
-//                editVc.albumItem = item
+                editVc.albumPageItem = pageItem
                 sourceVC.navigationController?.pushViewController(editVc, animated: true)
             }else{
                 if let video = items.singleVideo {

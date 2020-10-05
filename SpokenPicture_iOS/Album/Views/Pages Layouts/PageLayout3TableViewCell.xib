@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PageLayout3TableViewCell" rowHeight="234" id="KGk-i7-Jjw" customClass="PageLayout3TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="248" height="234"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PageLayout3TableViewCell" rowHeight="354" id="KGk-i7-Jjw" customClass="PageLayout3TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="284" height="354"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="248" height="234"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="284" height="354"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zld-TK-Fqg">
@@ -36,19 +36,19 @@
                         <state key="normal" image="trash.fill" catalog="system"/>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wco-8n-clm">
-                        <rect key="frame" x="10" y="40" width="228" height="184"/>
+                        <rect key="frame" x="10" y="40" width="264" height="320"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0RB-Wc-jE0">
-                                <rect key="frame" x="0.0" y="0.0" width="109" height="184"/>
+                                <rect key="frame" x="0.0" y="0.0" width="132" height="320"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdA-vJ-l0H">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="87"/>
+                                        <rect key="frame" x="11.5" y="0.0" width="109" height="155"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UvT-ep-yZ5">
-                                                <rect key="frame" x="0.0" y="0.0" width="109" height="87"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="155"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-Bj-Qd0">
-                                                <rect key="frame" x="0.0" y="0.0" width="109" height="87"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="155"/>
                                                 <connections>
                                                     <action selector="image1ButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="X9H-6g-UCe"/>
                                                 </connections>
@@ -67,13 +67,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-Hr-cxp">
-                                        <rect key="frame" x="0.0" y="97" width="109" height="87"/>
+                                        <rect key="frame" x="11.5" y="165" width="109" height="155"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jLk-rb-tVT">
-                                                <rect key="frame" x="0.0" y="0.0" width="109" height="87"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="155"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqB-KB-Flp">
-                                                <rect key="frame" x="0.0" y="0.0" width="109" height="87"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="155"/>
                                                 <connections>
                                                     <action selector="image2ButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jCQ-wk-znH"/>
                                                 </connections>
@@ -94,13 +94,13 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHG-Na-YZu">
-                                <rect key="frame" x="119" y="0.0" width="109" height="184"/>
+                                <rect key="frame" x="132" y="0.0" width="132" height="320"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tri-Pi-6zy">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="184"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="320"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-oZ-Tbr">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="184"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="320"/>
                                         <connections>
                                             <action selector="image3ButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YtE-cE-6o6"/>
                                         </connections>
@@ -124,6 +124,7 @@
                             <constraint firstAttribute="bottom" secondItem="ZHG-Na-YZu" secondAttribute="bottom" id="Pf7-xU-OcK"/>
                             <constraint firstItem="ZHG-Na-YZu" firstAttribute="top" secondItem="wco-8n-clm" secondAttribute="top" id="gLd-2G-kAu"/>
                             <constraint firstItem="ZHG-Na-YZu" firstAttribute="leading" secondItem="0RB-Wc-jE0" secondAttribute="trailing" id="wjg-15-gDK"/>
+                            <constraint firstAttribute="height" constant="320" id="y10-aV-VqO"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -147,7 +148,7 @@
                 <outlet property="image3Button" destination="rWu-oZ-Tbr" id="fCR-M9-r85"/>
                 <outlet property="image3ImageView" destination="rWu-oZ-Tbr" id="i2g-0m-YVe"/>
             </connections>
-            <point key="canvasLocation" x="147.82608695652175" y="235.04464285714283"/>
+            <point key="canvasLocation" x="40.579710144927539" y="354.91071428571428"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -34,7 +34,7 @@ class PageLayout5TableViewCell: UITableViewCell {
     }
     
     @IBAction func bottomRightImageButtonClicked(_ sender: Any) {
-        bottomRightImageButton.showImagePicker(sourceVC: sourceVC!)
+        bottomRightImageButton.showImagePicker(sourceVC: sourceVC!, pageItem: nil, coverItem: nil)
         bottomRightImageButton.isHidden = true
     }
     

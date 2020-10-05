@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PageLayout5TableViewCell" rowHeight="259" id="KGk-i7-Jjw" customClass="PageLayout5TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="263" height="259"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PageLayout5TableViewCell" rowHeight="349" id="KGk-i7-Jjw" customClass="PageLayout5TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="269" height="349"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="263" height="259"/>
+                <rect key="frame" x="0.0" y="0.0" width="269" height="349"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2a-le-bb3">
@@ -36,16 +36,16 @@
                         <state key="normal" image="trash.fill" catalog="system"/>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-gD-QUH">
-                        <rect key="frame" x="10" y="40" width="243" height="209"/>
+                        <rect key="frame" x="10" y="40" width="249" height="320"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-4t-qld">
-                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="209"/>
+                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="209"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zii-Cc-NRa">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="209"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="209"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPw-0t-CfZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="209"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="209"/>
                                         <connections>
                                             <action selector="leftImagebuttonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Y7f-Hm-SLl"/>
                                         </connections>
@@ -64,16 +64,16 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uIT-28-5Q0">
-                                <rect key="frame" x="126.5" y="0.0" width="116.5" height="209"/>
+                                <rect key="frame" x="129.5" y="0.0" width="119.5" height="320"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJt-iz-qEq">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="99.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-PP-XZJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="99.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Up1-uH-f2i">
-                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="99.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
                                                 <connections>
                                                     <action selector="topRightImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xOk-9C-koz"/>
                                                 </connections>
@@ -92,13 +92,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7X-bV-Aq6">
-                                        <rect key="frame" x="0.0" y="109.5" width="116.5" height="99.5"/>
+                                        <rect key="frame" x="0.0" y="165" width="119.5" height="155"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-gL-IIA">
-                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="99.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Teg-Yu-YSk">
-                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="99.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
                                                 <connections>
                                                     <action selector="bottomRightImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="slZ-aX-dTf"/>
                                                 </connections>
@@ -117,6 +117,9 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="6LZ-or-BUs"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
@@ -146,7 +149,7 @@
                 <outlet property="topRightImageButton" destination="Up1-uH-f2i" id="n0e-HY-igQ"/>
                 <outlet property="topRightImageView" destination="Lwr-PP-XZJ" id="xzd-xY-koq"/>
             </connections>
-            <point key="canvasLocation" x="145.6521739130435" y="194.53125"/>
+            <point key="canvasLocation" x="109.42028985507247" y="256.80803571428572"/>
         </tableViewCell>
     </objects>
     <resources>
