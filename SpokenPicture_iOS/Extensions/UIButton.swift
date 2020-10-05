@@ -59,14 +59,13 @@ extension UIButton{
     func showImagePicker(sourceVC: UIViewController){
         var config = YPImagePickerConfiguration()
         config.showsPhotoFilters = false
+        config.showsVideoTrimmer = false
         config.screens = [.library]
         config.library.mediaType = .photoAndVideo
         config.video.fileType = .mov
         config.video.recordingTimeLimit = 15.0
         config.video.libraryTimeLimit = 15.0
         config.video.minimumTimeLimit = 3.0
-        config.video.trimmerMaxDuration = 15.0
-        config.video.trimmerMinDuration = 3.0
         // Build a picker with your configuration
         let picker = YPImagePicker(configuration: config)
         picker.didFinishPicking { [unowned picker] items, _ in
@@ -77,6 +76,14 @@ extension UIButton{
                 let editVc = editing.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
                 editVc.originalImage = photo.originalImage
                 sourceVC.navigationController?.pushViewController(editVc, animated: true)
+            }else{
+                if let video = items.singleVideo {
+                     print(video.fromCamera)
+                     print(video.thumbnail)
+                     print(video.url)
+                    let VideoThummbnailVC = editing.instantiateViewController(withIdentifier: "VideoThummbnailVC") as! VideoThummbnailViewController
+                    sourceVC.navigationController?.pushViewController(VideoThummbnailVC, animated: true)
+                 }
             }
             picker.dismiss(animated: true, completion: nil)
         }
