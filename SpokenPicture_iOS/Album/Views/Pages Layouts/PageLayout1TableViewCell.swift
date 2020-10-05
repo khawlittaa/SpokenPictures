@@ -10,9 +10,26 @@ import UIKit
 
 class PageLayout1TableViewCell: UITableViewCell {
     
+    @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var addImageBtn: UIButton!
+    @IBOutlet weak var pageNumberLabel: UILabel!
+    
     private  var sourceVC: UIViewController?
     
+    var item : AlbumPagesViewModelItem?{
+        didSet{
+            print("album page layout 2 did set \(item?.albumPage?.images?.count) images ")
+            if let pageNumber = item?.albumPage?.pageNumber{
+                pageNumberLabel.text = "page \(pageNumber)"
+            }
+            
+            if let images = item?.albumPage?.images{
+                if images.count > 0 {
+                    albumImageView.image = images[0]
+                }
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +44,7 @@ class PageLayout1TableViewCell: UITableViewCell {
     }
     
     @IBAction func addImageBtnClicked(_ sender: Any) {
-        addImageBtn.showImagePicker(sourceVC: sourceVC!)
+        addImageBtn.showImagePicker(sourceVC: sourceVC!, pageItem: item, coverItem: nil)
         addImageBtn.isHidden = true
     }
     @IBAction func deletePageBtnClicked(_ sender: Any) {

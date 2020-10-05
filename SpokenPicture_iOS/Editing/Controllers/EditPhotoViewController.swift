@@ -29,7 +29,7 @@ class EditPhotoViewController: UIViewController {
     let disposeBag = DisposeBag()
     var originalImage = UIImage()
     var sourcePostcardVM: PostsCardViewModel?
-    var albumItem: AlbumViewModelItem?
+    var albumPageItem: AlbumPagesViewModelItem?
     
     var audioPlayer:AVAudioPlayer!
     
@@ -96,6 +96,12 @@ class EditPhotoViewController: UIViewController {
         
     }
     
+    func addToAlbum(){
+        if let pageItem = self.albumPageItem{
+            pageItem.albumPage?.images?.append(albumImage.image!)
+        }
+    }
+    
 //MARK: set selected image to its original destination
     @objc func addTapped()  {
         self.navigationController?.popViewController(animated: true)
@@ -105,6 +111,7 @@ class EditPhotoViewController: UIViewController {
             postcardVC.postCardVm = postacdVM
             postcardVC.postCardVm.postCardimage.finalImage = albumImage.image
         }
+        addToAlbum()
     }
     
     @objc  func updateAudioProgressView()

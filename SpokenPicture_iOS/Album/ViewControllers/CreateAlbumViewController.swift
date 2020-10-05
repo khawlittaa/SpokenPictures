@@ -76,7 +76,7 @@ class CreateAlbumViewController: UIViewController {
                     case .layout1:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout1TableViewCell", for: indexPath) as! PageLayout1TableViewCell
                         cell.setSourceVC(sourceVC: self)
-                        //        cell.item = item
+                        cell.item = item as? AlbumPagesViewModelItem
                         return cell
                         
                     case .layout2:
@@ -87,22 +87,21 @@ class CreateAlbumViewController: UIViewController {
                     case .layout3:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout3TableViewCell", for: indexPath) as! PageLayout3TableViewCell
                         cell.setSourceVC(sourceVC: self)
-                        //        cell.item = item
+//                        cell.item = item as? AlbumPagesViewModelItem
                         return cell
                     case .layout4:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout4TableViewCell", for: indexPath) as! PageLayout4TableViewCell
                         cell.setSourceVC(sourceVC: self)
-                        //        cell.item = item
-                        return cell
+//                        cell.item = item as? AlbumPagesViewModelItem                        return cell
                     case .layout5:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout5TableViewCell", for: indexPath) as! PageLayout5TableViewCell
                         cell.setSourceVC(sourceVC: self)
-                        //        cell.item = item
+//                        cell.item = item as? AlbumPagesViewModelItem
                         return cell
                     case .layout6:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout6TableViewCell", for: indexPath) as! PageLayout6TableViewCell
                         cell.setSourceVC(sourceVC: self)
-                        //        cell.item = item
+//                        cell.item = item as? AlbumPagesViewModelItem
                         return cell
                     case .none:
                         return UITableViewCell()

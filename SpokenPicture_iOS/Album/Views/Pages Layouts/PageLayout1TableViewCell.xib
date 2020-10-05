@@ -10,24 +10,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PageLayout1TableViewCell" rowHeight="395" id="KGk-i7-Jjw" customClass="PageLayout1TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="395"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PageLayout1TableViewCell" rowHeight="376" id="KGk-i7-Jjw" customClass="PageLayout1TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="376"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="374" height="395"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="376"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DUh-o2-OLO">
-                        <rect key="frame" x="10" y="54" width="354" height="287"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DUh-o2-OLO">
+                        <rect key="frame" x="10" y="40" width="460" height="320"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="320" id="XSw-pI-8Ls"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdi-2j-SVy">
-                        <rect key="frame" x="10" y="10" width="55" height="34"/>
+                        <rect key="frame" x="10" y="10" width="55" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="O22-mH-FX1"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4i-Fi-dc5">
-                        <rect key="frame" x="75" y="17" width="20" height="20"/>
+                        <rect key="frame" x="75" y="10" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="BMw-jX-f76"/>
                             <constraint firstAttribute="height" constant="20" id="mge-iw-8HI"/>
@@ -38,18 +44,18 @@
                             <action selector="deletePageBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i7F-ft-qen"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-Dj-1em">
-                        <rect key="frame" x="30" y="54" width="314" height="320"/>
+                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-Dj-1em">
+                        <rect key="frame" x="30" y="40" width="420" height="320"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="320" id="5Dq-UC-6pu"/>
                         </constraints>
+                        <state key="normal" image="placeHolderImageIcon"/>
                         <connections>
                             <action selector="addImageBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YXi-oj-bf9"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="DUh-o2-OLO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GTk-3M-B4l"/>
                     <constraint firstAttribute="trailingMargin" secondItem="D6t-Dj-1em" secondAttribute="trailing" constant="10" id="Hqb-XN-Z00"/>
                     <constraint firstItem="n4i-Fi-dc5" firstAttribute="centerY" secondItem="Kdi-2j-SVy" secondAttribute="centerY" id="J7a-ZS-QX9"/>
                     <constraint firstItem="DUh-o2-OLO" firstAttribute="top" secondItem="Kdi-2j-SVy" secondAttribute="bottom" constant="10" id="Ltr-uM-DB0"/>
@@ -66,8 +72,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="addImageBtn" destination="D6t-Dj-1em" id="dUU-Ob-xr5"/>
+                <outlet property="albumImageView" destination="DUh-o2-OLO" id="D0h-24-uxi"/>
+                <outlet property="pageNumberLabel" destination="Kdi-2j-SVy" id="WuX-fz-T1b"/>
             </connections>
-            <point key="canvasLocation" x="43.478260869565219" y="173.77232142857142"/>
+            <point key="canvasLocation" x="49.275362318840585" y="165.40178571428569"/>
         </tableViewCell>
     </objects>
     <resources>
