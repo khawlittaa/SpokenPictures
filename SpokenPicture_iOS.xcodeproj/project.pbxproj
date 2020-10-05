@@ -123,6 +123,7 @@
 		6EE87C25252748EE0099E238 /* PostcardDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87C23252748EE0099E238 /* PostcardDropMenuViewController.swift */; };
 		6EE87C2825274ACF0099E238 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87C2725274ACF0099E238 /* MenuItem.swift */; };
 		6EE87C2A25275B770099E238 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE87C2925275B770099E238 /* Mulish-Regular.ttf */; };
+		6EE87C2C25277AE50099E238 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE87C2B25277AE40099E238 /* Mulish-Bold.ttf */; };
 		6EF8A23A25169D27000C5A9D /* EditRootControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8A23925169D27000C5A9D /* EditRootControl.swift */; };
 		6EF8A24025189FC7000C5A9D /* PostCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF8A23F25189FC7000C5A9D /* PostCard.storyboard */; };
 		6EF8A2422518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8A2412518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift */; };
@@ -250,6 +251,7 @@
 		6EE87C23252748EE0099E238 /* PostcardDropMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardDropMenuViewController.swift; sourceTree = "<group>"; };
 		6EE87C2725274ACF0099E238 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		6EE87C2925275B770099E238 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		6EE87C2B25277AE40099E238 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		6EF8A23925169D27000C5A9D /* EditRootControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRootControl.swift; sourceTree = "<group>"; };
 		6EF8A23F25189FC7000C5A9D /* PostCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostCard.storyboard; sourceTree = "<group>"; };
 		6EF8A2412518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePostCardLayoutViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		6E4F8FE3250A676A00A2241B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6EE87C2B25277AE40099E238 /* Mulish-Bold.ttf */,
 				6EE87C2925275B770099E238 /* Mulish-Regular.ttf */,
 				6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */,
 			);
@@ -455,9 +458,9 @@
 		6E6B3F1D2513489D00862D47 /* Album */ = {
 			isa = PBXGroup;
 			children = (
-				6EE732E32521E3170075D0CE /* Views */,
 				6EE732E22521E30C0075D0CE /* ViewModels */,
 				6EE732E12521E2FB0075D0CE /* ViewControllers */,
+				6EE732E32521E3170075D0CE /* Views */,
 				6EE732E42521E4FC0075D0CE /* Album.storyboard */,
 			);
 			path = Album;
@@ -827,6 +830,7 @@
 				6E71AF56250FB80B001E8BF8 /* CreateAlbumCell.xib in Resources */,
 				6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */,
 				6E36DB242510E472005203F3 /* Menu.storyboard in Resources */,
+				6EE87C2C25277AE50099E238 /* Mulish-Bold.ttf in Resources */,
 				6E767D8C251DCA7200D4879E /* Default-568h@2x.png in Resources */,
 				6E3B629B2512566800DB862E /* PageLayout3TableViewCell.xib in Resources */,
 				6E71AF44250F6D03001E8BF8 /* CreateMenuCell.xib in Resources */,

@@ -7,6 +7,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mulish-Bold.ttf">
+            <string>Mulish-Bold</string>
+        </array>
+        <array key="Mulish-Regular.ttf">
+            <string>Mulish-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Choose Post Card Layout View Controller-->
         <scene sceneID="Ek0-Rv-xb0">
@@ -21,7 +29,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="jHo-nk-M74"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFW-6T-nmQ">
@@ -46,13 +55,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y60-sS-sbj">
-                                <rect key="frame" x="99" y="378" width="122" height="50"/>
+                                <rect key="frame" x="94" y="378" width="132" height="53"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-ti-kmq">
-                                        <rect key="frame" x="72" y="10" width="40" height="30"/>
+                                        <rect key="frame" x="77" y="10" width="45" height="33"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="20G-sd-jXJ"/>
+                                            <constraint firstAttribute="width" constant="45" id="20G-sd-jXJ"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -61,18 +71,18 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8A0-97-LgM">
-                                        <rect key="frame" x="60" y="20" width="2" height="10"/>
+                                        <rect key="frame" x="65" y="20" width="2" height="13"/>
                                         <color key="backgroundColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="2" id="sQt-8D-VlT"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJh-Hr-eoW">
-                                        <rect key="frame" x="10" y="10" width="40" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="45" height="33"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="wbd-f9-ijR"/>
+                                            <constraint firstAttribute="width" constant="45" id="wbd-f9-ijR"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
                                         <state key="normal" title="Front">
                                             <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -104,6 +114,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="MFI-cX-b62"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -154,8 +165,8 @@
                                 <rect key="frame" x="0.0" y="368" width="320" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-Sm-ens">
-                                        <rect key="frame" x="20" y="17" width="130.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <rect key="frame" x="20" y="17" width="123" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
                                         <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -265,7 +276,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="rk5-Ob-Q8j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XhP-N5-4QC">
@@ -312,6 +324,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="YUZ-MG-8Fu"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
                                 <state key="normal" title="save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -337,14 +350,14 @@
                                         <state key="normal" image="trash.fill" catalog="system"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZx-f4-96Q">
-                                        <rect key="frame" x="50" y="32.5" width="36" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="50" y="32.5" width="24.5" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVT-YP-M2f">
-                                        <rect key="frame" x="194.5" y="32.5" width="35.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="205.5" y="32.5" width="24.5" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -378,13 +391,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vr-V6-P1R">
-                                <rect key="frame" x="99" y="391" width="122" height="40"/>
+                                <rect key="frame" x="97" y="391" width="126" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4J-Hb-7LM">
-                                        <rect key="frame" x="72" y="0.0" width="40" height="30"/>
+                                        <rect key="frame" x="74" y="0.0" width="42" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="9t5-2X-MXi"/>
+                                            <constraint firstAttribute="width" constant="42" id="9t5-2X-MXi"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -393,18 +407,18 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uln-Ck-dCF">
-                                        <rect key="frame" x="60" y="20" width="2" height="0.0"/>
+                                        <rect key="frame" x="62" y="15" width="2" height="10"/>
                                         <color key="backgroundColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="2" id="AzH-hB-BpM"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo1-1F-hsC">
-                                        <rect key="frame" x="10" y="0.0" width="40" height="30"/>
+                                        <rect key="frame" x="10" y="0.0" width="42" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="7Y4-mQ-NpN"/>
+                                            <constraint firstAttribute="width" constant="42" id="7Y4-mQ-NpN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
                                         <state key="normal" title="Front">
                                             <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -420,9 +434,9 @@
                                     <constraint firstItem="yo1-1F-hsC" firstAttribute="top" secondItem="2Vr-V6-P1R" secondAttribute="top" id="bq6-Sk-jZf"/>
                                     <constraint firstItem="e4J-Hb-7LM" firstAttribute="top" secondItem="2Vr-V6-P1R" secondAttribute="top" id="eGM-bS-IuR"/>
                                     <constraint firstItem="e4J-Hb-7LM" firstAttribute="leading" secondItem="uln-Ck-dCF" secondAttribute="trailing" constant="10" id="gWz-WP-axq"/>
-                                    <constraint firstItem="uln-Ck-dCF" firstAttribute="top" secondItem="2Vr-V6-P1R" secondAttribute="top" constant="20" id="hPR-DW-CW6"/>
-                                    <constraint firstAttribute="bottom" secondItem="uln-Ck-dCF" secondAttribute="bottom" constant="20" id="hWC-oA-hCf"/>
                                     <constraint firstAttribute="trailing" secondItem="e4J-Hb-7LM" secondAttribute="trailing" constant="10" id="lYZ-wb-Clw"/>
+                                    <constraint firstItem="uln-Ck-dCF" firstAttribute="centerY" secondItem="2Vr-V6-P1R" secondAttribute="centerY" id="uvc-3k-WGp"/>
+                                    <constraint firstItem="uln-Ck-dCF" firstAttribute="top" secondItem="2Vr-V6-P1R" secondAttribute="top" constant="15" id="yI2-mT-3vm"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -483,8 +497,8 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download the app and use the Scan feature to hear the audio message recorded just for you! " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-Qg-HgT">
-                                        <rect key="frame" x="198.5" y="215.5" width="112.5" height="25.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                        <rect key="frame" x="198.5" y="214.5" width="112.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="7"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -496,7 +510,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="poR-Rk-dt8">
-                                        <rect key="frame" x="198.5" y="181.5" width="41" height="29"/>
+                                        <rect key="frame" x="198.5" y="180.5" width="41" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="POg-4N-6nt"/>
                                             <constraint firstAttribute="width" constant="41" id="f5H-nm-6uV"/>
@@ -535,35 +549,36 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="sH7-Q4-NZ8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIg-uk-S6a">
-                                <rect key="frame" x="99" y="338" width="122" height="50"/>
+                                <rect key="frame" x="99" y="338" width="122" height="53"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpZ-sV-gfy">
-                                        <rect key="frame" x="72" y="10" width="40" height="30"/>
+                                        <rect key="frame" x="72" y="10" width="40" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="tt4-br-QGM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Deq-mV-M92">
-                                        <rect key="frame" x="60" y="20" width="2" height="10"/>
+                                        <rect key="frame" x="60" y="20" width="2" height="13"/>
                                         <color key="backgroundColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="2" id="Vye-2P-sAY"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tO-yk-jqc">
-                                        <rect key="frame" x="10" y="10" width="40" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="40" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="vHG-uH-rx0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
                                         <state key="normal" title="Front">
                                             <color key="titleColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -599,6 +614,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="l9k-y6-Gn5"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -648,15 +664,15 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/500 Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzG-65-z37">
-                                        <rect key="frame" x="190" y="232" width="100" height="12"/>
+                                        <rect key="frame" x="177.5" y="232" width="112.5" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="0he-PV-0dO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
