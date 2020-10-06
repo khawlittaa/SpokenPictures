@@ -10,7 +10,31 @@ import UIKit
 
 class PageLayout4TableViewCell: UITableViewCell {
     
+    var item : AlbumPagesViewModelItem?{
+        didSet{
+            print("album page layout 4 did set \(item?.albumPage?.images?.count) images ")
+            if let pageNumber = item?.albumPage?.pageNumber{
+                pageNumberLabel.text = "page \(pageNumber)"
+            }
+            if let images = item?.albumPage?.images{
+                if images.count > 0 {
+                    topImageImageView.image = images[0]
+                    
+                }
+                if images.count > 1 {
+                    bottomRightImageImageView.image = images[1]
+                }else{
+                    if images.count > 2{
+                        bottomLeftImageImageView.image = images[2]
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBOutlet weak var pageNumberLabel: UILabel!
     private  var sourceVC: UIViewController?
+    
     @IBOutlet weak var topImageImageView: UIImageView!
     @IBOutlet weak var bottomLeftImageImageView: UIImageView!
     @IBOutlet weak var bottomRightImageImageView: UIImageView!
@@ -42,7 +66,7 @@ class PageLayout4TableViewCell: UITableViewCell {
     }
     
     @IBAction func addTopImageButtonClicked(_ sender: Any) {
-        addTopImageButton.showImagePicker(sourceVC: sourceVC!)
+        addTopImageButton.showImagePicker(sourceVC: sourceVC!, pageItem: item)
         addTopImageButton.isHidden = true
     }
     

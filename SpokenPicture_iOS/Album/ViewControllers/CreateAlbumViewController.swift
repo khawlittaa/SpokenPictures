@@ -42,29 +42,30 @@ class CreateAlbumViewController: UIViewController {
         let addCommand = Observable.of(saveButton.rx.tap.asObservable(), add3ItemsAddStart)
             .merge()
             .map(TableViewEditingCommand.addRandomItem)
-
+        
         let deleteCommand = albumContentTableView.rx.itemDeleted.asObservable()
             .map(TableViewEditingCommand.DeleteItem)
-//        
-//        Observable.of(addCommand, deleteCommand)
-//        .merge()
-//        .scan(initialState) { (state: AlbumViewModel, command: TableViewEditingCommand) -> AlbumViewModel in
-//            return state.execute(command: command)
-//        }
-//        .startWith(initialState)
-//        .map {
-//            $0.sections
-//        }
-//        .share(replay: 1)
-//        .bind(to: tableView.rx.items(dataSource: dataSource))
-//        .disposed(by: disposeBag)
+        //
+        //        Observable.of(addCommand, deleteCommand)
+        //        .merge()
+        //        .scan(initialState) { (state: AlbumViewModel, command: TableViewEditingCommand) -> AlbumViewModel in
+        //            return state.execute(command: command)
+        //        }
+        //        .startWith(initialState)
+        //        .map {
+        //            $0.sections
+        //        }
+        //        .share(replay: 1)
+        //        .bind(to: tableView.rx.items(dataSource: dataSource))
+        //        .disposed(by: disposeBag)
         
         let dataSource = RxTableViewSectionedReloadDataSource<AlbumSectionItem>(
             configureCell: { dataSource, tableView, indexPath, item in
                 switch item.type{
                 case .cover:
                     if let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCoverCell", for: indexPath) as? AlbumCoverCell {
-                        //               cell.item = item
+                        cell.setSourceVC(sourceVC: self)
+                        cell.item = item as? AlbumCoverViewModelItem
                         return cell
                     }
                 case .pages:
@@ -87,29 +88,30 @@ class CreateAlbumViewController: UIViewController {
                     case .layout3:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout3TableViewCell", for: indexPath) as! PageLayout3TableViewCell
                         cell.setSourceVC(sourceVC: self)
-//                        cell.item = item as? AlbumPagesViewModelItem
+                        cell.item = item as? AlbumPagesViewModelItem
                         return cell
                     case .layout4:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout4TableViewCell", for: indexPath) as! PageLayout4TableViewCell
                         cell.setSourceVC(sourceVC: self)
-//                        cell.item = item as? AlbumPagesViewModelItem                        return cell
+                        cell.item = item as? AlbumPagesViewModelItem
+                        return cell
                     case .layout5:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout5TableViewCell", for: indexPath) as! PageLayout5TableViewCell
                         cell.setSourceVC(sourceVC: self)
-//                        cell.item = item as? AlbumPagesViewModelItem
+                        cell.item = item as? AlbumPagesViewModelItem
                         return cell
                     case .layout6:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout6TableViewCell", for: indexPath) as! PageLayout6TableViewCell
                         cell.setSourceVC(sourceVC: self)
-//                        cell.item = item as? AlbumPagesViewModelItem
+                        cell.item = item as? AlbumPagesViewModelItem
                         return cell
                     case .none:
                         return UITableViewCell()
                     }
                     
                 }
-                 // return the default cell if none of above succeed
-                        return UITableViewCell()
+                // return the default cell if none of above succeed
+                return UITableViewCell()
         })
         
         
@@ -151,7 +153,7 @@ class CreateAlbumViewController: UIViewController {
     @IBAction func addPageButtonClicked(_ sender: Any){
         
         let popUp = album.instantiateViewController(withIdentifier: "ChooseLayoutViewController") as! ChooseLayoutViewController
-//        popUp.createAlbumVM = self.createAlbumsVM
+        //        popUp.createAlbumVM = self.createAlbumsVM
         self.addChild(popUp)
         popUp.view.frame = self.view.frame
         self.view.addSubview(popUp.view)

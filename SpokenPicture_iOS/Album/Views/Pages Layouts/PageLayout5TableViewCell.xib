@@ -146,6 +146,7 @@
                 <outlet property="bottomRightImageView" destination="cHf-gL-IIA" id="EyP-2M-CQw"/>
                 <outlet property="leftImageButton" destination="jPw-0t-CfZ" id="1hn-oa-gYJ"/>
                 <outlet property="leftImageView" destination="zii-Cc-NRa" id="Rej-RM-TRj"/>
+                <outlet property="pageNumberLabel" destination="h2a-le-bb3" id="0GD-UX-gB8"/>
                 <outlet property="topRightImageButton" destination="Up1-uH-f2i" id="n0e-HY-igQ"/>
                 <outlet property="topRightImageView" destination="Lwr-PP-XZJ" id="xzd-xY-koq"/>
             </connections>

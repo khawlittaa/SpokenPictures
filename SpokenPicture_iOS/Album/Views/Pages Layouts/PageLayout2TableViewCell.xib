@@ -111,6 +111,7 @@
                 <outlet property="addButtomImageButton" destination="aBT-pC-9NQ" id="hW5-KU-s3j"/>
                 <outlet property="addTopImageButton" destination="1at-Hz-36M" id="ePE-YQ-xK0"/>
                 <outlet property="buttomImageView" destination="tlG-uB-h92" id="vd3-KU-fke"/>
+                <outlet property="pageNumberLabel" destination="XVh-3S-vut" id="NfD-e1-zbi"/>
                 <outlet property="topImageView" destination="x2V-71-uuP" id="mTA-ho-fhn"/>
             </connections>
             <point key="canvasLocation" x="163.04347826086959" y="127.90178571428571"/>

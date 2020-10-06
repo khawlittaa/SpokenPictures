@@ -109,6 +109,7 @@
             <connections>
                 <outlet property="leftImageButton" destination="NmZ-5B-RbA" id="cU6-wc-TTk"/>
                 <outlet property="leftImageView" destination="fcm-D2-UeQ" id="sai-BL-NzL"/>
+                <outlet property="pageNumberLabel" destination="REx-HA-xMD" id="pXP-xi-akg"/>
                 <outlet property="rightImageButton" destination="qPQ-zz-hPP" id="m2K-MC-2Qr"/>
                 <outlet property="rightImageView" destination="U7J-Sv-c1f" id="OKX-Ma-oen"/>
             </connections>

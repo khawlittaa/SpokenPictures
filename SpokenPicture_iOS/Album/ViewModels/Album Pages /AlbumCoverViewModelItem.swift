@@ -6,7 +6,7 @@
 //  Copyright © 2020 BothofUS. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class AlbumCoverViewModelItem: AlbumViewModelItem{
     var type: AlbumSectionViewModelItemType{
@@ -15,5 +15,5 @@ class AlbumCoverViewModelItem: AlbumViewModelItem{
     
     var albumtitle: String = ""
     var albumCreationDate: String = ""
-    var coverImageURl: String = ""
+    var coverImage: UIImage?
 }

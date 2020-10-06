@@ -143,6 +143,7 @@
                 <outlet property="addTopImageButton" destination="OGd-xf-BvG" id="tu5-rp-TJj"/>
                 <outlet property="bottomLeftImageImageView" destination="Ind-HX-H9K" id="rrZ-B1-RND"/>
                 <outlet property="bottomRightImageImageView" destination="H3z-JI-Z5o" id="xYc-Fn-Eu8"/>
+                <outlet property="pageNumberLabel" destination="Tec-P0-Et3" id="KXY-t5-S4D"/>
                 <outlet property="topImageImageView" destination="zaJ-zr-spS" id="Trs-zJ-UA8"/>
             </connections>
             <point key="canvasLocation" x="7.2463768115942031" y="138.95089285714286"/>

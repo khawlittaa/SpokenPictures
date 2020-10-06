@@ -18,7 +18,7 @@ class PageLayout1TableViewCell: UITableViewCell {
     
     var item : AlbumPagesViewModelItem?{
         didSet{
-            print("album page layout 2 did set \(item?.albumPage?.images?.count) images ")
+            print("album page layout 1 did set \(item?.albumPage?.images?.count) images ")
             if let pageNumber = item?.albumPage?.pageNumber{
                 pageNumberLabel.text = "page \(pageNumber)"
             }
@@ -34,7 +34,7 @@ class PageLayout1TableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -44,7 +44,7 @@ class PageLayout1TableViewCell: UITableViewCell {
     }
     
     @IBAction func addImageBtnClicked(_ sender: Any) {
-        addImageBtn.showImagePicker(sourceVC: sourceVC!, pageItem: item, coverItem: nil)
+        addImageBtn.showImagePicker(sourceVC: sourceVC!, pageItem: item)
         addImageBtn.isHidden = true
     }
     @IBAction func deletePageBtnClicked(_ sender: Any) {

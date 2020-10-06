@@ -75,6 +75,7 @@ extension UIButton{
                 let editVc = editing.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
                 editVc.originalImage = photo.originalImage
                 editVc.albumPageItem = pageItem
+                editVc.albumCoverItem = coverItem
                 sourceVC.navigationController?.pushViewController(editVc, animated: true)
             }else{
                 if let video = items.singleVideo {

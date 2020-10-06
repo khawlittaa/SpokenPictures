@@ -141,12 +141,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="buttomLeftImageView" destination="jLk-rb-tVT" id="hP7-i5-AEM"/>
                 <outlet property="image1Button" destination="fVy-Bj-Qd0" id="KeY-VR-RxI"/>
-                <outlet property="image1ImageView" destination="UvT-ep-yZ5" id="Tsa-QJ-fy7"/>
                 <outlet property="image2Button" destination="KqB-KB-Flp" id="1QC-my-0ZA"/>
-                <outlet property="image2ImageView" destination="jLk-rb-tVT" id="5aM-TL-6c7"/>
                 <outlet property="image3Button" destination="rWu-oZ-Tbr" id="fCR-M9-r85"/>
-                <outlet property="image3ImageView" destination="rWu-oZ-Tbr" id="i2g-0m-YVe"/>
+                <outlet property="pageNumberLabel" destination="Zld-TK-Fqg" id="ycP-ar-fGX"/>
+                <outlet property="rightImageView" destination="tri-Pi-6zy" id="LC4-GK-xgw"/>
+                <outlet property="topleftImageView" destination="UvT-ep-yZ5" id="ctW-V5-pWz"/>
             </connections>
             <point key="canvasLocation" x="40.579710144927539" y="354.91071428571428"/>
         </tableViewCell>

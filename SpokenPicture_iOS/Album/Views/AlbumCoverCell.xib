@@ -80,9 +80,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRO-ym-Y4W">
                                 <rect key="frame" x="0.0" y="0.0" width="249" height="192"/>
-                                <state key="normal" image="placeHolderImageIcon"/>
+                                <connections>
+                                    <action selector="addImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MgH-lm-jpc"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Q7C-cF-IpT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Q7C-cF-IpT">
                                 <rect key="frame" x="40" y="10" width="169" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="fot-CU-Fs3"/>
@@ -150,8 +152,7 @@
             <accessibility key="accessibilityConfiguration" identifier="AlbumCoverCell"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="addImageButton" destination="Q7C-cF-IpT" id="Emo-AY-Cfd"/>
-                <outlet property="addImageButtonClicked" destination="Q7C-cF-IpT" id="GsV-UZ-Fg4"/>
+                <outlet property="addImageButton" destination="rRO-ym-Y4W" id="Ycv-2m-uND"/>
                 <outlet property="albumCoverImage" destination="Q7C-cF-IpT" id="6eA-gS-I7N"/>
                 <outlet property="albumDateTextField" destination="cPR-0d-24J" id="Tq5-Of-OhE"/>
                 <outlet property="albumTitleTextField" destination="vbe-2e-EZm" id="qnX-Dk-GGK"/>

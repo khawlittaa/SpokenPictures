@@ -30,6 +30,7 @@ class EditPhotoViewController: UIViewController {
     var originalImage = UIImage()
     var sourcePostcardVM: PostsCardViewModel?
     var albumPageItem: AlbumPagesViewModelItem?
+    var albumCoverItem: AlbumCoverViewModelItem?
     
     var audioPlayer:AVAudioPlayer!
     
@@ -99,6 +100,9 @@ class EditPhotoViewController: UIViewController {
     func addToAlbum(){
         if let pageItem = self.albumPageItem{
             pageItem.albumPage?.images?.append(albumImage.image!)
+        }
+        if let albumcover = self.albumCoverItem{
+            albumcover.coverImage = albumImage.image!
         }
     }
     
