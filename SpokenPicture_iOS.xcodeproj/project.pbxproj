@@ -59,14 +59,8 @@
 		6E62C040251B505300C51851 /* EditedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C03F251B505300C51851 /* EditedImage.swift */; };
 		6E62C042251B548700C51851 /* PostcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C041251B548700C51851 /* PostcardViewModel.swift */; };
 		6E62C044251BB04A00C51851 /* PostCardTextEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62C043251BB04A00C51851 /* PostCardTextEditorViewController.swift */; };
-		6E6B3F0F2513430700862D47 /* AlbumPagesViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F0E2513430700862D47 /* AlbumPagesViewModelItem.swift */; };
-		6E6B3F122513450C00862D47 /* AlbumPageLayout1Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F112513450C00862D47 /* AlbumPageLayout1Item.swift */; };
-		6E6B3F142513451F00862D47 /* AlbumPageLayout2Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F132513451F00862D47 /* AlbumPageLayout2Item.swift */; };
-		6E6B3F162513452D00862D47 /* AlbumPageLayout3Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F152513452D00862D47 /* AlbumPageLayout3Item.swift */; };
-		6E6B3F182513453F00862D47 /* AlbumPageLayout4Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F172513453F00862D47 /* AlbumPageLayout4Item.swift */; };
-		6E6B3F1A2513454D00862D47 /* AlbumPageLayout5Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */; };
-		6E6B3F1C2513455900862D47 /* AlbumPageLayout6Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */; };
-		6E6B3F1F251369F400862D47 /* CreateAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */; };
+		6E6B3F0F2513430700862D47 /* AlbumViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F0E2513430700862D47 /* AlbumViewModelItem.swift */; };
+		6E6B3F1F251369F400862D47 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F1E251369F400862D47 /* AlbumViewModel.swift */; };
 		6E6B3F22251390C900862D47 /* Editing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6B3F21251390C900862D47 /* Editing.storyboard */; };
 		6E6B3F272513A49200862D47 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F262513A49200862D47 /* UIImageView.swift */; };
 		6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */; };
@@ -120,6 +114,11 @@
 		6ED709172525FCBB00BC2DB2 /* OrderStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED709162525FCBB00BC2DB2 /* OrderStep.swift */; };
 		6ED70919252602D600BC2DB2 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED70918252602D600BC2DB2 /* ConfirmationViewController.swift */; };
 		6EE732E52521E4FC0075D0CE /* Album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE732E42521E4FC0075D0CE /* Album.storyboard */; };
+		6EE732E82521E7FA0075D0CE /* AlbumCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732E62521E7FA0075D0CE /* AlbumCoverCell.swift */; };
+		6EE732E92521E7FA0075D0CE /* AlbumCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE732E72521E7FA0075D0CE /* AlbumCoverCell.xib */; };
+		6EE732EB2521F5750075D0CE /* AlbumCoverViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732EA2521F5750075D0CE /* AlbumCoverViewModelItem.swift */; };
+		6EE732ED2521F5A20075D0CE /* AlbumPageViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732EC2521F5A20075D0CE /* AlbumPageViewModelItem.swift */; };
+		6EE732F02521F99C0075D0CE /* AlbumPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732EF2521F99C0075D0CE /* AlbumPage.swift */; };
 		6EE87C25252748EE0099E238 /* PostcardDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87C23252748EE0099E238 /* PostcardDropMenuViewController.swift */; };
 		6EE87C2825274ACF0099E238 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87C2725274ACF0099E238 /* MenuItem.swift */; };
 		6EE87C2A25275B770099E238 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE87C2925275B770099E238 /* Mulish-Regular.ttf */; };
@@ -185,14 +184,8 @@
 		6E62C03F251B505300C51851 /* EditedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditedImage.swift; sourceTree = "<group>"; };
 		6E62C041251B548700C51851 /* PostcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardViewModel.swift; sourceTree = "<group>"; };
 		6E62C043251BB04A00C51851 /* PostCardTextEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardTextEditorViewController.swift; sourceTree = "<group>"; };
-		6E6B3F0E2513430700862D47 /* AlbumPagesViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPagesViewModelItem.swift; sourceTree = "<group>"; };
-		6E6B3F112513450C00862D47 /* AlbumPageLayout1Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout1Item.swift; sourceTree = "<group>"; };
-		6E6B3F132513451F00862D47 /* AlbumPageLayout2Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout2Item.swift; sourceTree = "<group>"; };
-		6E6B3F152513452D00862D47 /* AlbumPageLayout3Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout3Item.swift; sourceTree = "<group>"; };
-		6E6B3F172513453F00862D47 /* AlbumPageLayout4Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout4Item.swift; sourceTree = "<group>"; };
-		6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout5Item.swift; sourceTree = "<group>"; };
-		6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageLayout6Item.swift; sourceTree = "<group>"; };
-		6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlbumViewModel.swift; sourceTree = "<group>"; };
+		6E6B3F0E2513430700862D47 /* AlbumViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModelItem.swift; sourceTree = "<group>"; };
+		6E6B3F1E251369F400862D47 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		6E6B3F21251390C900862D47 /* Editing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Editing.storyboard; sourceTree = "<group>"; };
 		6E6B3F262513A49200862D47 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		6E6B3F282513A51D00862D47 /* RecordAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +241,11 @@
 		6ED709162525FCBB00BC2DB2 /* OrderStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStep.swift; sourceTree = "<group>"; };
 		6ED70918252602D600BC2DB2 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		6EE732E42521E4FC0075D0CE /* Album.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Album.storyboard; sourceTree = "<group>"; };
+		6EE732E62521E7FA0075D0CE /* AlbumCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoverCell.swift; sourceTree = "<group>"; };
+		6EE732E72521E7FA0075D0CE /* AlbumCoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCoverCell.xib; sourceTree = "<group>"; };
+		6EE732EA2521F5750075D0CE /* AlbumCoverViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoverViewModelItem.swift; sourceTree = "<group>"; };
+		6EE732EC2521F5A20075D0CE /* AlbumPageViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageViewModelItem.swift; sourceTree = "<group>"; };
+		6EE732EF2521F99C0075D0CE /* AlbumPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPage.swift; sourceTree = "<group>"; };
 		6EE87C23252748EE0099E238 /* PostcardDropMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardDropMenuViewController.swift; sourceTree = "<group>"; };
 		6EE87C2725274ACF0099E238 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		6EE87C2925275B770099E238 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
@@ -436,28 +434,17 @@
 		6E6B3F0D251342C000862D47 /* Album Pages  */ = {
 			isa = PBXGroup;
 			children = (
-				6E6B3F10251344CC00862D47 /* AlbumPageItems */,
-				6E6B3F0E2513430700862D47 /* AlbumPagesViewModelItem.swift */,
+				6E6B3F0E2513430700862D47 /* AlbumViewModelItem.swift */,
+				6EE732EA2521F5750075D0CE /* AlbumCoverViewModelItem.swift */,
+				6EE732EC2521F5A20075D0CE /* AlbumPageViewModelItem.swift */,
 			);
 			path = "Album Pages ";
-			sourceTree = "<group>";
-		};
-		6E6B3F10251344CC00862D47 /* AlbumPageItems */ = {
-			isa = PBXGroup;
-			children = (
-				6E6B3F112513450C00862D47 /* AlbumPageLayout1Item.swift */,
-				6E6B3F132513451F00862D47 /* AlbumPageLayout2Item.swift */,
-				6E6B3F152513452D00862D47 /* AlbumPageLayout3Item.swift */,
-				6E6B3F172513453F00862D47 /* AlbumPageLayout4Item.swift */,
-				6E6B3F192513454D00862D47 /* AlbumPageLayout5Item.swift */,
-				6E6B3F1B2513455900862D47 /* AlbumPageLayout6Item.swift */,
-			);
-			path = AlbumPageItems;
 			sourceTree = "<group>";
 		};
 		6E6B3F1D2513489D00862D47 /* Album */ = {
 			isa = PBXGroup;
 			children = (
+				6EE732EE2521F98C0075D0CE /* Models */,
 				6EE732E22521E30C0075D0CE /* ViewModels */,
 				6EE732E12521E2FB0075D0CE /* ViewControllers */,
 				6EE732E32521E3170075D0CE /* Views */,
@@ -546,7 +533,6 @@
 			children = (
 				6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */,
 				6E3B628A2512368D00DB862E /* ChooseLayoutViewModel.swift */,
-				6E6B3F1E251369F400862D47 /* CreateAlbumViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -690,6 +676,7 @@
 		6EE732E22521E30C0075D0CE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6E6B3F1E251369F400862D47 /* AlbumViewModel.swift */,
 				6E6B3F0D251342C000862D47 /* Album Pages  */,
 			);
 			path = ViewModels;
@@ -701,8 +688,18 @@
 				6E3B628F251255F300DB862E /* Pages Layouts */,
 				6E3B6286251220FB00DB862E /* LayoutCollectionViewCell.swift */,
 				6E3B6287251220FB00DB862E /* LayoutCollectionViewCell.xib */,
+				6EE732E62521E7FA0075D0CE /* AlbumCoverCell.swift */,
+				6EE732E72521E7FA0075D0CE /* AlbumCoverCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6EE732EE2521F98C0075D0CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6EE732EF2521F99C0075D0CE /* AlbumPage.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6EF8A23B25189F65000C5A9D /* PostCard */ = {
@@ -848,6 +845,7 @@
 				6E7A004A251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.xib in Resources */,
 				6E3B6289251220FB00DB862E /* LayoutCollectionViewCell.xib in Resources */,
 				6E36DB2A2510E8B6005203F3 /* MenuTableViewCell.xib in Resources */,
+				6EE732E92521E7FA0075D0CE /* AlbumCoverCell.xib in Resources */,
 				6E3B62972512564E00DB862E /* PageLayout2TableViewCell.xib in Resources */,
 				6E3B62A72512569600DB862E /* PageLayout6TableViewCell.xib in Resources */,
 				6E3B629F2512567600DB862E /* PageLayout4TableViewCell.xib in Resources */,
@@ -909,6 +907,7 @@
 				6EB5FA51250D6ACC00D54A40 /* UIViewController.swift in Sources */,
 				6ED709052525CB6700BC2DB2 /* ShipmentMethodCell.swift in Sources */,
 				6E62C039251B3C8100C51851 /* PostCardLayoutViewController.swift in Sources */,
+				6EE732ED2521F5A20075D0CE /* AlbumPageViewModelItem.swift in Sources */,
 				6E71AF40250F68D4001E8BF8 /* CreatePopUpViewController.swift in Sources */,
 				6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */,
 				6E767D97251E0E3E00D4879E /* User.swift in Sources */,
@@ -925,12 +924,11 @@
 				6E74E874250B780200B6ABC7 /* WelcomeViewModel.swift in Sources */,
 				6EF8A2442518B6E4000C5A9D /* PostCardLayoutPopUpViewController.swift in Sources */,
 				6E36DB3425111475005203F3 /* CreateAlbumViewController.swift in Sources */,
-				6E6B3F1A2513454D00862D47 /* AlbumPageLayout5Item.swift in Sources */,
 				6E62C042251B548700C51851 /* PostcardViewModel.swift in Sources */,
 				6E4F8FDA250A41E500A2241B /* WelcomeViewController.swift in Sources */,
 				6E71AF55250FB80B001E8BF8 /* CreateAlbumCell.swift in Sources */,
-				6E6B3F122513450C00862D47 /* AlbumPageLayout1Item.swift in Sources */,
-				6E6B3F0F2513430700862D47 /* AlbumPagesViewModelItem.swift in Sources */,
+				6E6B3F0F2513430700862D47 /* AlbumViewModelItem.swift in Sources */,
+				6EE732EB2521F5750075D0CE /* AlbumCoverViewModelItem.swift in Sources */,
 				6E7A0049251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.swift in Sources */,
 				6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */,
 				6E355852252388C300058EA6 /* Order.swift in Sources */,
@@ -939,15 +937,15 @@
 				6EF8A2422518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift in Sources */,
 				6ED709002525C1F600BC2DB2 /* ShippingDetailsViewController.swift in Sources */,
 				6E74E86B250B588700B6ABC7 /* UIColor.swift in Sources */,
+				6EE732F02521F99C0075D0CE /* AlbumPage.swift in Sources */,
 				6E35584A252366F200058EA6 /* MenuNotificationCell.swift in Sources */,
 				6E3B629E2512567600DB862E /* PageLayout4TableViewCell.swift in Sources */,
 				6ED709022525C85200BC2DB2 /* ShippingMethodViewController.swift in Sources */,
 				6E3B62A22512568700DB862E /* PageLayout5TableViewCell.swift in Sources */,
 				6E36DB2E2510F662005203F3 /* MenuviewModel.swift in Sources */,
-				6E6B3F1F251369F400862D47 /* CreateAlbumViewModel.swift in Sources */,
+				6E6B3F1F251369F400862D47 /* AlbumViewModel.swift in Sources */,
 				6E36DB302510FD84005203F3 /* MenuProfileViewController.swift in Sources */,
 				6E62C044251BB04A00C51851 /* PostCardTextEditorViewController.swift in Sources */,
-				6E6B3F142513451F00862D47 /* AlbumPageLayout2Item.swift in Sources */,
 				6E74E86D250B5B3700B6ABC7 /* UIButton.swift in Sources */,
 				6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */,
 				6E6E36732514D46C004C7F19 /* EditPhotoViewModel.swift in Sources */,
@@ -955,6 +953,7 @@
 				6E35583A2523150500058EA6 /* DropMenuCell.swift in Sources */,
 				6ED1FEF62524DCBF007F2D7B /* MenuCartViewController.swift in Sources */,
 				6E62C040251B505300C51851 /* EditedImage.swift in Sources */,
+				6EE732E82521E7FA0075D0CE /* AlbumCoverCell.swift in Sources */,
 				6E71AF4C250F9492001E8BF8 /* AlbumsViewController.swift in Sources */,
 				6E810264250A37A500B9BB43 /* SceneDelegate.swift in Sources */,
 				6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */,

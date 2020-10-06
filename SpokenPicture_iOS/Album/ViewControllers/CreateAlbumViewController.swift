@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import RxDataSources
+import RxCocoa
+import RxSwift
+import Differentiator
 
 class CreateAlbumViewController: UIViewController {
     
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var albumCoverImage: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var addPageButton: UIButton!
     
-    @IBOutlet weak var pagesTableView: UITableView!
+    @IBOutlet weak var albumContentTableView: UITableView!
     
-    let createAlbumsVM = CreateAlbumViewModel()
+    let albumsVM = AlbumViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,107 +28,118 @@ class CreateAlbumViewController: UIViewController {
         addNavigationBarItemsWithMenu(iscomplete: true)
         setUpTableView()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        pagesTableView.reloadData()
+        albumContentTableView.reloadData()
     }
     
     func setUpTableView(){
-        pagesTableView.dataSource = self
+        albumContentTableView.dataSource = self
+        albumContentTableView.registerCell(nib: "PageLayout1TableViewCell", cellreuseIdentifier: "PageLayout1TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout2TableViewCell", cellreuseIdentifier: "PageLayout2TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout3TableViewCell", cellreuseIdentifier: "PageLayout3TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout4TableViewCell", cellreuseIdentifier: "PageLayout4TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout5TableViewCell", cellreuseIdentifier: "PageLayout5TableViewCell")
+        albumContentTableView.registerCell(nib: "PageLayout6TableViewCell", cellreuseIdentifier: "PageLayout6TableViewCell")
+        albumContentTableView.registerCell(nib: "AlbumCoverCell", cellreuseIdentifier: "AlbumCoverCell")
         
-        pagesTableView.registerCell(nib: "PageLayout1TableViewCell", cellreuseIdentifier: "PageLayout1TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout2TableViewCell", cellreuseIdentifier: "PageLayout2TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout3TableViewCell", cellreuseIdentifier: "PageLayout3TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout4TableViewCell", cellreuseIdentifier: "PageLayout4TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout5TableViewCell", cellreuseIdentifier: "PageLayout5TableViewCell")
-        pagesTableView.registerCell(nib: "PageLayout6TableViewCell", cellreuseIdentifier: "PageLayout6TableViewCell")
-        
     }
     
     
-    @IBAction func yellowButtonClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected yellow color ")
-    }
-    
-    @IBAction func purpleButtonClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected purple color ")
-    }
-    
-    @IBAction func whiteBtnClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected white color ")
-    }
-    
-    @IBAction func blueButtonClicked(_ sender: Any) {
-        let btn = sender as! UIButton
-        btn.selectedRadioButton()
-        print("selected blue color ")
-    }
-    
-    @IBAction func addPageButtonClicked(_ sender: Any){
-        
+    func showAddPagePopUp(){
         let popUp = album.instantiateViewController(withIdentifier: "ChooseLayoutViewController") as! ChooseLayoutViewController
-        popUp.createAlbumVM = self.createAlbumsVM
+        //        popUp.createAlbumVM = self.createAlbumsVM
         self.addChild(popUp)
         popUp.view.frame = self.view.frame
         self.view.addSubview(popUp.view)
         popUp.didMove(toParent: self)
     }
     
+    @IBAction func addPageButtonClicked(_ sender: Any){
+        
+        let pages = AlbumPagesViewModelItem()
+        let page = AlbumPage(pageLayout: .layout1 , pageNumber: albumsVM.sections.count, numberPictures: 1)
+        pages.albumPage = page
+        self.albumsVM.sections.append(
+            AlbumSectionItem(header: "Second section", items: [pages]))
+        self.albumContentTableView.reloadData()
+        
+    }
+    
     @IBAction func saveButtonClicked(_ sender: Any) {
     }
-}
-
-extension CreateAlbumViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return createAlbumsVM.pages.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let page = createAlbumsVM.pages[indexPath.row]
-        switch page.type {
-        case .layout1:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout1TableViewCell", for: indexPath) as? PageLayout1TableViewCell {
-                //                cell.item = item
-                return cell}
-        case .layout2:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout2TableViewCell", for: indexPath) as? PageLayout2TableViewCell {
-                return cell}
-            
-        case .layout3:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout3TableViewCell", for: indexPath) as? PageLayout3TableViewCell {
-                return cell
-            }
-            
-        case .layout4:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout4TableViewCell", for: indexPath) as? PageLayout4TableViewCell {
-                return cell
-            }
-            
-        case .layout5:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout5TableViewCell", for: indexPath) as? PageLayout5TableViewCell {
-                return cell
-            }
-            
-        case .layout6:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout6TableViewCell", for: indexPath) as? PageLayout6TableViewCell {
-                return cell
-            }
-        }
-        // return the default cell if none of above succeed
-        return UITableViewCell()
-    }
-    
 }
 
 extension CreateAlbumViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
+}
+
+extension CreateAlbumViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return albumsVM.sections.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let page = albumsVM.sections[indexPath.section]
+        let item = page.items[indexPath.row]
+        switch item.type    {
+        case .cover:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCoverCell", for: indexPath) as? AlbumCoverCell {
+                cell.setSourceVC(sourceVC: self)
+                cell.item = item as? AlbumCoverViewModelItem
+                return cell
+            }
+        case .pages:
+            // TO Do fix with approriate Layout here
+            let albumPages = item as! AlbumPagesViewModelItem
+            let cellLayout = albumPages.albumPage?.pageLayout
+            switch cellLayout
+            {
+            case .layout1:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout1TableViewCell", for: indexPath) as! PageLayout1TableViewCell
+                cell.setSourceVC(sourceVC: self)
+                cell.item = item as? AlbumPagesViewModelItem
+                return cell
+                
+            case .layout2:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout2TableViewCell", for: indexPath) as! PageLayout2TableViewCell
+                cell.item = item as? AlbumPagesViewModelItem
+                cell.setSourceVC(sourceVC: self)
+                return cell
+            case .layout3:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout3TableViewCell", for: indexPath) as! PageLayout3TableViewCell
+                cell.setSourceVC(sourceVC: self)
+                cell.item = item as? AlbumPagesViewModelItem
+                return cell
+            case .layout4:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout4TableViewCell", for: indexPath) as! PageLayout4TableViewCell
+                cell.setSourceVC(sourceVC: self)
+                cell.item = item as? AlbumPagesViewModelItem
+                return cell
+            case .layout5:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout5TableViewCell", for: indexPath) as! PageLayout5TableViewCell
+                cell.setSourceVC(sourceVC: self)
+                cell.item = item as? AlbumPagesViewModelItem
+                return cell
+            case .layout6:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PageLayout6TableViewCell", for: indexPath) as! PageLayout6TableViewCell
+                cell.setSourceVC(sourceVC: self)
+                cell.item = item as? AlbumPagesViewModelItem
+                return cell
+            case .none:
+                return UITableViewCell()
+            }
+        }
+        // return the default cell if none of above succeed
+        return UITableViewCell()
+    }
+    
 }
 

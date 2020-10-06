@@ -12,7 +12,8 @@ class ChooseLayoutViewController: UIViewController {
     @IBOutlet weak var layoutsCollectionView: UICollectionView!
     
     let layoutsVM = ChooseLayoutViewModel()
-    var createAlbumVM: CreateAlbumViewModel?
+    var createAlbumVM: AlbumViewModel?
+    var albumPagesItem: AlbumPagesViewModelItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,34 +60,36 @@ class ChooseLayoutViewController: UIViewController {
 
 extension ChooseLayoutViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if createAlbumVM?.album.count == 2{
+//            albumPagesItem = createAlbumVM?.album[1] as? AlbumPagesViewModelItem
+//        }
+//        else{
+//            albumPagesItem = AlbumPagesViewModelItem()
+//            createAlbumVM?.album.append(albumPagesItem as! AlbumViewModelItem)
+//        }
         switch indexPath.row {
         case 0:
-            let page = AlbumPageLayout1Item()
-            createAlbumVM?.pages.append(page)
-            removeAnimate()
+            let page = AlbumPage(pageLayout: .layout1, pageNumber: 1, numberPictures: 1)
+//            albumPagesItem?.albumPages.append(page)
         case 1:
-            let page = AlbumPageLayout2Item()
-            createAlbumVM?.pages.append(page)
-            removeAnimate()
+            let page = AlbumPage(pageLayout: .layout2, pageNumber: 1, numberPictures: 2)
+//            albumPagesItem?.albumPages.append(page)
         case 2:
-            let page = AlbumPageLayout3Item()
-            createAlbumVM?.pages.append(page)
-            removeAnimate()
+            let page = AlbumPage(pageLayout: .layout3, pageNumber: 1, numberPictures: 3)
+//            albumPagesItem?.albumPages.append(page)
         case 3:
-            let page = AlbumPageLayout4Item()
-            createAlbumVM?.pages.append(page)
-            removeAnimate()
+            let page = AlbumPage(pageLayout: .layout4, pageNumber: 1, numberPictures: 3)
+//            albumPagesItem?.albumPages.append(page)
         case 4:
-            let page = AlbumPageLayout5Item()
-            createAlbumVM?.pages.append(page)
-            removeAnimate()
+            let page = AlbumPage(pageLayout: .layout5, pageNumber: 1, numberPictures: 3)
+//            albumPagesItem?.albumPages.append(page)
         case 5:
-            let page = AlbumPageLayout6Item()
-            createAlbumVM?.pages.append(page)
-            removeAnimate()
+            let page = AlbumPage(pageLayout: .layout6, pageNumber: 1, numberPictures: 2)
+//            albumPagesItem?.albumPages.append(page)
         default:
             print("error selcting layout")
         }
+        removeAnimate()
         print("selected layout \(indexPath.row) ")
     }
 }

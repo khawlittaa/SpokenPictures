@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import YPImagePicker
+import TBDropdownMenu
 
 extension UIButton{
     
@@ -42,7 +44,7 @@ extension UIButton{
     
     func selectedRadioButton(){
         let bgImage = UIImage(named: "coverColorSelection")
-        self.setBackgroundImage(bgImage, for: .normal)
+        self.setBackgroundImage(bgImage, for: .selected)
     }
     
     func addButtonShadow(){
@@ -52,5 +54,40 @@ extension UIButton{
         self.layer.shadowRadius = 1.0
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 4.0
+    }
+    
+    func showImagePicker(sourceVC: UIViewController, pageItem: AlbumPagesViewModelItem? = nil, coverItem: AlbumCoverViewModelItem? = nil ){
+        var config = YPImagePickerConfiguration()
+        config.showsPhotoFilters = false
+        config.showsVideoTrimmer = false
+        config.screens = [.library]
+        config.library.mediaType = .photoAndVideo
+        config.video.fileType = .mov
+        config.video.libraryTimeLimit = 20.0
+        config.video.minimumTimeLimit = 15.0
+        // Build a picker with your configuration
+        let picker = YPImagePicker(configuration: config)
+        picker.didFinishPicking { [unowned picker] items, _ in
+            if let photo = items.singlePhoto {
+                print(photo.fromCamera) // Image source (camera or library)
+                print(photo.image) // Final image selected by the user
+                print(photo.originalImage) // original image selected by the user, unfiltered
+                let editVc = editing.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
+                editVc.originalImage = photo.originalImage
+                editVc.albumPageItem = pageItem
+                editVc.albumCoverItem = coverItem
+                sourceVC.navigationController?.pushViewController(editVc, animated: true)
+            }else{
+                if let video = items.singleVideo {
+                     print(video.fromCamera)
+                     print(video.thumbnail)
+                     print(video.url)
+                    let VideoThummbnailVC = editing.instantiateViewController(withIdentifier: "VideoThummbnailVC") as! VideoThummbnailViewController
+                    sourceVC.navigationController?.pushViewController(VideoThummbnailVC, animated: true)
+                 }
+            }
+            picker.dismiss(animated: true, completion: nil)
+        }
+        sourceVC.present(picker, animated: true, completion: nil)
     }
 }

@@ -7,27 +7,32 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mulish-Regular.ttf">
+            <string>Mulish-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PageLayout5TableViewCell" rowHeight="259" id="KGk-i7-Jjw" customClass="PageLayout5TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="263" height="259"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PageLayout5TableViewCell" rowHeight="349" id="KGk-i7-Jjw" customClass="PageLayout5TableViewCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="269" height="349"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="263" height="259"/>
+                <rect key="frame" x="0.0" y="0.0" width="269" height="349"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2a-le-bb3">
-                        <rect key="frame" x="10" y="10" width="55" height="20"/>
+                        <rect key="frame" x="10" y="10" width="54" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="oq0-SY-EpB"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="16"/>
                         <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-sZ-V1v">
-                        <rect key="frame" x="75" y="10" width="20" height="20"/>
+                        <rect key="frame" x="74" y="10" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="OUw-sr-6Rd"/>
                             <constraint firstAttribute="width" constant="20" id="mNF-00-lDE"/>
@@ -36,26 +41,94 @@
                         <state key="normal" image="trash.fill" catalog="system"/>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-gD-QUH">
-                        <rect key="frame" x="10" y="40" width="243" height="209"/>
+                        <rect key="frame" x="10" y="40" width="249" height="320"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zii-Cc-NRa">
-                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="209"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uIT-28-5Q0">
-                                <rect key="frame" x="126.5" y="0.0" width="116.5" height="209"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-4t-qld">
+                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="209"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-PP-XZJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="99.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zii-Cc-NRa">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="209"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-gL-IIA">
-                                        <rect key="frame" x="0.0" y="109.5" width="116.5" height="99.5"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPw-0t-CfZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="209"/>
+                                        <connections>
+                                            <action selector="leftImagebuttonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Y7f-Hm-SLl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="zii-Cc-NRa" firstAttribute="leading" secondItem="vk2-4t-qld" secondAttribute="leading" id="AGb-12-FIA"/>
+                                    <constraint firstAttribute="bottom" secondItem="jPw-0t-CfZ" secondAttribute="bottom" id="Myj-CE-5mD"/>
+                                    <constraint firstItem="jPw-0t-CfZ" firstAttribute="leading" secondItem="vk2-4t-qld" secondAttribute="leading" id="XdT-if-803"/>
+                                    <constraint firstAttribute="bottom" secondItem="zii-Cc-NRa" secondAttribute="bottom" id="dhi-ai-Uzc"/>
+                                    <constraint firstAttribute="trailing" secondItem="zii-Cc-NRa" secondAttribute="trailing" id="jd2-p1-ptd"/>
+                                    <constraint firstItem="jPw-0t-CfZ" firstAttribute="top" secondItem="vk2-4t-qld" secondAttribute="top" id="m63-Wu-lQM"/>
+                                    <constraint firstItem="zii-Cc-NRa" firstAttribute="top" secondItem="vk2-4t-qld" secondAttribute="top" id="m8s-ZK-9qF"/>
+                                    <constraint firstAttribute="trailing" secondItem="jPw-0t-CfZ" secondAttribute="trailing" id="vir-QT-hhM"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uIT-28-5Q0">
+                                <rect key="frame" x="129.5" y="0.0" width="119.5" height="320"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJt-iz-qEq">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-PP-XZJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Up1-uH-f2i">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
+                                                <connections>
+                                                    <action selector="topRightImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xOk-9C-koz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Lwr-PP-XZJ" secondAttribute="bottom" id="Czh-3S-zte"/>
+                                            <constraint firstItem="Lwr-PP-XZJ" firstAttribute="top" secondItem="oJt-iz-qEq" secondAttribute="top" id="Hm9-uE-Z6z"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lwr-PP-XZJ" secondAttribute="trailing" id="In8-Nx-Hzx"/>
+                                            <constraint firstAttribute="bottom" secondItem="Up1-uH-f2i" secondAttribute="bottom" id="RFE-sZ-a7c"/>
+                                            <constraint firstItem="Up1-uH-f2i" firstAttribute="leading" secondItem="oJt-iz-qEq" secondAttribute="leading" id="Svg-YV-ewo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Up1-uH-f2i" secondAttribute="trailing" id="lYD-VI-fxQ"/>
+                                            <constraint firstItem="Lwr-PP-XZJ" firstAttribute="leading" secondItem="oJt-iz-qEq" secondAttribute="leading" id="ppb-GQ-Xbu"/>
+                                            <constraint firstItem="Up1-uH-f2i" firstAttribute="top" secondItem="oJt-iz-qEq" secondAttribute="top" id="zGH-3h-ogp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7X-bV-Aq6">
+                                        <rect key="frame" x="0.0" y="165" width="119.5" height="155"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolderImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cHf-gL-IIA">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Teg-Yu-YSk">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="155"/>
+                                                <connections>
+                                                    <action selector="bottomRightImageButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="slZ-aX-dTf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Teg-Yu-YSk" secondAttribute="trailing" id="48Z-Ff-AWj"/>
+                                            <constraint firstAttribute="bottom" secondItem="cHf-gL-IIA" secondAttribute="bottom" id="5Bq-QC-VAL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Teg-Yu-YSk" secondAttribute="bottom" id="8SS-Fn-z38"/>
+                                            <constraint firstItem="Teg-Yu-YSk" firstAttribute="top" secondItem="I7X-bV-Aq6" secondAttribute="top" id="QzU-Wy-qqM"/>
+                                            <constraint firstItem="Teg-Yu-YSk" firstAttribute="leading" secondItem="I7X-bV-Aq6" secondAttribute="leading" id="UOE-HT-74F"/>
+                                            <constraint firstItem="cHf-gL-IIA" firstAttribute="leading" secondItem="I7X-bV-Aq6" secondAttribute="leading" id="eAf-DO-aIi"/>
+                                            <constraint firstItem="cHf-gL-IIA" firstAttribute="top" secondItem="I7X-bV-Aq6" secondAttribute="top" id="fDT-st-zhJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="cHf-gL-IIA" secondAttribute="trailing" id="gvw-R8-UVW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="6LZ-or-BUs"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="uIT-28-5Q0" secondAttribute="bottom" id="vgU-bz-3yb"/>
-                            <constraint firstAttribute="bottom" secondItem="zii-Cc-NRa" secondAttribute="bottom" id="ykW-uI-IBw"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -73,7 +146,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="145.6521739130435" y="194.53125"/>
+            <connections>
+                <outlet property="bottomRightImageButton" destination="Teg-Yu-YSk" id="enb-s8-tMu"/>
+                <outlet property="bottomRightImageView" destination="cHf-gL-IIA" id="EyP-2M-CQw"/>
+                <outlet property="leftImageButton" destination="jPw-0t-CfZ" id="1hn-oa-gYJ"/>
+                <outlet property="leftImageView" destination="zii-Cc-NRa" id="Rej-RM-TRj"/>
+                <outlet property="pageNumberLabel" destination="h2a-le-bb3" id="0GD-UX-gB8"/>
+                <outlet property="topRightImageButton" destination="Up1-uH-f2i" id="n0e-HY-igQ"/>
+                <outlet property="topRightImageView" destination="Lwr-PP-XZJ" id="xzd-xY-koq"/>
+            </connections>
+            <point key="canvasLocation" x="109.42028985507247" y="256.80803571428572"/>
         </tableViewCell>
     </objects>
     <resources>

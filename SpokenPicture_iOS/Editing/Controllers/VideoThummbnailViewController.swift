@@ -28,7 +28,11 @@ class VideoThummbnailViewController: UIViewController {
       
       
       @objc func ContinueTapped()  {
-          self.navigationController?.popViewController(animated: true)
+          self.navigationController?.popViewController(animated: false)
+          let editVc = editing.instantiateViewController(withIdentifier: "EditPhotoVC") as! EditPhotoViewController
+        editVc.originalImage = thumbnailImage.image!
+          self.navigationController?.pushViewController(editVc, animated: false)
+        
       }
     
     func setUpCollectionView(){
