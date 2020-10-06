@@ -12,7 +12,9 @@ class PostcardDropMenuViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var menuBackView: UIView!
     
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     var items: [MenuItem]?
+    var heightValue: CGFloat = 160
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,7 @@ class PostcardDropMenuViewController: UIViewController {
     
     func setUpTableView(){
         menuTableView.dataSource = self
+        tableViewHeightConstraint.constant = heightValue
         menuTableView.registerCell(nib: "DropMenuCell", cellreuseIdentifier: "DropMenuCell")
         menuBackView.addViewShadow()
         

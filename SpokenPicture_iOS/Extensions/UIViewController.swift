@@ -8,7 +8,6 @@
 
 import UIKit
 import YPImagePicker
-import TBDropdownMenu
 
 extension UIViewController{
     
@@ -19,23 +18,50 @@ extension UIViewController{
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
-    func addNavigationBarItemsWithMenu(iscomplete: Bool){
+    func addNavigationBarItemsWithMenu(iscomplete: Bool,isAlbum: Bool = false){
         self.navigationController?.navigationBar.tintColor = .accentBlack1Main
         let complete = UIImage(named: "complete")
         let menu = UIImage(named: "menuBar")
-        let menuButtonItem = UIBarButtonItem(image: menu, style: .plain, target: self, action: #selector(menuOptionTapped))
+        var menuButtonItem = UIBarButtonItem()
+        if isAlbum {
+            menuButtonItem = UIBarButtonItem(image: menu, style: .plain, target: self, action: #selector(showAlbumMenu))
+            }else{
+          menuButtonItem = UIBarButtonItem(image: menu, style: .plain, target: self, action: #selector(showMenu))
+            }
+     
         let completeButtonItem = UIBarButtonItem(image: complete, style: .plain, target: self, action: #selector(completeOptionTapped))
         completeButtonItem.isEnabled = iscomplete
         self.navigationItem.rightBarButtonItems = [menuButtonItem, completeButtonItem]
         self.navigationItem.backBarButtonItem?.title = ""
-        
     }
-    func showMenu(){
+    
+    @objc  func showAlbumMenu(){
+        let item1 = MenuItem(image: UIImage(named: "collaborateBlack")!,title: "Collaborate")
+        let item2 = MenuItem(image: UIImage(named: "shareBlack")!, title: "Share")
+        let item3 = MenuItem(image: UIImage(named: "orderBlackMaterial")!, title: "Order")
+        let item4 = MenuItem(image: UIImage(named: "previewBlack")!, title: "Preview")
+        let item5 = MenuItem(image: UIImage(named: "deleteBlack")!, title: "Delete")
+        
+        let items = [item1, item2, item3, item4, item5]
+        
+        let menuView = postcard.instantiateViewController(withIdentifier: "PostcardDropMenuVC")
+            as! PostcardDropMenuViewController
+        menuView.items = items
+        menuView.heightValue = 200
+        navigationController?.pushViewController(menuView, animated: false)
+        self.addChild(menuView)
+        menuView.view.frame = self.view.frame
+        self.view.addSubview(menuView.view)
+        menuView.didMove(toParent: self)
+    }
+    
+    
+     @objc func showMenu(){
         let item1 = MenuItem(image: UIImage(named: "orderBlackMaterial")!,title: "Order")
         let item2 = MenuItem(image: UIImage(named: "editBlack")!, title: "Edit")
         let item3 = MenuItem(image: UIImage(named: "shareBlack")!, title: "Share")
         let item4 = MenuItem(image: UIImage(named: "deleteBlack")!, title: "Delete")
-
+        
         let items = [item1, item2, item3, item4]
         
         let menuView = postcard.instantiateViewController(withIdentifier: "PostcardDropMenuVC")
@@ -47,22 +73,6 @@ extension UIViewController{
         self.view.addSubview(menuView.view)
         menuView.didMove(toParent: self)
         
-//        let menuView = DropdownMenu(navigationController: navigationController!, items: items)
-//        menuView.tintColor = UIColor.accentBlack1Main
-//        menuView.cellBackgroundColor = UIColor.pastelPastel11Main
-//        menuView.displaySelected = false
-//
-//        menuView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
-//        menuView.updateConstraints()
-//        menuView.reloadInputViews()
-//        menuView.tableView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
-//
-//        menuView.delegate = self
-//        menuView.showMenu()
-    }
-    
-    @objc func menuOptionTapped()  {
-        showMenu()
     }
     
     @objc func completeOptionTapped()  {
@@ -92,12 +102,3 @@ extension UIViewController{
     }
 }
 
-extension UIViewController: DropdownMenuDelegate {
-    func dropdownMenu(dropdownMenu: DropdownMenu, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("DropdownMenu didselect \(indexPath.row)")
-    }
-
-    func dropUpMenuCancel(_ dropUpMenu: DropUpMenu) {
-        print("select cancel")
-    }
-}

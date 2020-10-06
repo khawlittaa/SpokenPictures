@@ -25,7 +25,7 @@ class CreateAlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.roundEdges()
-        addNavigationBarItemsWithMenu(iscomplete: true)
+        addNavigationBarItemsWithMenu(iscomplete: true, isAlbum: true)
         setUpTableView()
     }
     

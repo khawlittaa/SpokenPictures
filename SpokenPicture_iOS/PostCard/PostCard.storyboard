@@ -239,9 +239,9 @@
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kfb-op-gtc" secondAttribute="trailing" id="1go-dQ-MN9"/>
-                                    <constraint firstAttribute="height" constant="160" id="5kn-tG-gZ7"/>
                                     <constraint firstAttribute="bottom" secondItem="kfb-op-gtc" secondAttribute="bottom" id="7nu-iq-VS5"/>
                                     <constraint firstAttribute="width" constant="160" id="CDd-8v-wTn"/>
+                                    <constraint firstItem="kfb-op-gtc" firstAttribute="height" secondItem="Y5M-Qg-LeQ" secondAttribute="height" id="IfR-zg-tdb"/>
                                     <constraint firstItem="kfb-op-gtc" firstAttribute="top" secondItem="Y5M-Qg-LeQ" secondAttribute="top" id="WGa-qx-T1U"/>
                                     <constraint firstItem="kfb-op-gtc" firstAttribute="leading" secondItem="Y5M-Qg-LeQ" secondAttribute="leading" id="aHO-yo-Ote"/>
                                 </constraints>
@@ -257,6 +257,7 @@
                     <connections>
                         <outlet property="menuBackView" destination="Y5M-Qg-LeQ" id="J5g-AF-5lk"/>
                         <outlet property="menuTableView" destination="kfb-op-gtc" id="RPh-5F-b7b"/>
+                        <outlet property="tableViewHeightConstraint" destination="jUp-xM-6PA" id="CAT-2x-NYw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsF-bg-GwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -668,7 +669,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/500 Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzG-65-z37">
-                                        <rect key="frame" x="177.5" y="232" width="112.5" height="12"/>
+                                        <rect key="frame" x="181.5" y="232" width="108.5" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="0he-PV-0dO"/>
                                         </constraints>

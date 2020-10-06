@@ -30,7 +30,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQe-k5-UNS">
-                        <rect key="frame" x="80" y="10" width="120" height="21"/>
+                        <rect key="frame" x="60" y="10" width="160" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="1CD-OY-AzJ"/>
                         </constraints>
@@ -41,11 +41,11 @@
                 </subviews>
                 <color key="backgroundColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="uQe-k5-UNS" firstAttribute="leading" secondItem="LKf-vj-8z5" secondAttribute="trailing" constant="40" id="8Fj-w6-kGh"/>
+                    <constraint firstItem="uQe-k5-UNS" firstAttribute="leading" secondItem="LKf-vj-8z5" secondAttribute="trailing" constant="20" id="8Fj-w6-kGh"/>
                     <constraint firstItem="LKf-vj-8z5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Gr5-Vk-z8L"/>
                     <constraint firstItem="uQe-k5-UNS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IoE-Br-Q8i"/>
                     <constraint firstItem="LKf-vj-8z5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="TCE-y8-MM9"/>
-                    <constraint firstAttribute="trailing" secondItem="uQe-k5-UNS" secondAttribute="trailing" constant="20" id="Ued-ad-fYf"/>
+                    <constraint firstAttribute="trailing" secondItem="uQe-k5-UNS" secondAttribute="trailing" id="Ued-ad-fYf"/>
                     <constraint firstItem="uQe-k5-UNS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UhQ-Id-FAw"/>
                     <constraint firstAttribute="bottom" secondItem="LKf-vj-8z5" secondAttribute="bottom" constant="10" id="n3g-pe-beB"/>
                 </constraints>
