@@ -185,6 +185,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="TH6-ie-FDb"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPageButton" destination="gTc-kJ-exn" id="tbG-fT-lq4"/>
                         <outlet property="albumContentTableView" destination="ZmY-6r-Mgx" id="y5o-xh-W75"/>
                         <outlet property="saveButton" destination="noE-y4-bSk" id="2uq-A0-je8"/>
                     </connections>
