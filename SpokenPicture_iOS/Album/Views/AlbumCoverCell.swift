@@ -49,5 +49,18 @@ class AlbumCoverCell: UITableViewCell {
         addImageButton.showImagePicker(sourceVC: sourceVC!, coverItem: item)
         addImageButton.isHidden = true
     }
+
+    @IBAction func btnClicked(sender:UIButton){
+
+        let buttonArray = [yellowCoverButton,purpleCoverButton,blueCoverButton,whiteCoverButton]
+
+        buttonArray.forEach{
+            $0?.isSelected = false
+        }
+ 
+        sender.isSelected = true
+        sender.selectedRadioButton()
+
+    }
     
 }

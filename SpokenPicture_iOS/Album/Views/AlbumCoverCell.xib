@@ -42,6 +42,9 @@
                                     <constraint firstAttribute="height" constant="30" id="pfX-yJ-VHP"/>
                                 </constraints>
                                 <state key="normal" image="coverColorWhite"/>
+                                <connections>
+                                    <action selector="btnClickedWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QOo-2J-4hd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8A8-UV-Y5T">
                                 <rect key="frame" x="148" y="0.0" width="30" height="30"/>
@@ -51,6 +54,9 @@
                                     <constraint firstAttribute="height" constant="30" id="ou9-kN-AOg"/>
                                 </constraints>
                                 <state key="normal" image="coverColorBlue"/>
+                                <connections>
+                                    <action selector="btnClickedWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jna-dc-9sU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k1-pG-55x">
                                 <rect key="frame" x="190" y="0.0" width="30" height="30"/>
@@ -60,6 +66,9 @@
                                     <constraint firstAttribute="height" constant="30" id="jJ8-r1-cvm"/>
                                 </constraints>
                                 <state key="normal" image="coverColorPurple"/>
+                                <connections>
+                                    <action selector="btnClickedWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="blC-SN-aze"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OK-MP-WJh">
                                 <rect key="frame" x="232" y="0.0" width="30" height="30"/>
@@ -69,6 +78,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Gpn-pO-F4B"/>
                                 </constraints>
                                 <state key="normal" image="coverColorYellow"/>
+                                <connections>
+                                    <action selector="btnClickedWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i7U-3n-ESy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

@@ -44,7 +44,7 @@ extension UIButton{
     
     func selectedRadioButton(){
         let bgImage = UIImage(named: "coverColorSelection")
-        self.setBackgroundImage(bgImage, for: .normal)
+        self.setBackgroundImage(bgImage, for: .selected)
     }
     
     func addButtonShadow(){
