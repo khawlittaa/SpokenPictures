@@ -7,14 +7,102 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mulish-Regular.ttf">
+            <string>Mulish-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--My Orders-->
+        <scene sceneID="RCT-rY-DtH">
+            <objects>
+                <viewController storyboardIdentifier="MenuOrderViewController" title="My Orders" id="qVR-A9-6LX" customClass="MenuOrderViewController" customModule="SpokenPicture_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="96a-fA-ey8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuButtomWave" translatesAutoresizingMaskIntoConstraints="NO" id="83T-4b-idw">
+                                <rect key="frame" x="0.0" y="700" width="414" height="196"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRg-9Q-v0Z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="282"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don’t have any orders yet! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXW-6m-KVX">
+                                        <rect key="frame" x="20" y="20" width="392" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you just placed an order, please check your email for confirmation. " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd1-SM-Z3o">
+                                        <rect key="frame" x="30" y="58.5" width="314" height="29"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noOrder" translatesAutoresizingMaskIntoConstraints="NO" id="d3Y-7x-rtz">
+                                        <rect key="frame" x="150" y="147.5" width="114" height="114"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="6m6-Pl-j2Z"/>
+                                            <constraint firstAttribute="height" constant="114" id="zd3-2d-Ukj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jXW-6m-KVX" firstAttribute="top" secondItem="fRg-9Q-v0Z" secondAttribute="top" constant="20" id="CEj-Nt-gbI"/>
+                                    <constraint firstItem="jXW-6m-KVX" firstAttribute="leading" secondItem="fRg-9Q-v0Z" secondAttribute="leading" constant="20" id="CdH-Hb-Jtz"/>
+                                    <constraint firstAttribute="trailing" secondItem="jXW-6m-KVX" secondAttribute="trailing" constant="2" id="DoF-li-Vvj"/>
+                                    <constraint firstItem="d3Y-7x-rtz" firstAttribute="centerX" secondItem="fRg-9Q-v0Z" secondAttribute="centerX" id="OYd-dq-S77"/>
+                                    <constraint firstItem="gd1-SM-Z3o" firstAttribute="leading" secondItem="fRg-9Q-v0Z" secondAttribute="leading" constant="30" id="TL2-Nx-zJa"/>
+                                    <constraint firstItem="d3Y-7x-rtz" firstAttribute="top" secondItem="gd1-SM-Z3o" secondAttribute="bottom" constant="60" id="ZML-jm-Oxw"/>
+                                    <constraint firstItem="gd1-SM-Z3o" firstAttribute="top" secondItem="jXW-6m-KVX" secondAttribute="bottom" constant="6" id="jHc-M6-iDU"/>
+                                    <constraint firstAttribute="trailing" secondItem="gd1-SM-Z3o" secondAttribute="trailing" constant="70" id="k0Y-yu-oKa"/>
+                                    <constraint firstAttribute="height" constant="282" id="rAX-rX-hRf"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfn-TB-gb0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fRg-9Q-v0Z" firstAttribute="top" secondItem="iMl-ur-kTy" secondAttribute="top" id="0DN-ap-G5z"/>
+                            <constraint firstItem="lfn-TB-gb0" firstAttribute="top" secondItem="iMl-ur-kTy" secondAttribute="top" id="IGb-l8-WLo"/>
+                            <constraint firstItem="iMl-ur-kTy" firstAttribute="trailing" secondItem="lfn-TB-gb0" secondAttribute="trailing" id="NjS-OM-gUf"/>
+                            <constraint firstAttribute="bottom" secondItem="83T-4b-idw" secondAttribute="bottom" id="OJ5-nr-O2T"/>
+                            <constraint firstItem="lfn-TB-gb0" firstAttribute="leading" secondItem="iMl-ur-kTy" secondAttribute="leading" id="Uao-Ar-6ZY"/>
+                            <constraint firstItem="iMl-ur-kTy" firstAttribute="trailing" secondItem="83T-4b-idw" secondAttribute="trailing" id="X2f-Ns-gad"/>
+                            <constraint firstItem="83T-4b-idw" firstAttribute="leading" secondItem="iMl-ur-kTy" secondAttribute="leading" id="bWB-P8-elC"/>
+                            <constraint firstItem="iMl-ur-kTy" firstAttribute="bottom" secondItem="lfn-TB-gb0" secondAttribute="bottom" id="lXX-fV-9QT"/>
+                            <constraint firstItem="iMl-ur-kTy" firstAttribute="trailing" secondItem="fRg-9Q-v0Z" secondAttribute="trailing" id="obZ-M1-s36"/>
+                            <constraint firstItem="fRg-9Q-v0Z" firstAttribute="leading" secondItem="iMl-ur-kTy" secondAttribute="leading" id="zUY-Ms-BG5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iMl-ur-kTy"/>
+                    </view>
+                    <connections>
+                        <outlet property="noOrdersView" destination="fRg-9Q-v0Z" id="Ovj-LP-iRa"/>
+                        <outlet property="ordersTableView" destination="lfn-TB-gb0" id="Sf9-6E-SpS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5jt-Im-vHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3589.8550724637685" y="-342.1875"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="83q-pk-yLN">
             <objects>
                 <navigationController id="bbY-D4-Yjv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nj1-Qp-736">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="blackBack" backIndicatorTransitionMaskImage="blackBack" id="nj1-Qp-736">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="TL4-3h-cLj" kind="relationship" relationship="rootViewController" id="3Io-Jw-CCg"/>
@@ -61,7 +149,7 @@
                         <viewLayoutGuide key="safeArea" id="6YL-HE-KF1"/>
                     </view>
                     <navigationItem key="navigationItem" id="avQ-4B-uy5">
-                        <barButtonItem key="backBarButtonItem" title=" " id="c4U-fm-hxp"/>
+                        <barButtonItem key="backBarButtonItem" title="  " id="c4U-fm-hxp"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menuTableView" destination="8l0-gG-FvI" id="DpA-S1-Lte"/>
@@ -80,20 +168,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="1IY-Yf-x7U">
-                                <rect key="frame" x="30" y="104" width="354" height="277"/>
+                                <rect key="frame" x="30" y="104" width="354" height="285.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-LE-T2v">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="67.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woH-vo-o0P">
-                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="55.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="20"/>
                                                 <color key="textColor" red="0.031372549019607843" green="0.15294117647058825" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Foulen" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-H2-jEs">
-                                                <rect key="frame" x="0.0" y="32" width="354" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="33.5" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -103,17 +191,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-LT-cdt">
-                                        <rect key="frame" x="0.0" y="102" width="354" height="62.5"/>
+                                        <rect key="frame" x="0.0" y="103.5" width="354" height="67.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdD-S2-ZZw">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="20"/>
                                                 <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="foulen@mail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zp0-25-tdE">
-                                                <rect key="frame" x="0.0" y="28.5" width="354" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="33.5" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -123,23 +211,23 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="acB-2F-skj">
-                                        <rect key="frame" x="0.0" y="200.5" width="354" height="76.5"/>
+                                        <rect key="frame" x="0.0" y="207" width="354" height="78.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDc-NI-TZ5">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="12"/>
                                                 <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a language for your auto translate subtitles. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGd-Ij-JQf">
-                                                <rect key="frame" x="0.0" y="22.5" width="334" height="12"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="334" height="13"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="10"/>
                                                 <color key="textColor" red="0.58823529409999997" green="0.62745098040000002" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s2M-a4-lZn" customClass="DropDown" customModule="iOSDropDown">
-                                                <rect key="frame" x="0.0" y="42.5" width="354" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
@@ -157,19 +245,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp1-Ej-FUh">
-                                <rect key="frame" x="30" y="401" width="354" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="30" y="409.5" width="354" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="17"/>
                                 <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received push notifications when your collaborators make updates or when you receive photos from others." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcL-Qc-Gve">
-                                <rect key="frame" x="30" y="428.5" width="314" height="61"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="30" y="438" width="314" height="64.5"/>
+                                <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="17"/>
                                 <color key="textColor" red="0.58823529409999997" green="0.62745098040000002" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUO-Q6-3QL">
-                                <rect key="frame" x="364" y="428.5" width="20" height="20"/>
+                                <rect key="frame" x="364" y="438" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="SmO-Uv-rsF"/>
                                     <constraint firstAttribute="height" constant="20" id="c86-4V-gcR"/>
@@ -222,9 +310,49 @@
             </objects>
             <point key="canvasLocation" x="2747.826086956522" y="-349.55357142857139"/>
         </scene>
+        <!--Notifications-->
+        <scene sceneID="von-xY-hT7">
+            <objects>
+                <viewController storyboardIdentifier="MenuNotificationViewController" title="Notifications" id="h1I-eg-6N0" customClass="MenuNotificationViewController" customModule="SpokenPicture_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mN8-wg-9Fl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuButtomWave" translatesAutoresizingMaskIntoConstraints="NO" id="rV5-Vh-SZM">
+                                <rect key="frame" x="0.0" y="700" width="414" height="196"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-XP-drf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zyj-cA-Gdl" firstAttribute="trailing" secondItem="tCa-XP-drf" secondAttribute="trailing" id="6GC-Ub-kPi"/>
+                            <constraint firstAttribute="bottom" secondItem="rV5-Vh-SZM" secondAttribute="bottom" id="DZJ-1i-Yv1"/>
+                            <constraint firstItem="tCa-XP-drf" firstAttribute="top" secondItem="Zyj-cA-Gdl" secondAttribute="top" id="RDZ-VZ-Mpw"/>
+                            <constraint firstItem="Zyj-cA-Gdl" firstAttribute="trailing" secondItem="rV5-Vh-SZM" secondAttribute="trailing" id="Ug6-0c-bLa"/>
+                            <constraint firstItem="tCa-XP-drf" firstAttribute="leading" secondItem="Zyj-cA-Gdl" secondAttribute="leading" id="ZGX-hO-L3L"/>
+                            <constraint firstItem="Zyj-cA-Gdl" firstAttribute="bottom" secondItem="tCa-XP-drf" secondAttribute="bottom" id="kNG-Af-Uuy"/>
+                            <constraint firstItem="rV5-Vh-SZM" firstAttribute="leading" secondItem="mN8-wg-9Fl" secondAttribute="leading" id="wI7-dk-6dm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zyj-cA-Gdl"/>
+                    </view>
+                    <connections>
+                        <outlet property="notificationsTableView" destination="tCa-XP-drf" id="LDc-0M-Ggg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pn0-Cv-Aed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4515.9420289855079" y="-350.22321428571428"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="MenuButtomWave" width="360" height="196"/>
         <image name="bars" width="42" height="42"/>
+        <image name="blackBack" width="30" height="30"/>
         <image name="checkYellow" width="21" height="24"/>
+        <image name="noOrder" width="134" height="134"/>
     </resources>
 </document>

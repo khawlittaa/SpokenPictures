@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		005E3C3E48D32200EBD87E7A /* Pods_SpokenPicture_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485F04CAAC0CC8C5D76BAACC /* Pods_SpokenPicture_iOS.framework */; };
+		6E35583A2523150500058EA6 /* DropMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3558382523150500058EA6 /* DropMenuCell.swift */; };
+		6E35583B2523150500058EA6 /* DropMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3558392523150500058EA6 /* DropMenuCell.xib */; };
+		6E35584125235B2D00058EA6 /* MenuOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584025235B2D00058EA6 /* MenuOrderViewController.swift */; };
+		6E35584325235B5500058EA6 /* MenuNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584225235B5500058EA6 /* MenuNotificationViewController.swift */; };
+		6E3558462523640900058EA6 /* MenuOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3558442523640900058EA6 /* MenuOrderCell.swift */; };
+		6E3558472523640900058EA6 /* MenuOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3558452523640900058EA6 /* MenuOrderCell.xib */; };
+		6E35584A252366F200058EA6 /* MenuNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E355848252366F200058EA6 /* MenuNotificationCell.swift */; };
+		6E35584B252366F200058EA6 /* MenuNotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E355849252366F200058EA6 /* MenuNotificationCell.xib */; };
+		6E35584E2523738300058EA6 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584D2523738300058EA6 /* Notification.swift */; };
+		6E3558502523766D00058EA6 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35584F2523766D00058EA6 /* NotificationsViewModel.swift */; };
+		6E355852252388C300058EA6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E355851252388C300058EA6 /* Order.swift */; };
+		6E3558542523898E00058EA6 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3558532523898E00058EA6 /* OrdersViewModel.swift */; };
 		6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */; };
 		6E36DB242510E472005203F3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E36DB232510E472005203F3 /* Menu.storyboard */; };
 		6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E36DB252510E52F005203F3 /* MenuViewController.swift */; };
@@ -84,12 +96,33 @@
 		6E81026B250A37A700B9BB43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E81026A250A37A700B9BB43 /* Assets.xcassets */; };
 		6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E81026C250A37A700B9BB43 /* LaunchScreen.storyboard */; };
 		6EB5FA51250D6ACC00D54A40 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5FA50250D6ACC00D54A40 /* UIViewController.swift */; };
+		6ED1FEF12524DC1B007F2D7B /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1FEF02524DC1B007F2D7B /* Payment.storyboard */; };
+		6ED1FEF62524DCBF007F2D7B /* MenuCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1FEF52524DCBF007F2D7B /* MenuCartViewController.swift */; };
+		6ED1FEF92524E41C007F2D7B /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1FEF72524E41C007F2D7B /* CartItemCell.swift */; };
+		6ED1FEFA2524E41C007F2D7B /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1FEF82524E41C007F2D7B /* CartItemCell.xib */; };
+		6ED709002525C1F600BC2DB2 /* ShippingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED708FF2525C1F600BC2DB2 /* ShippingDetailsViewController.swift */; };
+		6ED709022525C85200BC2DB2 /* ShippingMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED709012525C85200BC2DB2 /* ShippingMethodViewController.swift */; };
+		6ED709052525CB6700BC2DB2 /* ShipmentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED709032525CB6700BC2DB2 /* ShipmentMethodCell.swift */; };
+		6ED709062525CB6700BC2DB2 /* ShipmentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED709042525CB6700BC2DB2 /* ShipmentMethodCell.xib */; };
+		6ED709082525D86500BC2DB2 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED709072525D86500BC2DB2 /* PaymentViewController.swift */; };
+		6ED7090A2525D88C00BC2DB2 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED709092525D88C00BC2DB2 /* SummaryViewController.swift */; };
+		6ED7090D2525E9E000BC2DB2 /* ShippingDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7090B2525E9E000BC2DB2 /* ShippingDetailsCell.swift */; };
+		6ED7090E2525E9E000BC2DB2 /* ShippingDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED7090C2525E9E000BC2DB2 /* ShippingDetailsCell.xib */; };
+		6ED709112525EA0200BC2DB2 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7090F2525EA0200BC2DB2 /* PaymentCell.swift */; };
+		6ED709122525EA0200BC2DB2 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED709102525EA0200BC2DB2 /* PaymentCell.xib */; };
+		6ED709142525EF8900BC2DB2 /* OrderDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED709132525EF8900BC2DB2 /* OrderDetailsViewModel.swift */; };
+		6ED709172525FCBB00BC2DB2 /* OrderStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED709162525FCBB00BC2DB2 /* OrderStep.swift */; };
+		6ED70919252602D600BC2DB2 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED70918252602D600BC2DB2 /* ConfirmationViewController.swift */; };
 		6EE732E52521E4FC0075D0CE /* Album.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE732E42521E4FC0075D0CE /* Album.storyboard */; };
 		6EE732E82521E7FA0075D0CE /* AlbumCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732E62521E7FA0075D0CE /* AlbumCoverCell.swift */; };
 		6EE732E92521E7FA0075D0CE /* AlbumCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE732E72521E7FA0075D0CE /* AlbumCoverCell.xib */; };
 		6EE732EB2521F5750075D0CE /* AlbumCoverViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732EA2521F5750075D0CE /* AlbumCoverViewModelItem.swift */; };
 		6EE732ED2521F5A20075D0CE /* AlbumPageViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732EC2521F5A20075D0CE /* AlbumPageViewModelItem.swift */; };
 		6EE732F02521F99C0075D0CE /* AlbumPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE732EF2521F99C0075D0CE /* AlbumPage.swift */; };
+		6EE87C25252748EE0099E238 /* PostcardDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87C23252748EE0099E238 /* PostcardDropMenuViewController.swift */; };
+		6EE87C2825274ACF0099E238 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE87C2725274ACF0099E238 /* MenuItem.swift */; };
+		6EE87C2A25275B770099E238 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE87C2925275B770099E238 /* Mulish-Regular.ttf */; };
+		6EE87C2C25277AE50099E238 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE87C2B25277AE40099E238 /* Mulish-Bold.ttf */; };
 		6EF8A23A25169D27000C5A9D /* EditRootControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8A23925169D27000C5A9D /* EditRootControl.swift */; };
 		6EF8A24025189FC7000C5A9D /* PostCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF8A23F25189FC7000C5A9D /* PostCard.storyboard */; };
 		6EF8A2422518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8A2412518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift */; };
@@ -100,6 +133,18 @@
 		485F04CAAC0CC8C5D76BAACC /* Pods_SpokenPicture_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpokenPicture_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55528C53CB2055495F663EEF /* Pods-SpokenPicture_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpokenPicture_iOS.release.xcconfig"; path = "Target Support Files/Pods-SpokenPicture_iOS/Pods-SpokenPicture_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		6981AAA64011AFAC65AF093F /* Pods-SpokenPicture_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpokenPicture_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SpokenPicture_iOS/Pods-SpokenPicture_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6E3558382523150500058EA6 /* DropMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropMenuCell.swift; sourceTree = "<group>"; };
+		6E3558392523150500058EA6 /* DropMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropMenuCell.xib; sourceTree = "<group>"; };
+		6E35584025235B2D00058EA6 /* MenuOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrderViewController.swift; sourceTree = "<group>"; };
+		6E35584225235B5500058EA6 /* MenuNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNotificationViewController.swift; sourceTree = "<group>"; };
+		6E3558442523640900058EA6 /* MenuOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrderCell.swift; sourceTree = "<group>"; };
+		6E3558452523640900058EA6 /* MenuOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuOrderCell.xib; sourceTree = "<group>"; };
+		6E355848252366F200058EA6 /* MenuNotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNotificationCell.swift; sourceTree = "<group>"; };
+		6E355849252366F200058EA6 /* MenuNotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuNotificationCell.xib; sourceTree = "<group>"; };
+		6E35584D2523738300058EA6 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		6E35584F2523766D00058EA6 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		6E355851252388C300058EA6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		6E3558532523898E00058EA6 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		6E36DB1D2510B63F005203F3 /* CreateMenuPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMenuPopUpViewModel.swift; sourceTree = "<group>"; };
 		6E36DB232510E472005203F3 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		6E36DB252510E52F005203F3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -178,12 +223,33 @@
 		6E81026D250A37A700B9BB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E81026F250A37A700B9BB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EB5FA50250D6ACC00D54A40 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		6ED1FEF02524DC1B007F2D7B /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		6ED1FEF52524DCBF007F2D7B /* MenuCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCartViewController.swift; sourceTree = "<group>"; };
+		6ED1FEF72524E41C007F2D7B /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
+		6ED1FEF82524E41C007F2D7B /* CartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
+		6ED708FF2525C1F600BC2DB2 /* ShippingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingDetailsViewController.swift; sourceTree = "<group>"; };
+		6ED709012525C85200BC2DB2 /* ShippingMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingMethodViewController.swift; sourceTree = "<group>"; };
+		6ED709032525CB6700BC2DB2 /* ShipmentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentMethodCell.swift; sourceTree = "<group>"; };
+		6ED709042525CB6700BC2DB2 /* ShipmentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipmentMethodCell.xib; sourceTree = "<group>"; };
+		6ED709072525D86500BC2DB2 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		6ED709092525D88C00BC2DB2 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		6ED7090B2525E9E000BC2DB2 /* ShippingDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingDetailsCell.swift; sourceTree = "<group>"; };
+		6ED7090C2525E9E000BC2DB2 /* ShippingDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShippingDetailsCell.xib; sourceTree = "<group>"; };
+		6ED7090F2525EA0200BC2DB2 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
+		6ED709102525EA0200BC2DB2 /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
+		6ED709132525EF8900BC2DB2 /* OrderDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewModel.swift; sourceTree = "<group>"; };
+		6ED709162525FCBB00BC2DB2 /* OrderStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStep.swift; sourceTree = "<group>"; };
+		6ED70918252602D600BC2DB2 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		6EE732E42521E4FC0075D0CE /* Album.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Album.storyboard; sourceTree = "<group>"; };
 		6EE732E62521E7FA0075D0CE /* AlbumCoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoverCell.swift; sourceTree = "<group>"; };
 		6EE732E72521E7FA0075D0CE /* AlbumCoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCoverCell.xib; sourceTree = "<group>"; };
 		6EE732EA2521F5750075D0CE /* AlbumCoverViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoverViewModelItem.swift; sourceTree = "<group>"; };
 		6EE732EC2521F5A20075D0CE /* AlbumPageViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPageViewModelItem.swift; sourceTree = "<group>"; };
 		6EE732EF2521F99C0075D0CE /* AlbumPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPage.swift; sourceTree = "<group>"; };
+		6EE87C23252748EE0099E238 /* PostcardDropMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcardDropMenuViewController.swift; sourceTree = "<group>"; };
+		6EE87C2725274ACF0099E238 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		6EE87C2925275B770099E238 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		6EE87C2B25277AE40099E238 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		6EF8A23925169D27000C5A9D /* EditRootControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRootControl.swift; sourceTree = "<group>"; };
 		6EF8A23F25189FC7000C5A9D /* PostCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostCard.storyboard; sourceTree = "<group>"; };
 		6EF8A2412518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePostCardLayoutViewController.swift; sourceTree = "<group>"; };
@@ -202,9 +268,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E355837252314B400058EA6 /* DropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6E3558382523150500058EA6 /* DropMenuCell.swift */,
+				6E3558392523150500058EA6 /* DropMenuCell.xib */,
+				6EE87C2725274ACF0099E238 /* MenuItem.swift */,
+			);
+			path = DropDownMenu;
+			sourceTree = "<group>";
+		};
+		6E35584C2523736100058EA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E35584D2523738300058EA6 /* Notification.swift */,
+				6E355851252388C300058EA6 /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6E36DB1F2510E421005203F3 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				6E35584C2523736100058EA6 /* Models */,
 				6E36DB222510E45C005203F3 /* ViewModels */,
 				6E36DB212510E452005203F3 /* Controllers */,
 				6E36DB202510E44A005203F3 /* Views */,
@@ -218,6 +304,10 @@
 			children = (
 				6E36DB272510E8B6005203F3 /* MenuTableViewCell.swift */,
 				6E36DB282510E8B6005203F3 /* MenuTableViewCell.xib */,
+				6E3558442523640900058EA6 /* MenuOrderCell.swift */,
+				6E3558452523640900058EA6 /* MenuOrderCell.xib */,
+				6E355848252366F200058EA6 /* MenuNotificationCell.swift */,
+				6E355849252366F200058EA6 /* MenuNotificationCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +317,8 @@
 			children = (
 				6E36DB252510E52F005203F3 /* MenuViewController.swift */,
 				6E36DB2F2510FD84005203F3 /* MenuProfileViewController.swift */,
+				6E35584025235B2D00058EA6 /* MenuOrderViewController.swift */,
+				6E35584225235B5500058EA6 /* MenuNotificationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +328,8 @@
 			children = (
 				6E36DB2D2510F662005203F3 /* MenuviewModel.swift */,
 				6E36DB3125110499005203F3 /* ProfileViewModel.swift */,
+				6E35584F2523766D00058EA6 /* NotificationsViewModel.swift */,
+				6E3558532523898E00058EA6 /* OrdersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -308,6 +402,8 @@
 		6E4F8FE3250A676A00A2241B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6EE87C2B25277AE40099E238 /* Mulish-Bold.ttf */,
+				6EE87C2925275B770099E238 /* Mulish-Regular.ttf */,
 				6E4F8FE5250A67B900A2241B /* CantataOne-Regular.ttf */,
 			);
 			path = Fonts;
@@ -496,11 +592,13 @@
 				6E74E86E250B67AB00B6ABC7 /* Helpers */,
 				6E4F8FE4250A677200A2241B /* Extensions */,
 				6E36DB1F2510E421005203F3 /* Menu */,
+				6ED1FEEF2524DBE3007F2D7B /* Payment */,
 				6E6B3F1D2513489D00862D47 /* Album */,
 				6E71AF35250F623E001E8BF8 /* Home */,
 				6E6B3F20251390AF00862D47 /* Editing */,
 				6E4F8FD3250A39D900A2241B /* OnBoarding */,
 				6EF8A23B25189F65000C5A9D /* PostCard */,
+				6E355837252314B400058EA6 /* DropDownMenu */,
 				6E810267250A37A500B9BB43 /* Main.storyboard */,
 				6E81026A250A37A700B9BB43 /* Assets.xcassets */,
 				6E592C42251E5CA60085205E /* splashScreenReallyFinal.png */,
@@ -508,6 +606,62 @@
 				6E81026F250A37A700B9BB43 /* Info.plist */,
 			);
 			path = SpokenPicture_iOS;
+			sourceTree = "<group>";
+		};
+		6ED1FEEF2524DBE3007F2D7B /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				6ED709152525FC9F00BC2DB2 /* Model */,
+				6ED1FEF22524DC55007F2D7B /* ViewModels */,
+				6ED1FEF32524DC5D007F2D7B /* ViewControllers */,
+				6ED1FEF42524DC66007F2D7B /* Views */,
+				6ED1FEF02524DC1B007F2D7B /* Payment.storyboard */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		6ED1FEF22524DC55007F2D7B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6ED709132525EF8900BC2DB2 /* OrderDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6ED1FEF32524DC5D007F2D7B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6ED1FEF52524DCBF007F2D7B /* MenuCartViewController.swift */,
+				6ED708FF2525C1F600BC2DB2 /* ShippingDetailsViewController.swift */,
+				6ED709012525C85200BC2DB2 /* ShippingMethodViewController.swift */,
+				6ED709072525D86500BC2DB2 /* PaymentViewController.swift */,
+				6ED709092525D88C00BC2DB2 /* SummaryViewController.swift */,
+				6ED70918252602D600BC2DB2 /* ConfirmationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6ED1FEF42524DC66007F2D7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6ED1FEF72524E41C007F2D7B /* CartItemCell.swift */,
+				6ED1FEF82524E41C007F2D7B /* CartItemCell.xib */,
+				6ED709032525CB6700BC2DB2 /* ShipmentMethodCell.swift */,
+				6ED709042525CB6700BC2DB2 /* ShipmentMethodCell.xib */,
+				6ED7090B2525E9E000BC2DB2 /* ShippingDetailsCell.swift */,
+				6ED7090C2525E9E000BC2DB2 /* ShippingDetailsCell.xib */,
+				6ED7090F2525EA0200BC2DB2 /* PaymentCell.swift */,
+				6ED709102525EA0200BC2DB2 /* PaymentCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6ED709152525FC9F00BC2DB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6ED709162525FCBB00BC2DB2 /* OrderStep.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6EE732E12521E2FB0075D0CE /* ViewControllers */ = {
@@ -574,6 +728,7 @@
 				6E62C038251B3C8100C51851 /* PostCardLayoutViewController.swift */,
 				6E62C03C251B3CAD00C51851 /* PostCardBackLayoutViewController.swift */,
 				6E62C043251BB04A00C51851 /* PostCardTextEditorViewController.swift */,
+				6EE87C23252748EE0099E238 /* PostcardDropMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -663,20 +818,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED1FEFA2524E41C007F2D7B /* CartItemCell.xib in Resources */,
 				6E3B62A32512568700DB862E /* PageLayout5TableViewCell.xib in Resources */,
 				6E71AF4A250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.xib in Resources */,
 				6E592C43251E5CA60085205E /* splashScreenReallyFinal.png in Resources */,
+				6E35583B2523150500058EA6 /* DropMenuCell.xib in Resources */,
+				6ED7090E2525E9E000BC2DB2 /* ShippingDetailsCell.xib in Resources */,
 				6E71AF56250FB80B001E8BF8 /* CreateAlbumCell.xib in Resources */,
 				6E81026E250A37A700B9BB43 /* LaunchScreen.storyboard in Resources */,
 				6E36DB242510E472005203F3 /* Menu.storyboard in Resources */,
+				6EE87C2C25277AE50099E238 /* Mulish-Bold.ttf in Resources */,
 				6E767D8C251DCA7200D4879E /* Default-568h@2x.png in Resources */,
 				6E3B629B2512566800DB862E /* PageLayout3TableViewCell.xib in Resources */,
 				6E71AF44250F6D03001E8BF8 /* CreateMenuCell.xib in Resources */,
 				6EE732E52521E4FC0075D0CE /* Album.storyboard in Resources */,
+				6ED709062525CB6700BC2DB2 /* ShipmentMethodCell.xib in Resources */,
 				6EF8A24025189FC7000C5A9D /* PostCard.storyboard in Resources */,
+				6E35584B252366F200058EA6 /* MenuNotificationCell.xib in Resources */,
 				6E71AF37250F6271001E8BF8 /* Home.storyboard in Resources */,
 				6E6B3F22251390C900862D47 /* Editing.storyboard in Resources */,
+				6ED1FEF12524DC1B007F2D7B /* Payment.storyboard in Resources */,
 				6E81026B250A37A700B9BB43 /* Assets.xcassets in Resources */,
+				6E3558472523640900058EA6 /* MenuOrderCell.xib in Resources */,
 				6E810269250A37A500B9BB43 /* Main.storyboard in Resources */,
 				6E3B62932512563300DB862E /* PageLayout1TableViewCell.xib in Resources */,
 				6E7A004A251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.xib in Resources */,
@@ -686,7 +849,9 @@
 				6E3B62972512564E00DB862E /* PageLayout2TableViewCell.xib in Resources */,
 				6E3B62A72512569600DB862E /* PageLayout6TableViewCell.xib in Resources */,
 				6E3B629F2512567600DB862E /* PageLayout4TableViewCell.xib in Resources */,
+				6ED709122525EA0200BC2DB2 /* PaymentCell.xib in Resources */,
 				6E4F8FE6250A67B900A2241B /* CantataOne-Regular.ttf in Resources */,
+				6EE87C2A25275B770099E238 /* Mulish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,11 +905,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB5FA51250D6ACC00D54A40 /* UIViewController.swift in Sources */,
+				6ED709052525CB6700BC2DB2 /* ShipmentMethodCell.swift in Sources */,
 				6E62C039251B3C8100C51851 /* PostCardLayoutViewController.swift in Sources */,
 				6EE732ED2521F5A20075D0CE /* AlbumPageViewModelItem.swift in Sources */,
 				6E71AF40250F68D4001E8BF8 /* CreatePopUpViewController.swift in Sources */,
 				6E36DB3225110499005203F3 /* ProfileViewModel.swift in Sources */,
 				6E767D97251E0E3E00D4879E /* User.swift in Sources */,
+				6E3558502523766D00058EA6 /* NotificationsViewModel.swift in Sources */,
+				6E3558462523640900058EA6 /* MenuOrderCell.swift in Sources */,
+				6ED709142525EF8900BC2DB2 /* OrderDetailsViewModel.swift in Sources */,
+				6E6B3F162513452D00862D47 /* AlbumPageLayout3Item.swift in Sources */,
+				6E6B3F182513453F00862D47 /* AlbumPageLayout4Item.swift in Sources */,
 				6E74E870250B67C000B6ABC7 /* Helper.swift in Sources */,
 				6E6B3F2D2513B31700862D47 /* RecordAudioViewModel.swift in Sources */,
 				6E4F8FE2250A65C000A2241B /* OnBoarding4ViewController.swift in Sources */,
@@ -760,11 +931,16 @@
 				6EE732EB2521F5750075D0CE /* AlbumCoverViewModelItem.swift in Sources */,
 				6E7A0049251CE62800B29AD1 /* ThumbnailSuggestionCollectionViewCell.swift in Sources */,
 				6E36DB262510E52F005203F3 /* MenuViewController.swift in Sources */,
+				6E355852252388C300058EA6 /* Order.swift in Sources */,
+				6E35584E2523738300058EA6 /* Notification.swift in Sources */,
 				6E810262250A37A500B9BB43 /* AppDelegate.swift in Sources */,
 				6EF8A2422518A0AC000C5A9D /* ChoosePostCardLayoutViewController.swift in Sources */,
+				6ED709002525C1F600BC2DB2 /* ShippingDetailsViewController.swift in Sources */,
 				6E74E86B250B588700B6ABC7 /* UIColor.swift in Sources */,
 				6EE732F02521F99C0075D0CE /* AlbumPage.swift in Sources */,
+				6E35584A252366F200058EA6 /* MenuNotificationCell.swift in Sources */,
 				6E3B629E2512567600DB862E /* PageLayout4TableViewCell.swift in Sources */,
+				6ED709022525C85200BC2DB2 /* ShippingMethodViewController.swift in Sources */,
 				6E3B62A22512568700DB862E /* PageLayout5TableViewCell.swift in Sources */,
 				6E36DB2E2510F662005203F3 /* MenuviewModel.swift in Sources */,
 				6E6B3F1F251369F400862D47 /* AlbumViewModel.swift in Sources */,
@@ -774,33 +950,48 @@
 				6E6B3F292513A51D00862D47 /* RecordAudioViewController.swift in Sources */,
 				6E6E36732514D46C004C7F19 /* EditPhotoViewModel.swift in Sources */,
 				6E71AF50250FA2C3001E8BF8 /* UIView.swift in Sources */,
+				6E35583A2523150500058EA6 /* DropMenuCell.swift in Sources */,
+				6ED1FEF62524DCBF007F2D7B /* MenuCartViewController.swift in Sources */,
 				6E62C040251B505300C51851 /* EditedImage.swift in Sources */,
 				6EE732E82521E7FA0075D0CE /* AlbumCoverCell.swift in Sources */,
 				6E71AF4C250F9492001E8BF8 /* AlbumsViewController.swift in Sources */,
 				6E810264250A37A500B9BB43 /* SceneDelegate.swift in Sources */,
 				6E36DB1E2510B63F005203F3 /* CreateMenuPopUpViewModel.swift in Sources */,
+				6ED70919252602D600BC2DB2 /* ConfirmationViewController.swift in Sources */,
+				6E35584325235B5500058EA6 /* MenuNotificationViewController.swift in Sources */,
 				6E6B3F2B2513A53A00862D47 /* EditPhotoViewController.swift in Sources */,
 				6E3B629A2512566800DB862E /* PageLayout3TableViewCell.swift in Sources */,
+				6EE87C25252748EE0099E238 /* PostcardDropMenuViewController.swift in Sources */,
+				6ED7090D2525E9E000BC2DB2 /* ShippingDetailsCell.swift in Sources */,
 				6E74E872250B776800B6ABC7 /* RegularExpressions.swift in Sources */,
+				6ED709172525FCBB00BC2DB2 /* OrderStep.swift in Sources */,
 				6E71AF49250F7F99001E8BF8 /* AlbumCoverCollectionViewCell.swift in Sources */,
 				6E4F8FDE250A65A200A2241B /* OnBoarding2ViewController.swift in Sources */,
+				6ED1FEF92524E41C007F2D7B /* CartItemCell.swift in Sources */,
+				6E6B3F1C2513455900862D47 /* AlbumPageLayout6Item.swift in Sources */,
 				6E71AF4E250F94B7001E8BF8 /* HomeViewController.swift in Sources */,
 				6E4F8FE0250A65B300A2241B /* OnBoarding3ViewController.swift in Sources */,
 				6E71AF59250FC065001E8BF8 /* PinterestLayout.swift in Sources */,
+				6E3558542523898E00058EA6 /* OrdersViewModel.swift in Sources */,
 				6E3B62922512563300DB862E /* PageLayout1TableViewCell.swift in Sources */,
 				6E62C03D251B3CAD00C51851 /* PostCardBackLayoutViewController.swift in Sources */,
 				6E3B628E251236C900DB862E /* Layout.swift in Sources */,
+				6ED709082525D86500BC2DB2 /* PaymentViewController.swift in Sources */,
 				6E71AF43250F6D03001E8BF8 /* CreateMenuCell.swift in Sources */,
 				6E3B62962512564E00DB862E /* PageLayout2TableViewCell.swift in Sources */,
+				6E35584125235B2D00058EA6 /* MenuOrderViewController.swift in Sources */,
 				6E4F8FDC250A659200A2241B /* OnBoarding1ViewController.swift in Sources */,
 				6E36DB2C2510EDD9005203F3 /* UITableView.swift in Sources */,
 				6E6B3F272513A49200862D47 /* UIImageView.swift in Sources */,
+				6ED709112525EA0200BC2DB2 /* PaymentCell.swift in Sources */,
 				6EF8A23A25169D27000C5A9D /* EditRootControl.swift in Sources */,
 				6E71AF46250F7C8B001E8BF8 /* UICollectionView.swift in Sources */,
 				6E7A0044251CD98A00B29AD1 /* VideoThummbnailViewController.swift in Sources */,
 				6E3B628525121F9700DB862E /* ChooseLayoutViewController.swift in Sources */,
 				6E3B6288251220FB00DB862E /* LayoutCollectionViewCell.swift in Sources */,
+				6EE87C2825274ACF0099E238 /* MenuItem.swift in Sources */,
 				6E36DB292510E8B6005203F3 /* MenuTableViewCell.swift in Sources */,
+				6ED7090A2525D88C00BC2DB2 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,6 +1136,7 @@
 			baseConfigurationReference = 6981AAA64011AFAC65AF093F /* Pods-SpokenPicture_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2D4NJ62UU;
 				INFOPLIST_FILE = SpokenPicture_iOS/Info.plist;
@@ -954,6 +1146,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BothofUS.SpokenPicture-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -964,6 +1157,7 @@
 			baseConfigurationReference = 55528C53CB2055495F663EEF /* Pods-SpokenPicture_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2D4NJ62UU;
 				INFOPLIST_FILE = SpokenPicture_iOS/Info.plist;
@@ -973,6 +1167,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BothofUS.SpokenPicture-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

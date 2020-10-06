@@ -30,26 +30,39 @@ extension UIViewController{
         self.navigationItem.backBarButtonItem?.title = ""
         
     }
-    @objc func menuOptionTapped()  {
-        let item1 = DropdownItem(image: UIImage(named: "orderBlackMaterial")!,title: "Order")
-        let item2 = DropdownItem(image: UIImage(named: "editBlack")!, title: "Edit")
-        let item3 = DropdownItem(image: UIImage(named: "shareBlack")!, title: "Share")
-        let item4 = DropdownItem(image: UIImage(named: "deleteBlack")!, title: "Delete")
+    func showMenu(){
+        let item1 = MenuItem(image: UIImage(named: "orderBlackMaterial")!,title: "Order")
+        let item2 = MenuItem(image: UIImage(named: "editBlack")!, title: "Edit")
+        let item3 = MenuItem(image: UIImage(named: "shareBlack")!, title: "Share")
+        let item4 = MenuItem(image: UIImage(named: "deleteBlack")!, title: "Delete")
 
         let items = [item1, item2, item3, item4]
         
-        let menuView = DropdownMenu(navigationController: navigationController!, items: items)
-        menuView.tintColor = UIColor.accentBlack1Main
-        menuView.cellBackgroundColor = UIColor.pastelPastel11Main
-        menuView.displaySelected = false
-
-        menuView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
-        menuView.updateConstraints()
-        menuView.reloadInputViews()
-        menuView.tableView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
-
-        menuView.delegate = self
-        menuView.showMenu()
+        let menuView = postcard.instantiateViewController(withIdentifier: "PostcardDropMenuVC")
+            as! PostcardDropMenuViewController
+        menuView.items = items
+        navigationController?.pushViewController(menuView, animated: false)
+        self.addChild(menuView)
+        menuView.view.frame = self.view.frame
+        self.view.addSubview(menuView.view)
+        menuView.didMove(toParent: self)
+        
+//        let menuView = DropdownMenu(navigationController: navigationController!, items: items)
+//        menuView.tintColor = UIColor.accentBlack1Main
+//        menuView.cellBackgroundColor = UIColor.pastelPastel11Main
+//        menuView.displaySelected = false
+//
+//        menuView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
+//        menuView.updateConstraints()
+//        menuView.reloadInputViews()
+//        menuView.tableView.frame = CGRect(x: 90, y: 20, width: 160, height: 180)
+//
+//        menuView.delegate = self
+//        menuView.showMenu()
+    }
+    
+    @objc func menuOptionTapped()  {
+        showMenu()
     }
     
     @objc func completeOptionTapped()  {

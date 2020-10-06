@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mulish-Bold.ttf">
+            <string>Mulish-Bold</string>
+        </array>
+        <array key="Mulish-Regular.ttf">
+            <string>Mulish-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShipmentMethodCell" rowHeight="79" id="KGk-i7-Jjw" customClass="ShipmentMethodCell" customModule="SpokenPicture_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="qJy-SJ-9xX">
+                        <rect key="frame" x="1" y="1" width="332" height="76"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="76" id="s5t-j1-hBt"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMV-lb-mSj">
+                        <rect key="frame" x="12" y="16" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="eFJ-SI-qMp"/>
+                            <constraint firstAttribute="height" constant="20" id="wFE-IU-bIL"/>
+                        </constraints>
+                        <state key="normal" image="checkYellow"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard Shipping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-Nb-ivG">
+                        <rect key="frame" x="44" y="16" width="144" height="20.5"/>
+                        <fontDescription key="fontDescription" name="Mulish-Bold" family="Mulish" pointSize="16"/>
+                        <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 kr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpG-fk-T3i">
+                        <rect key="frame" x="283" y="16" width="38" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postnord MyPack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-sr-gma">
+                        <rect key="frame" x="44" y="46.5" width="113" height="18"/>
+                        <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
+                        <color key="textColor" red="0.031372549020000001" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.90588235289999997" green="0.93725490199999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="WpG-fk-T3i" firstAttribute="centerY" secondItem="IMV-lb-mSj" secondAttribute="centerY" id="0Gk-9H-0OG"/>
+                    <constraint firstItem="IMV-lb-mSj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="0eL-WA-Agt"/>
+                    <constraint firstAttribute="trailing" secondItem="WpG-fk-T3i" secondAttribute="trailing" constant="13" id="2ZI-mT-jFa"/>
+                    <constraint firstItem="qJy-SJ-9xX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="4my-O3-alI"/>
+                    <constraint firstItem="xZa-Nb-ivG" firstAttribute="centerY" secondItem="IMV-lb-mSj" secondAttribute="centerY" id="6RN-RP-6eb"/>
+                    <constraint firstAttribute="trailing" secondItem="qJy-SJ-9xX" secondAttribute="trailing" constant="1" id="8bu-7S-lZl"/>
+                    <constraint firstItem="qJy-SJ-9xX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="AK8-Jn-5V1"/>
+                    <constraint firstItem="xZa-Nb-ivG" firstAttribute="leading" secondItem="IMV-lb-mSj" secondAttribute="trailing" constant="12" id="B5A-ra-LJs"/>
+                    <constraint firstItem="IMV-lb-mSj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Tox-8n-dhq"/>
+                    <constraint firstAttribute="bottom" secondItem="qJy-SJ-9xX" secondAttribute="bottom" constant="1" id="Zft-4A-UzQ"/>
+                    <constraint firstItem="e3t-sr-gma" firstAttribute="leading" secondItem="xZa-Nb-ivG" secondAttribute="leading" id="b8t-cz-izL"/>
+                    <constraint firstItem="e3t-sr-gma" firstAttribute="top" secondItem="xZa-Nb-ivG" secondAttribute="bottom" constant="10" id="rCs-kj-14u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="147.82608695652175" y="109.48660714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkYellow" width="21" height="24"/>
+        <image name="rectangle" width="301" height="76"/>
+    </resources>
+</document>
