@@ -9,6 +9,7 @@
 import UIKit
 
 class PageLayout1TableViewCell: UITableViewCell {
+    @IBOutlet weak var addimageButttonHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var addImageBtn: UIButton!
@@ -32,7 +33,7 @@ class PageLayout1TableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        addImagePressAction()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,10 +44,25 @@ class PageLayout1TableViewCell: UITableViewCell {
         self.sourceVC = sourceVC
     }
     
+    func addImagePressAction(){
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(showImageEditingMenu))
+        longPressRecognizer.minimumPressDuration = 0.2
+        self.albumImageView.addGestureRecognizer(longPressRecognizer)
+    }
+    
+    @objc func showImageEditingMenu(sender: UILongPressGestureRecognizer) {
+        print("longpressed")
+//       if sender.state == .began {
+//          self.becomeFirstResponder()
+//       }
+    }
+    
     @IBAction func addImageBtnClicked(_ sender: Any) {
         addImageBtn.showImagePicker(sourceVC: sourceVC!, pageItem: item)
         addImageBtn.isHidden = true
+        addimageButttonHeightConstraint.constant = 0
     }
+    
     @IBAction func deletePageBtnClicked(_ sender: Any) {
     }
     

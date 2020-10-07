@@ -36,6 +36,7 @@ class CreateAlbumViewController: UIViewController {
     
     func setUpTableView(){
         albumContentTableView.dataSource = self
+        albumContentTableView.delegate = self
         albumContentTableView.registerCell(nib: "PageLayout1TableViewCell", cellreuseIdentifier: "PageLayout1TableViewCell")
         albumContentTableView.registerCell(nib: "PageLayout2TableViewCell", cellreuseIdentifier: "PageLayout2TableViewCell")
         albumContentTableView.registerCell(nib: "PageLayout3TableViewCell", cellreuseIdentifier: "PageLayout3TableViewCell")
@@ -73,7 +74,7 @@ class CreateAlbumViewController: UIViewController {
 
 extension CreateAlbumViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 350
     }
 }
 
